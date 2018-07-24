@@ -1,11 +1,17 @@
 package in.ssi.vadhyaronline.entity;
 
+import in.ssi.vadhyaronline.domain.UserRole;
+
 import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
+@Entity
 @Table(name = "user_role")
-public class UserRole {
+public class UserRoleEntity {
 
+    @Id
     @Column(name = "role_id")
     private int roleId;
     @Column(name = "role_name", unique = true)
@@ -25,5 +31,9 @@ public class UserRole {
 
     public void setRoleName(String roleName) {
         this.roleName = roleName;
+    }
+
+    public UserRole toDomain() {
+        return new UserRole(this.roleId, this.roleName);
     }
 }

@@ -1,12 +1,14 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.dao.RolesRepository;
-import in.ssi.vadhyaronline.entity.UserRole;
+import in.ssi.vadhyaronline.domain.UserRole;
+import in.ssi.vadhyaronline.entity.UserRoleEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 @Service
 public class UserRoleServices {
@@ -20,8 +22,6 @@ public class UserRoleServices {
      * @return list of user roles
      */
     public List<UserRole> getUserRoles() {
-        List<UserRole> userRoles = new ArrayList<>();
-        rolesRepository.findAll().forEach(userRoles::add);
-        return userRoles;
+        return rolesRepository.findAll().stream().map(UserRoleEntity::toDomain).collect(Collectors.toList());
     }
 }

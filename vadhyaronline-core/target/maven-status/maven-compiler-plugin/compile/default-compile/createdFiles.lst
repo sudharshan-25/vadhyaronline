@@ -1,0 +1,13 @@
+in\ssi\vadhyaronline\exception\VadhyarOnlineException.class
+in\ssi\vadhyaronline\service\UserRoleServices.class
+in\ssi\vadhyaronline\dao\LanguageSupportedRepository.class
+in\ssi\vadhyaronline\Application.class
+in\ssi\vadhyaronline\web\UserRolesController.class
+in\ssi\vadhyaronline\dao\RolesRepository.class
+in\ssi\vadhyaronline\domain\LanguageSupported.class
+in\ssi\vadhyaronline\entity\UserRoleEntity.class
+in\ssi\vadhyaronline\domain\UserRole.class
+in\ssi\vadhyaronline\web\LanguageSupportedController.class
+in\ssi\vadhyaronline\domain\VadhyarResponse.class
+in\ssi\vadhyaronline\entity\LanguageSupportedEntity.class
+in\ssi\vadhyaronline\service\LanguageSupportedService.class
