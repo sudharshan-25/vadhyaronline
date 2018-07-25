@@ -1,0 +1,30 @@
+{
+  "DATA": [
+    {
+      "id": 3,
+      "key": null,
+      "value": "Devasam"
+    },
+    {
+      "id": 1,
+      "key": null,
+      "value": "Homa"
+    },
+    {
+      "id": 4,
+      "key": null,
+      "value": "Manthra"
+    },
+    {
+      "id": 5,
+      "key": null,
+      "value": "Shloka"
+    },
+    {
+      "id": 2,
+      "key": null,
+      "value": "Tharpanam"
+    }
+  ],
+  "ERROR": null
+}

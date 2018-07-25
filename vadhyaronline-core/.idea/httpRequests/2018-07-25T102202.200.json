@@ -1,0 +1,78 @@
+{
+  "DATA": {
+    "Shloka": [
+      {
+        "eventTypeId": 6,
+        "eventTypeName": "Bhagavad Gita",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 5,
+          "eventCategoryName": "Shloka"
+        }
+      }
+    ],
+    "Tharpanam": [
+      {
+        "eventTypeId": 2,
+        "eventTypeName": "Amavasya Tharpanam",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 2,
+          "eventCategoryName": "Tharpanam"
+        }
+      }
+    ],
+    "Manthra": [
+      {
+        "eventTypeId": 5,
+        "eventTypeName": "Sandiyavandanam",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 4,
+          "eventCategoryName": "Manthra"
+        }
+      }
+    ],
+    "Devasam": [
+      {
+        "eventTypeId": 3,
+        "eventTypeName": "Pithru Tharpanam",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 3,
+          "eventCategoryName": "Devasam"
+        }
+      },
+      {
+        "eventTypeId": 4,
+        "eventTypeName": "Mathru Tharpanam",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 3,
+          "eventCategoryName": "Devasam"
+        }
+      }
+    ],
+    "Homa": [
+      {
+        "eventTypeId": 1,
+        "eventTypeName": "Sudharshana Homam",
+        "eventTypeDescription": "",
+        "eventCategory": {
+          "eventCategoryId": 1,
+          "eventCategoryName": "Homa"
+        }
+      },
+      {
+        "eventTypeId": 7,
+        "eventTypeName": "Ganapathy Homam",
+        "eventTypeDescription": "Test",
+        "eventCategory": {
+          "eventCategoryId": 1,
+          "eventCategoryName": "Homa"
+        }
+      }
+    ]
+  },
+  "ERROR": null
+}

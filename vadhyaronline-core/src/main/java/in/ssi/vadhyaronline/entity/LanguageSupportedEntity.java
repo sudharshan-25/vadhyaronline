@@ -1,6 +1,6 @@
 package in.ssi.vadhyaronline.entity;
 
-import in.ssi.vadhyaronline.domain.LanguageSupported;
+import in.ssi.vadhyaronline.domain.AbstractResponse;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "language_supported")
-public class LanguageSupportedEntity {
+public class LanguageSupportedEntity implements AbstractEntity {
 
     @Id
     @Column(name = "lang_id")
@@ -44,7 +44,7 @@ public class LanguageSupportedEntity {
         this.value = value;
     }
 
-    public LanguageSupported toDomain(){
-        return new LanguageSupported(this.id, this.key, this.value);
+    public AbstractResponse toDomain() {
+        return new AbstractResponse(this.id, this.key, this.value);
     }
 }

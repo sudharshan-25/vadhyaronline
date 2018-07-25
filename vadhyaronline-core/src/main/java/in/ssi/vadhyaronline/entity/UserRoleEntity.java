@@ -1,6 +1,6 @@
 package in.ssi.vadhyaronline.entity;
 
-import in.ssi.vadhyaronline.domain.UserRole;
+import in.ssi.vadhyaronline.domain.AbstractResponse;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,7 +9,7 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_role")
-public class UserRoleEntity {
+public class UserRoleEntity implements AbstractEntity {
 
     @Id
     @Column(name = "role_id")
@@ -33,7 +33,7 @@ public class UserRoleEntity {
         this.roleName = roleName;
     }
 
-    public UserRole toDomain() {
-        return new UserRole(this.roleId, this.roleName);
+    public AbstractResponse toDomain() {
+        return new AbstractResponse(this.roleId, this.roleName);
     }
 }

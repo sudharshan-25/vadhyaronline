@@ -2,7 +2,7 @@ package in.ssi.vadhyaronline.web;
 
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
-import in.ssi.vadhyaronline.service.LanguageSupportedService;
+import in.ssi.vadhyaronline.service.EventCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -12,18 +12,18 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/common")
-public class LanguageSupportedController {
+public class EventCategoryController {
 
     @Autowired
-    private LanguageSupportedService languageService;
+    private EventCategoryService eventCategoryService;
 
-    @RequestMapping(value = "/langSupported", method = RequestMethod.GET)
-    public ResponseEntity<VadhyarResponse> getSupportedLanguages() {
+    @RequestMapping(value = "/eventCategory", method = RequestMethod.GET)
+    public ResponseEntity<VadhyarResponse> getAllEventCategories() {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            List<AbstractResponse> langSupported = languageService.getSupportedLanguages();
-            response.setData(langSupported);
+            List<AbstractResponse> eventCategories = eventCategoryService.getAllEventCategories();
+            response.setData(eventCategories);
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
@@ -32,13 +32,13 @@ public class LanguageSupportedController {
         return responseEntity;
     }
 
-    @RequestMapping(value = "/langSupported", method = RequestMethod.POST)
-    public ResponseEntity<VadhyarResponse> addSupportedLanguages(@RequestBody AbstractResponse languageSupported) {
+    @RequestMapping(value = "/eventCategory", method = RequestMethod.POST)
+    public ResponseEntity<VadhyarResponse> addEventCategories(@RequestBody AbstractResponse abstractResponse) {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            languageService.addLanguageSupport(languageSupported);
-            response.setData("Language Added Successfully");
+            eventCategoryService.addEventCategory(abstractResponse);
+            response.setData("Event category added successfully...");
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
@@ -47,13 +47,13 @@ public class LanguageSupportedController {
         return responseEntity;
     }
 
-    @RequestMapping(value = "/searchLangSupported", method = RequestMethod.GET)
-    public ResponseEntity<VadhyarResponse> searchLangSupported(@RequestParam("key") String key) {
+    @RequestMapping(value = "/searchEventCategory", method = RequestMethod.GET)
+    public ResponseEntity<VadhyarResponse> searchEventCategories(@RequestParam("name") String name) {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            List<AbstractResponse> langSupported = languageService.searchLanguage(key);
-            response.setData(langSupported);
+            List<AbstractResponse> eventCategories = eventCategoryService.searchEventCategory(name);
+            response.setData(eventCategories);
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
@@ -61,5 +61,4 @@ public class LanguageSupportedController {
         }
         return responseEntity;
     }
-
 }

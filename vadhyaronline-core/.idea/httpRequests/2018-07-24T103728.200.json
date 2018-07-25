@@ -1,0 +1,25 @@
+{
+  "DATA": [
+    {
+      "id": 1,
+      "key": "en",
+      "value": "English"
+    },
+    {
+      "id": 2,
+      "key": "tam",
+      "value": "Tamil"
+    },
+    {
+      "id": 3,
+      "key": "sans",
+      "value": "Sanskrit"
+    },
+    {
+      "id": 4,
+      "key": "kan",
+      "value": "Kannada"
+    }
+  ],
+  "ERROR": null
+}

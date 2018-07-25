@@ -1,0 +1,53 @@
+{
+  "DATA": [
+    {
+      "eventTypeId": 1,
+      "eventCategory": {
+        "categoryId": 1,
+        "categoryName": "Homa"
+      },
+      "eventTypeName": "Sudharshana Homam"
+    },
+    {
+      "eventTypeId": 2,
+      "eventCategory": {
+        "categoryId": 2,
+        "categoryName": "Tharpanam"
+      },
+      "eventTypeName": "Amavasya Tharpanam"
+    },
+    {
+      "eventTypeId": 3,
+      "eventCategory": {
+        "categoryId": 3,
+        "categoryName": "Devasam"
+      },
+      "eventTypeName": "Pithru Tharpanam"
+    },
+    {
+      "eventTypeId": 4,
+      "eventCategory": {
+        "categoryId": 3,
+        "categoryName": "Devasam"
+      },
+      "eventTypeName": "Mathru Tharpanam"
+    },
+    {
+      "eventTypeId": 5,
+      "eventCategory": {
+        "categoryId": 4,
+        "categoryName": "Manthra"
+      },
+      "eventTypeName": "Sandiyavandanam"
+    },
+    {
+      "eventTypeId": 6,
+      "eventCategory": {
+        "categoryId": 5,
+        "categoryName": "Shloka"
+      },
+      "eventTypeName": "Bhagavad Gita"
+    }
+  ],
+  "ERROR": null
+}

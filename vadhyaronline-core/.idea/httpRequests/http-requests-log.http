@@ -1,0 +1,286 @@
+GET http://localhost:8080/vadhyaronline/common/searchEventTypes?categoryName=Manthra
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Gan ganapathaye namaha",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102723.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/searchEventTypes?categoryName=Homa
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Gan ganapathaye namaha",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102706.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes/
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Gan ganapathaye namaha",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102557.200.json
+
+###
+
+PUT http://localhost:8080/vadhyaronline/common/eventTypes/7
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Gan ganapathaye namaha",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102543.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-07-25T102249.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+<> 2018-07-25T102202.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{      "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Test",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102117.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{      "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Test",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102031.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{      "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Test",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-25T102006.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T101401.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T100712.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122904.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122638.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122151-1.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122151.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122150.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T122017.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T121131.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventTypes
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-25T120622.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventCategory
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-24T112232.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/eventCategory
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-24T112224.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/eventCategory
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Shloka" }
+
+<> 2018-07-24T112041.500.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventCategory?key=en
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T111928.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventCategory?key=en
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T111855.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/eventCategory?key=en
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T111604.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/searchLangSupported?key=en
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T103758.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/langSupported
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T103728.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline
+Accept: */*
+Cache-Control: no-cache
+
+<> 2018-07-24T103717.404.json
+
+###
+

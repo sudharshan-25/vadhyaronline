@@ -27,19 +27,32 @@ INSERT INTO language_supported(lang_key, lang_value) VALUES ('en', 'English');
 INSERT INTO language_supported(lang_key, lang_value) VALUES ('tam', 'Tamil');
 INSERT INTO language_supported(lang_key, lang_value) VALUES ('sans', 'Sanskrit');
 
-CREATE TABLE event_type (
-	event_type_id INT AUTO_INCREMENT,
-    event_type_key VARCHAR(50),
-    CONSTRAINT pk_event_type PRIMARY KEY (event_type_id),
-    CONSTRAINT uk_event_type_key UNIQUE (event_type_key)
+CREATE TABLE event_category (
+	event_category_id int auto_increment,
+    event_category_name varchar(50),
+    constraint pk_event_category primary key (event_category_id),
+    constraint uk_event_category_name unique (event_category_name)
 );
 
-CREATE TABLE event_type_name (
-	event_name_id INT AUTO_INCREMENT,
-    event_type_id INT,
-    lang_id INT,
-    event_name VARCHAR(100),
-    CONSTRAINT pk_event_type_name PRIMARY KEY (event_name_id),
-    CONSTRAINT fk_event_type_name FOREIGN KEY (event_type_id) REFERENCES event_type (event_type_id),
-    CONSTRAINT fk_event_lang_id FOREIGN KEY (lang_id) REFERENCES language_supported (lang_id)
+INSERT INTO event_category(event_category_name) VALUES ('Homa');
+INSERT INTO event_category(event_category_name) VALUES ('Tharpanam');
+INSERT INTO event_category(event_category_name) VALUES ('Devasam');
+INSERT INTO event_category(event_category_name) VALUES ('Manthra');
+INSERT INTO event_category(event_category_name) VALUES ('Shloka');
+
+CREATE TABLE event_type (
+  event_type_id INT AUTO_INCREMENT,
+  event_category_id INT,
+  event_type_name VARCHAR(50),
+  event_type_desc VARCHAR(150),
+  CONSTRAINT pk_event_type_id PRIMARY KEY (event_type_id),
+  CONSTRAINT fk_event_type_category FOREIGN KEY (event_category_id) REFERENCES event_category(event_category_id),
+  CONSTRAINT uk_event_type_name UNIQUE (event_type_name)
 );
+
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (1 , 'Sudharshana Homam', '');
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (2 , 'Amavasya Tharpanam', '');
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (3 , 'Pithru Tharpanam', '');
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (3 , 'Mathru Tharpanam', '');
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (4 , 'Sandiyavandanam', '');
+INSERT INTO event_type(event_category_id, event_type_name, event_type_desc) VALUES (5 , 'Bhagavad Gita', '');

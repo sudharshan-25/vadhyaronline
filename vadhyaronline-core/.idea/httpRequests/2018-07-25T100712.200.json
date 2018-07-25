@@ -1,0 +1,57 @@
+{
+  "DATA": {
+    "Devasam": [
+      {
+        "eventTypeId": 3,
+        "eventCategoryId": 3,
+        "eventCategoryName": "Devasam",
+        "eventTypeName": "Pithru Tharpanam",
+        "eventTypeDescription": ""
+      },
+      {
+        "eventTypeId": 4,
+        "eventCategoryId": 3,
+        "eventCategoryName": "Devasam",
+        "eventTypeName": "Mathru Tharpanam",
+        "eventTypeDescription": ""
+      }
+    ],
+    "Tharpanam": [
+      {
+        "eventTypeId": 2,
+        "eventCategoryId": 2,
+        "eventCategoryName": "Tharpanam",
+        "eventTypeName": "Amavasya Tharpanam",
+        "eventTypeDescription": ""
+      }
+    ],
+    "Homa": [
+      {
+        "eventTypeId": 1,
+        "eventCategoryId": 1,
+        "eventCategoryName": "Homa",
+        "eventTypeName": "Sudharshana Homam",
+        "eventTypeDescription": ""
+      }
+    ],
+    "Shloka": [
+      {
+        "eventTypeId": 6,
+        "eventCategoryId": 5,
+        "eventCategoryName": "Shloka",
+        "eventTypeName": "Bhagavad Gita",
+        "eventTypeDescription": ""
+      }
+    ],
+    "Manthra": [
+      {
+        "eventTypeId": 5,
+        "eventCategoryId": 4,
+        "eventCategoryName": "Manthra",
+        "eventTypeName": "Sandiyavandanam",
+        "eventTypeDescription": ""
+      }
+    ]
+  },
+  "ERROR": null
+}

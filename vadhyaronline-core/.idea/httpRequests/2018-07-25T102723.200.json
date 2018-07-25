@@ -1,0 +1,14 @@
+{
+  "DATA": [
+    {
+      "eventTypeId": 5,
+      "eventTypeName": "Sandiyavandanam",
+      "eventTypeDescription": "",
+      "eventCategory": {
+        "eventCategoryId": 4,
+        "eventCategoryName": "Manthra"
+      }
+    }
+  ],
+  "ERROR": null
+}

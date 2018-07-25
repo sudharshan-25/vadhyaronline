@@ -1,6 +1,6 @@
 package in.ssi.vadhyaronline.web;
 
-import in.ssi.vadhyaronline.domain.UserRole;
+import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
 import in.ssi.vadhyaronline.service.UserRoleServices;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,7 +24,7 @@ public class UserRolesController {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            List<UserRole> userRoles = userRoleServices.getUserRoles();
+            List<AbstractResponse> userRoles = userRoleServices.getUserRoles();
             response.setData(userRoles);
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
