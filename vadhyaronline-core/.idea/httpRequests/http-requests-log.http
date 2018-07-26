@@ -1,3 +1,122 @@
+GET http://localhost:8080/vadhyaronline/common/soothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram", "id" : 3 }
+
+<> 2018-07-26T110954.200.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/veda
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram", "id" : 3 }
+
+<> 2018-07-26T110929.404.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram", "id" : 3 }
+
+<> 2018-07-26T110908.200.json
+
+###
+
+PUT http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram", "id" : 3 }
+
+<> 2018-07-26T110903.200.json
+
+###
+
+PUT http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram ", "id" : 3 }
+
+<> 2018-07-26T110850.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram" }
+
+<> 2018-07-26T110822.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram" }
+
+<> 2018-07-26T110717.200.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram" }
+
+<> 2018-07-26T110603.406.json
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram" }
+
+###
+
+POST http://localhost:8080/vadhyaronline/common/gothram
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "value" : "Vathula Gothram" }
+
+<> 2018-07-26T110210.406.json
+
+###
+
+GET http://localhost:8080/vadhyaronline/common/gothram?categoryName=Manthra
+Accept: */*
+Cache-Control: no-cache
+Content-Type: application/json
+
+{   "eventTypeName" : "Ganapathy Homam",   "eventTypeDescription" : "Gan ganapathaye namaha",   "eventCategory" : {     "eventCategoryId" : 1   } }
+
+<> 2018-07-26T110114.200.json
+
+###
+
 GET http://localhost:8080/vadhyaronline/common/searchEventTypes?categoryName=Manthra
 Accept: */*
 Cache-Control: no-cache

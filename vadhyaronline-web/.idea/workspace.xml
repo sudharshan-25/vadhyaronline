@@ -2,28 +2,72 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b6cb5c8c-4cbd-4514-af92-2131d1f09c3c" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/LanguageSupportedRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/domain/LanguageSupported.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/domain/UserRole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/LanguageSupportedEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/LanguageSupportedService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/LanguageSupportedController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitattributes" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/compiler.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/dictionaries/sudha.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/RolesRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/UserRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/UserRoleEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/UserRoleServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/UserRoleServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/UserRolesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/UserRolesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/SQL/DDL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/SQL/DDL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103717.404.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103728.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103758.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111604.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111855.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111928.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112041.500.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112224.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112232.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T100712.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T101401.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102006.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102031.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102117.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102202.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102249.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102543.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102557.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102706.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102723.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T120622.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T121131.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122017.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122150.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122151-1.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122151.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122638.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122904.200.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/SQL/DDL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/Application.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/EventCategoryRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/EventTypeRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/LanguageSupportedRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/RolesRepository.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/AbstractResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/EventTypeVO$EventCategoryVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/EventTypeVO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/VadhyarResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/AbstractComplexEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/AbstractEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/EventCategoryEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/EventTypeEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/LanguageSupportedEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/UserRoleEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/exception/VadhyarOnlineException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/EventCategoryService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/EventTypeService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/LanguageSupportedService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/UserRoleServices.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/EventCategoryController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/EventTypeController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/LanguageSupportedController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/UserRolesController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -38,16 +82,72 @@
     <session id="676868036">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.24" value="1" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.open.time.81" value="1" />
+          <entry key="project.opened" value="3" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="js" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="JavaScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="8" />
+          <entry key="js" value="132" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="8" />
+          <entry key="JavaScript" value="132" />
         </counts>
       </usages-collector>
     </session>
   </component>
+  <component name="FileEditorManager">
+    <leaf>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/index.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/public/index.html" />
+        <option value="$PROJECT_DIR$/src/index.js" />
+      </list>
+    </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -81,6 +181,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -92,7 +193,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -131,11 +231,12 @@
       <updated>1532408412410</updated>
       <workItem from="1532408414019" duration="173000" />
       <workItem from="1532408837441" duration="210000" />
+      <workItem from="1532540967047" duration="463000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="383000" />
+    <option name="totallyTimeSpent" value="846000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -148,8 +249,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.25" />
       <window_info id="Structure" order="1" show_stripe_button="false" sideWeight="0.5008183" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -173,5 +275,24 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
   </component>
 </project>

@@ -1,7 +1,0 @@
-{
-  "timestamp": "2018-07-24T17:50:41.873+0000",
-  "status": 500,
-  "error": "Internal Server Error",
-  "message": "Type definition error: [simple type, class in.ssi.vadhyaronline.domain.AbstractResponse]; nested exception is com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `in.ssi.vadhyaronline.domain.AbstractResponse` (no Creators, like default construct, exist): cannot deserialize from Object value (no delegate- or property-based Creator)\n at [Source: (PushbackInputStream); line: 1, column: 5]",
-  "path": "/vadhyaronline/common/eventCategory"
-}
