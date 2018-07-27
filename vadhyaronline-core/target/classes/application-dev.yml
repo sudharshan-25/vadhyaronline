@@ -1,0 +1,19 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /vadhyaronline
+
+spring:
+  datasource:
+    url: jdbc:h2:mem:vadhyaronline;MODE=MySQL
+    driverClassName: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    show-sql: true
+    hibernate.ddl-auto: validate
+    database-platform: org.hibernate.dialect.H2Dialect
+  h2:
+    console:
+      enabled: true
+      path: /console

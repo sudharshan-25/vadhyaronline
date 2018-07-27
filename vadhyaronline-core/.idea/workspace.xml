@@ -2,58 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="002bc9e0-ca75-4398-96d0-027b833944ab" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/sudha.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/GothramMasterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/SoothramMasterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/VedaMasterRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/GothramMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/SoothramMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/VedaMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/MasterController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T103717.404.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T103728.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T103758.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T111604.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T111855.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T111928.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T112041.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T112224.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-24T112232.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T100712.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T101401.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102006.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102031.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102117.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102202.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102249.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102543.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102557.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102706.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T102723.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T120622.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T121131.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122017.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122150.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122151-1.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122151.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122638.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/httpRequests/2018-07-25T122904.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/SQL/DDL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/SQL/DDL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/SQL/DDL.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/SQL/DDL.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/registerServiceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/in/ssi/vadhyaronline/web/MasterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/in/ssi/vadhyaronline/web/MasterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/vadhyaronline-web.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/index.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -81,7 +48,7 @@
     <session id="-1007767802">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.45" value="1" />
           <entry key="project.open.time.95" value="1" />
@@ -92,30 +59,36 @@
         <counts>
           <entry key="groovy" value="1" />
           <entry key="java" value="28" />
-          <entry key="yml" value="1" />
+          <entry key="sql" value="3" />
+          <entry key="xml" value="1" />
+          <entry key="yml" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="JAVA" value="28" />
-          <entry key="Scratch" value="1" />
-          <entry key="YAML" value="1" />
+          <entry key="SQL" value="2" />
+          <entry key="Scratch" value="2" />
+          <entry key="XML" value="1" />
+          <entry key="YAML" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="1639" />
           <entry key="json" value="23" />
-          <entry key="sql" value="8" />
-          <entry key="yml" value="1" />
+          <entry key="sql" value="23" />
+          <entry key="xml" value="11" />
+          <entry key="yml" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="1639" />
           <entry key="JSON" value="23" />
-          <entry key="SQL" value="8" />
-          <entry key="YAML" value="1" />
+          <entry key="SQL" value="23" />
+          <entry key="XML" value="11" />
+          <entry key="YAML" value="122" />
         </counts>
       </usages-collector>
     </session>
@@ -125,60 +98,44 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1292">
-              <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="27" />
+            <state relative-caret-position="306">
+              <caret line="84" column="69" selection-start-line="82" selection-end-line="84" selection-end-column="69" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/MasterController.java">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="119">
+              <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="45" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="283">
-              <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1709#1710#0" expanded="true" />
-                <element signature="e#1771#1772#0" expanded="true" />
-                <element signature="e#2674#2675#0" expanded="true" />
-                <element signature="e#2737#2738#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/SoothramMasterRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/GothramMasterRepository.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="298">
+              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -236,6 +193,10 @@
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/SoothramMasterRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/MasterController.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
       </list>
     </option>
   </component>
@@ -268,7 +229,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -367,6 +328,7 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="h2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
@@ -377,6 +339,11 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.applicationServers" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\workspace\IdeaProjects\vadhyaronline\vadhyaronline-core\src\main\resources" />
+    </key>
   </component>
   <component name="RestClientSettings">
     <option name="REQUEST_HISTORY">
@@ -949,7 +916,7 @@
     <configuration name="vadyarOnlineCore" type="Application" factoryName="Application" singleton="true">
       <option name="MAIN_CLASS_NAME" value="in.ssi.vadhyaronline.Application" />
       <module name="vadhyaronline-core" />
-      <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
+      <option name="VM_PARAMETERS" value="-Dspring.profiles.active=dev" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -988,12 +955,12 @@
       <workItem from="1532539223609" duration="623000" />
       <workItem from="1532540419907" duration="1237000" />
       <workItem from="1532579132248" duration="3114000" />
-      <workItem from="1532623470354" duration="3323000" />
+      <workItem from="1532623470354" duration="5956000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22068000" />
+    <option name="totallyTimeSpent" value="24701000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1015,11 +982,11 @@
       <window_info id="Bean Validation" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32843137" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32733223" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49924356" weight="0.39770868" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32843137" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32733223" />
       <window_info anchor="bottom" id="Messages" order="7" weight="0.32843137" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.50075644" side_tool="true" weight="0.39869282" />
       <window_info anchor="bottom" id="Database Changes" order="9" weight="0.3289689" />
@@ -1028,7 +995,7 @@
       <window_info anchor="bottom" id="REST Client" order="12" sideWeight="0.501634" weight="0.46317512" />
       <window_info anchor="right" id="Palette&#9;" order="0" />
       <window_info anchor="right" id="Maven Projects" order="1" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="2" />
+      <window_info anchor="right" id="Database" order="2" weight="0.32980332" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="3" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="4" show_stripe_button="false" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="5" weight="0.25" />
@@ -1094,13 +1061,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/LanguageSupportedRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1334,24 +1294,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1292">
-          <caret line="76" column="13" selection-start-line="76" selection-start-column="13" selection-end-line="76" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/LanguageSupportedController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
           <caret line="32" column="5" lean-forward="true" selection-start-line="19" selection-start-column="4" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="92" selection-start-line="7" selection-start-column="92" selection-end-line="7" selection-end-column="92" />
         </state>
       </provider>
     </entry>
@@ -1407,11 +1353,56 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/MasterController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="78" column="46" selection-start-line="78" selection-start-column="46" selection-end-line="78" selection-end-column="46" />
+        <state relative-caret-position="493">
+          <caret line="79" selection-start-line="79" selection-end-line="79" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="84" column="69" selection-start-line="82" selection-end-line="84" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86a75efc-158f-4fec-835a-c39a2d1c97ef/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="18" selection-start-line="12" selection-start-column="18" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="45" />
         </state>
       </provider>
     </entry>

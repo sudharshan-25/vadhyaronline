@@ -1,73 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="b6cb5c8c-4cbd-4514-af92-2131d1f09c3c" name="Default Changelist" comment="">
+    <list default="true" id="867ab623-7061-4c3c-9e83-77d10f5897b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/application-dev.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/data.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103717.404.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103728.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T103758.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111604.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111855.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T111928.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112041.500.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112224.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-24T112232.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T100712.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T101401.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102006.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102031.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102117.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102202.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102249.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102543.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102557.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102706.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T102723.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T120622.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T121131.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122017.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122150.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122151-1.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122151.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122638.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/httpRequests/2018-07-25T122904.200.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/SQL/DDL.sql" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/Application.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/EventCategoryRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/EventTypeRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/LanguageSupportedRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/dao/RolesRepository.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/AbstractResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/EventTypeVO$EventCategoryVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/EventTypeVO.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/domain/VadhyarResponse.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/AbstractComplexEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/AbstractEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/EventCategoryEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/EventTypeEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/LanguageSupportedEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/entity/UserRoleEntity.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/exception/VadhyarOnlineException.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/EventCategoryService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/EventTypeService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/LanguageSupportedService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/service/UserRoleServices.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/EventCategoryController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/EventTypeController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/LanguageSupportedController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/UserRolesController.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/log4j2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/registerServiceWorker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/MasterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/target/classes/in/ssi/vadhyaronline/web/MasterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -82,48 +33,53 @@
     <session id="676868036">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
-          <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.24" value="1" />
-          <entry key="project.open.time.81" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.73" value="1" />
+          <entry key="project.opened" value="1" />
         </counts>
       </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
+      <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="html" value="1" />
-          <entry key="js" value="1" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="HTML" value="1" />
-          <entry key="JavaScript" value="1" />
+          <entry key="Angular2LanguageService" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="8" />
-          <entry key="js" value="132" />
+          <entry key="html" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="8" />
-          <entry key="JavaScript" value="132" />
+          <entry key="HTML" value="2" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/index.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+            <state>
               <folding>
-                <element signature="e#0#26#0" expanded="true" />
+                <element signature="e#0#58#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -131,31 +87,19 @@
       </file>
     </leaf>
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="JavaScript File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/index.html" />
-        <option value="$PROJECT_DIR$/src/index.js" />
+        <option value="$PROJECT_DIR$/src/app/app.component.html" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
-  <component name="JsFlowSettings">
-    <service-enabled>true</service-enabled>
-    <exe-path />
-    <other-services-enabled>true</other-services-enabled>
-    <auto-save>true</auto-save>
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER">
+    <package-json value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
@@ -189,6 +133,17 @@
               <item name="vadhyaronline-web" type="b2602c69:ProjectViewProjectNode" />
               <item name="vadhyaronline-web" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="vadhyaronline-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vadhyaronline-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vadhyaronline-web" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vadhyaronline-web" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -197,10 +152,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="F:\workspace\IdeaProjects\vadhyaronline\vadhyaronline-web\node_modules\tslint" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="com.chrisrm.idea.config" />
+    <property name="ts.external.directory.path" value="F:\workspace\IdeaProjects\vadhyaronline\vadhyaronline-web\node_modules\typescript\lib" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -215,7 +174,11 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="Vadhyaronline-Web" type="NodeJSConfigurationType" factoryName="Node.js" working-dir="$PROJECT_DIR$">
+    <configuration name="AngularApp" type="js.build_tools.npm" factoryName="npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="start" />
+      <node-interpreter value="project" />
+      <envs />
       <method v="2" />
     </configuration>
   </component>
@@ -224,47 +187,37 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="b6cb5c8c-4cbd-4514-af92-2131d1f09c3c" name="Default Changelist" comment="" />
-      <created>1532408412410</created>
+      <changelist id="867ab623-7061-4c3c-9e83-77d10f5897b5" name="Default Changelist" comment="" />
+      <created>1532630210461</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1532408412410</updated>
-      <workItem from="1532408414019" duration="173000" />
-      <workItem from="1532408837441" duration="210000" />
-      <workItem from="1532540967047" duration="463000" />
+      <updated>1532630210461</updated>
+      <workItem from="1532630240400" duration="903000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="846000" />
-  </component>
-  <component name="TodoView">
-    <todo-panel id="selected-file">
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="true" />
-      <is-autoscroll-to-source value="true" />
-    </todo-panel>
+    <option name="totallyTimeSpent" value="903000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.25" />
-      <window_info id="Structure" order="1" show_stripe_button="false" sideWeight="0.5008183" side_tool="true" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info active="true" id="npm" sideWeight="0.5008183" side_tool="true" visible="true" weight="0.25" />
+      <window_info id="Favorites" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49918166" visible="true" weight="0.25" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="TypeScript" />
+      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" />
+      <window_info anchor="bottom" id="Terminal" />
+      <window_info anchor="bottom" id="Event Log" sideWeight="0.50074404" side_tool="true" weight="0.39934534" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49925596" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3289689" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3289689" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3289689" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -277,19 +230,39 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/index.html">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="24" lean-forward="true" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        <state>
+          <folding>
+            <element signature="e#0#58#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/index.js">
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.spec.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        <state>
           <folding>
-            <element signature="e#0#26#0" expanded="true" />
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.ts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="6" lean-forward="true" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
