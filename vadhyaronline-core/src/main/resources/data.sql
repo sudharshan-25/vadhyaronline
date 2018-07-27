@@ -31,3 +31,7 @@ INSERT INTO soothram_master (soothram_name) VALUES ('Apasthamba Soothram');
 INSERT INTO gothram_master (gothram_name) VALUES ('Bharadwaja Gothram');
 INSERT INTO gothram_master (gothram_name) VALUES ('Athreya Gothram');
 INSERT INTO gothram_master (gothram_name) VALUES ('Vathula Gothram');
+
+
+INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_veda_id, user_soothram_id, user_gothram_id)
+  VALUES ('Admin', '', 'admin', 'sudharshan.srinivasan@outlook.in', '8695696274', 'password-123', 1,1,1);

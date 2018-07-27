@@ -2,25 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="002bc9e0-ca75-4398-96d0-027b833944ab" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/UserMasterRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/UserDomain.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/sudha.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/sudha.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/in/ssi/vadhyaronline/web/MasterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/in/ssi/vadhyaronline/web/MasterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/vadhyaronline-web.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/public/manifest.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/SQL/DDL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/SQL/DDL.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/schema.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <ignored path="$PROJECT_DIR$/.idea/httpRequests/" />
@@ -48,45 +44,46 @@
     <session id="-1007767802">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="3" />
+          <entry key="project.closed" value="4" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.65" value="1" />
           <entry key="project.open.time.95" value="1" />
-          <entry key="project.opened" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="groovy" value="1" />
-          <entry key="java" value="28" />
+          <entry key="java" value="40" />
           <entry key="sql" value="3" />
           <entry key="xml" value="1" />
-          <entry key="yml" value="4" />
+          <entry key="yml" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="JAVA" value="28" />
+          <entry key="JAVA" value="40" />
           <entry key="SQL" value="2" />
           <entry key="Scratch" value="2" />
           <entry key="XML" value="1" />
-          <entry key="YAML" value="4" />
+          <entry key="YAML" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1639" />
+          <entry key="java" value="2946" />
           <entry key="json" value="23" />
-          <entry key="sql" value="23" />
+          <entry key="sql" value="857" />
           <entry key="xml" value="11" />
           <entry key="yml" value="122" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1639" />
+          <entry key="JAVA" value="2946" />
           <entry key="JSON" value="23" />
-          <entry key="SQL" value="23" />
+          <entry key="SQL" value="857" />
           <entry key="XML" value="11" />
           <entry key="YAML" value="122" />
         </counts>
@@ -96,19 +93,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="84" column="69" selection-start-line="82" selection-end-line="84" selection-end-column="69" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
+            <state relative-caret-position="379">
+              <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="17" />
             </state>
           </provider>
         </entry>
@@ -116,26 +104,75 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+            <state relative-caret-position="481">
+              <caret line="36" column="105" selection-start-line="36" selection-start-column="105" selection-end-line="36" selection-end-column="105" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="45" />
+            <state relative-caret-position="492">
+              <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2651#2652#0" expanded="true" />
+                <element signature="e#2700#2701#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/UserDomain.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="36" column="39" selection-start-line="36" selection-start-column="39" selection-end-line="36" selection-end-column="39" />
+            <state relative-caret-position="458">
+              <caret line="113" lean-forward="true" selection-end-line="113" />
+              <folding>
+                <element signature="e#2017#2018#0" expanded="true" />
+                <element signature="e#2048#2049#0" expanded="true" />
+                <element signature="e#2096#2097#0" expanded="true" />
+                <element signature="e#2136#2137#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="526">
+              <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1955#1956#0" expanded="true" />
+                <element signature="e#1991#1992#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/UserController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="203">
+              <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -152,9 +189,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="dummy://restClient/response24.json" root0="SKIP_INSPECTION" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -194,9 +228,14 @@
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/MasterController.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
         <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
-        <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/UserMasterRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/UserDomain.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java" />
       </list>
     </option>
   </component>
@@ -313,6 +352,15 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="vadhyaronline" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="vadhyaronline-core" type="b2602c69:ProjectViewProjectNode" />
+              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="vadhyaronline" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vadhyaronline-core" type="b2602c69:ProjectViewProjectNode" />
@@ -956,11 +1004,12 @@
       <workItem from="1532540419907" duration="1237000" />
       <workItem from="1532579132248" duration="3114000" />
       <workItem from="1532623470354" duration="5956000" />
+      <workItem from="1532665632617" duration="4658000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24701000" />
+    <option name="totallyTimeSpent" value="29359000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -977,7 +1026,7 @@
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="Favorites" order="1" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="2" sideWeight="0.498366" visible="true" weight="0.27231467" />
+      <window_info active="true" content_ui="combo" id="Project" order="2" sideWeight="0.498366" visible="true" weight="0.27609682" />
       <window_info id="Structure" order="3" show_stripe_button="false" side_tool="true" weight="0.24962178" />
       <window_info id="Bean Validation" order="4" weight="0.32980332" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -1061,28 +1110,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/restClient/lib/restClient.jar!/com/intellij/ws/rest/client/requests/collection/get-requests.http">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/rest-api.http" />
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/0dc3f7f5-cf55-4866-bfde-97bd29dde2ea/console.sql">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/AbstractEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="20" selection-start-line="5" selection-start-column="20" selection-end-line="5" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/LanguageSupportedEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="47" column="36" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/LanguageSupported.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/EventCategory.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/UserRole.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/UserRoleEntity.java">
@@ -1134,13 +1161,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/EventCategoryController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="42" column="32" lean-forward="true" selection-start-line="42" selection-start-column="32" selection-end-line="42" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/AbstractComplexEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1159,13 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="901">
           <caret line="53" column="5" selection-start-line="53" selection-start-column="5" selection-end-line="53" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/EventTypeEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -1236,9 +1249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
           <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1246,9 +1256,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
           <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1305,15 +1312,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="18" column="30" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#504#505#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#751#752#0" expanded="true" />
-            <element signature="e#797#798#0" expanded="true" />
-            <element signature="e#853#854#0" expanded="true" />
-            <element signature="e#930#931#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1321,9 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1331,23 +1326,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="283">
-          <caret line="69" column="64" selection-start-line="69" selection-start-column="64" selection-end-line="69" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1709#1710#0" expanded="true" />
-            <element signature="e#1771#1772#0" expanded="true" />
-            <element signature="e#2674#2675#0" expanded="true" />
-            <element signature="e#2737#2738#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1355,28 +1333,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="493">
           <caret line="79" selection-start-line="79" selection-end-line="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="45" column="2" selection-start-line="45" selection-start-column="2" selection-end-line="45" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="84" column="69" selection-start-line="82" selection-end-line="84" selection-end-column="69" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/86a75efc-158f-4fec-835a-c39a2d1c97ef/console.sql">
       <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/SQL/DDL.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1428">
+          <caret line="84" column="69" selection-start-line="82" selection-end-line="84" selection-end-column="69" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1385,10 +1353,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="69" selection-start-line="32" selection-start-column="69" selection-end-line="32" selection-end-column="69" />
+        <state relative-caret-position="323">
+          <caret line="19" lean-forward="true" selection-start-line="19" selection-end-line="19" />
         </state>
       </provider>
     </entry>
@@ -1399,10 +1367,109 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/data.sql">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="45" lean-forward="true" selection-start-line="7" selection-start-column="9" selection-end-line="7" selection-end-column="45" />
+        <state relative-caret-position="481">
+          <caret line="36" column="105" selection-start-line="36" selection-start-column="105" selection-end-line="36" selection-end-column="105" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/EventTypeEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="379">
+          <caret line="56" column="17" lean-forward="true" selection-start-line="56" selection-start-column="2" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/dao/UserMasterRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" selection-start-line="6" selection-start-column="11" selection-end-line="6" selection-end-column="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/EventCategoryController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="493">
+          <caret line="62" column="5" lean-forward="true" selection-start-line="49" selection-start-column="4" selection-end-line="62" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/web/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="203">
+          <caret line="18" column="14" selection-start-line="18" selection-start-column="14" selection-end-line="18" selection-end-column="14" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-core/5.0.7.RELEASE/spring-core-5.0.7.RELEASE-sources.jar!/org/springframework/util/StringUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="1314" lean-forward="true" selection-start-line="1314" selection-end-line="1314" />
+          <folding>
+            <element signature="e#3042#3043#0" expanded="true" />
+            <element signature="e#3087#3088#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="35" lean-forward="true" selection-start-line="35" selection-end-line="35" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/domain/UserDomain.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="458">
+          <caret line="113" lean-forward="true" selection-end-line="113" />
+          <folding>
+            <element signature="e#2017#2018#0" expanded="true" />
+            <element signature="e#2048#2049#0" expanded="true" />
+            <element signature="e#2096#2097#0" expanded="true" />
+            <element signature="e#2136#2137#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="526">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1955#1956#0" expanded="true" />
+            <element signature="e#1991#1992#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="492">
+          <caret line="66" column="48" selection-start-line="66" selection-start-column="48" selection-end-line="66" selection-end-column="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#2651#2652#0" expanded="true" />
+            <element signature="e#2700#2701#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
