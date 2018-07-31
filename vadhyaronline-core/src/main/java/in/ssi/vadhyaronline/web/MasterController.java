@@ -3,7 +3,6 @@ package in.ssi.vadhyaronline.web;
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
 import in.ssi.vadhyaronline.service.MasterTableService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -14,11 +13,14 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequestMapping("/common")
+@RequestMapping("/master")
 public class MasterController {
 
-    @Autowired
     private MasterTableService masterTableService;
+
+    public MasterController(MasterTableService masterTableService) {
+        this.masterTableService = masterTableService;
+    }
 
     @RequestMapping(value = "/gothram", method = RequestMethod.GET)
     public ResponseEntity<VadhyarResponse> getGothrams() {
@@ -40,13 +42,8 @@ public class MasterController {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            String gothramName = gothram.getValue();
-            if (masterTableService.doesGothramExist(gothramName)) {
-                response.setData("Gothram already exists...");
-            } else {
-                masterTableService.addGothram(gothram.getValue());
-                response.setData("Gothram added successfully...");
-            }
+            masterTableService.addGothram(gothram.getValue());
+            response.setData("Gothram added successfully...");
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
@@ -60,13 +57,8 @@ public class MasterController {
         ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
         try {
-            String gothramName = gothram.getValue();
-            if (masterTableService.doesGothramExist(gothramName)) {
-                response.setData("Gothram Name already exists...");
-            } else {
-                masterTableService.updateGothram(gothram.getId(), gothram.getValue());
-                response.setData("Gothram updated successfully...");
-            }
+            masterTableService.updateGothram(gothram.getId(), gothram.getValue());
+            response.setData("Gothram updated successfully...");
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
@@ -137,6 +129,36 @@ public class MasterController {
         try {
             List<AbstractResponse> vedaList = masterTableService.getAllVeda();
             response.setData(vedaList);
+            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception ex) {
+            response.setError(ex.getMessage());
+            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
+        }
+        return responseEntity;
+    }
+
+    @RequestMapping(value = "/userRoles", method = RequestMethod.GET)
+    public ResponseEntity<VadhyarResponse> getUserRoleList() {
+        ResponseEntity<VadhyarResponse> responseEntity;
+        VadhyarResponse response = new VadhyarResponse();
+        try {
+            List<AbstractResponse> userRolesList = masterTableService.getAllRoles();
+            response.setData(userRolesList);
+            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
+        } catch (Exception ex) {
+            response.setError(ex.getMessage());
+            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
+        }
+        return responseEntity;
+    }
+
+    @RequestMapping(value = "/userStatus", method = RequestMethod.GET)
+    public ResponseEntity<VadhyarResponse> getUserStatusList() {
+        ResponseEntity<VadhyarResponse> responseEntity;
+        VadhyarResponse response = new VadhyarResponse();
+        try {
+            List<AbstractResponse> userStatusList = masterTableService.getAllStatusMaster();
+            response.setData(userStatusList);
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());

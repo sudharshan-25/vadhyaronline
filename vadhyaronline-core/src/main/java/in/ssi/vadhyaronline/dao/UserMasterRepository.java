@@ -6,4 +6,13 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface UserMasterRepository extends JpaRepository<UserMasterEntity, Integer> {
+
+    /**
+     * Find user master entity by userName
+     *
+     * @param userName userName
+     * @return user master <code>{@link UserMasterEntity}</code>
+     */
+    UserMasterEntity findUserMasterEntityByUserName(String userName);
+
 }

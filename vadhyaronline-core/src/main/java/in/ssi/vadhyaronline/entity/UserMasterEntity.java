@@ -9,6 +9,7 @@ import javax.persistence.*;
 public class UserMasterEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
     private int userId;
 
@@ -31,6 +32,10 @@ public class UserMasterEntity {
     private String mobile;
 
     @ManyToOne
+    @JoinColumn(name = "user_role_id")
+    private UserRoleEntity userRole;
+
+    @ManyToOne
     @JoinColumn(name = "user_veda_id")
     private VedaMasterEntity vedaMaster;
 
@@ -41,6 +46,9 @@ public class UserMasterEntity {
     @ManyToOne
     @JoinColumn(name = "user_gothram_id")
     private GothramMasterEntity gothramMaster;
+
+    @OneToOne(mappedBy = "userMaster", cascade = CascadeType.ALL)
+    private UserLoginStatusEntity userLoginStatus;
 
     public int getUserId() {
         return userId;
@@ -98,6 +106,14 @@ public class UserMasterEntity {
         this.mobile = mobile;
     }
 
+    public UserRoleEntity getUserRole() {
+        return userRole;
+    }
+
+    public void setUserRole(UserRoleEntity userRole) {
+        this.userRole = userRole;
+    }
+
     public VedaMasterEntity getVedaMaster() {
         return vedaMaster;
     }
@@ -123,7 +139,8 @@ public class UserMasterEntity {
     }
 
     public UserDomain toDomain() {
-        UserDomain user = new UserDomain(userId, firstName, lastName, userName, email, mobile);
+        UserDomain user = new UserDomain(userId, firstName, lastName, userName, email, mobile,
+                userLoginStatus.getStatusMaster().getStatusName(), this.getUserRole().getRoleName());
         if (soothramMaster != null) {
             user.setSoothram(soothramMaster.getSoothramName());
         }
@@ -134,6 +151,14 @@ public class UserMasterEntity {
             user.setVeda(vedaMaster.getVedaMasterName());
         }
         return user;
+    }
+
+    public UserLoginStatusEntity getUserLoginStatus() {
+        return userLoginStatus;
+    }
+
+    public void setUserLoginStatus(UserLoginStatusEntity userLoginStatus) {
+        this.userLoginStatus = userLoginStatus;
     }
 
 }

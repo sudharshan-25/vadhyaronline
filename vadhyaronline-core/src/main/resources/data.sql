@@ -1,10 +1,6 @@
-INSERT INTO user_role(role_name) VALUES ('Admin');
-INSERT INTO user_role(role_name) VALUES ('Vadhyar');
-INSERT INTO user_role(role_name) VALUES ('User');
-
-INSERT INTO language_supported(lang_key, lang_value) VALUES ('en', 'English');
-INSERT INTO language_supported(lang_key, lang_value) VALUES ('tam', 'Tamil');
-INSERT INTO language_supported(lang_key, lang_value) VALUES ('sans', 'Sanskrit');
+INSERT INTO user_role(role_id, role_name) VALUES (1, 'Admin');
+INSERT INTO user_role(role_id, role_name) VALUES (2, 'Vadhyar');
+INSERT INTO user_role(role_id, role_name) VALUES (3, 'User');
 
 INSERT INTO event_category(event_category_name) VALUES ('Homa');
 INSERT INTO event_category(event_category_name) VALUES ('Tharpanam');
@@ -32,6 +28,14 @@ INSERT INTO gothram_master (gothram_name) VALUES ('Bharadwaja Gothram');
 INSERT INTO gothram_master (gothram_name) VALUES ('Athreya Gothram');
 INSERT INTO gothram_master (gothram_name) VALUES ('Vathula Gothram');
 
+INSERT INTO status_master (status_master_id, status_master_name) VALUES (1, 'Active');
+INSERT INTO status_master (status_master_id, status_master_name) VALUES (2, 'Inactive');
+INSERT INTO status_master (status_master_id, status_master_name) VALUES (3, 'Logged In');
+INSERT INTO status_master (status_master_id, status_master_name) VALUES (4, 'Locked');
 
-INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_veda_id, user_soothram_id, user_gothram_id)
-  VALUES ('Admin', '', 'admin', 'sudharshan.srinivasan@outlook.in', '8695696274', 'password-123', 1,1,1);
+INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password,
+   user_role_id, user_veda_id, user_soothram_id, user_gothram_id)
+  VALUES ('Admin', '', 'admin', 'sudharshan.srinivasan@outlook.in', '8695696274', 'password-123', 1, 3, 1, 1);
+
+INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt)
+  VALUES (1, 1, null , 0)

@@ -7,6 +7,7 @@ import javax.persistence.*;
 public class EventTypeEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "event_type_id")
     private int eventTypeId;
 

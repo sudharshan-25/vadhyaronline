@@ -1,13 +1,9 @@
 package in.ssi.vadhyaronline.service;
 
-import in.ssi.vadhyaronline.dao.GothramMasterRepository;
-import in.ssi.vadhyaronline.dao.SoothramMasterRepository;
-import in.ssi.vadhyaronline.dao.VedaMasterRepository;
+import in.ssi.vadhyaronline.dao.*;
 import in.ssi.vadhyaronline.domain.AbstractResponse;
-import in.ssi.vadhyaronline.entity.GothramMasterEntity;
-import in.ssi.vadhyaronline.entity.SoothramMasterEntity;
-import in.ssi.vadhyaronline.entity.VedaMasterEntity;
-import org.springframework.beans.factory.annotation.Autowired;
+import in.ssi.vadhyaronline.entity.*;
+import in.ssi.vadhyaronline.exception.VadhyarOnlineException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -19,15 +15,26 @@ import java.util.stream.Collectors;
 @Transactional(propagation = Propagation.REQUIRED)
 public class MasterTableService {
 
-
-    @Autowired
     private GothramMasterRepository gothramRepository;
 
-    @Autowired
     private SoothramMasterRepository soothramRepository;
 
-    @Autowired
     private VedaMasterRepository vedaRepository;
+
+    private StatusMasterRepository statusRepository;
+
+    private RolesRepository rolesRepository;
+
+    public MasterTableService(GothramMasterRepository gothramRepository, SoothramMasterRepository soothramRepository,
+                              VedaMasterRepository vedaRepository, RolesRepository rolesRepository,
+                              StatusMasterRepository statusRepository) {
+        this.gothramRepository = gothramRepository;
+        this.soothramRepository = soothramRepository;
+        this.vedaRepository = vedaRepository;
+        this.rolesRepository = rolesRepository;
+        this.statusRepository = statusRepository;
+    }
+
 
     @Transactional(readOnly = true)
     public List<AbstractResponse> getAllGothram() {
@@ -35,7 +42,10 @@ public class MasterTableService {
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void addGothram(String gothramName) {
+    public void addGothram(String gothramName) throws VadhyarOnlineException {
+        if (doesGothramExist(gothramName)) {
+            throw new VadhyarOnlineException("Gothram Name already exists");
+        }
         GothramMasterEntity gothramMaster = new GothramMasterEntity();
         gothramMaster.setGothramName(gothramName);
         gothramRepository.save(gothramMaster);
@@ -47,7 +57,10 @@ public class MasterTableService {
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void updateGothram(int gothramId, String gothramName) {
+    public void updateGothram(int gothramId, String gothramName) throws VadhyarOnlineException {
+        if (doesGothramExist(gothramName)) {
+            throw new VadhyarOnlineException("Gothram Name already exists");
+        }
         GothramMasterEntity gothramMaster = gothramRepository.getOne(gothramId);
         gothramMaster.setGothramName(gothramName);
         gothramRepository.save(gothramMaster);
@@ -81,4 +94,15 @@ public class MasterTableService {
     public List<AbstractResponse> getAllVeda() {
         return vedaRepository.findAll().stream().map(VedaMasterEntity::toDomain).collect(Collectors.toList());
     }
+
+    @Transactional(readOnly = true)
+    public List<AbstractResponse> getAllStatusMaster() {
+        return statusRepository.findAll().stream().map(StatusMasterEntity::toDomain).collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<AbstractResponse> getAllRoles() {
+        return rolesRepository.findAll().stream().map(UserRoleEntity::toDomain).collect(Collectors.toList());
+    }
+
 }

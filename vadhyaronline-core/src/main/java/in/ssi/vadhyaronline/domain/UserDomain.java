@@ -2,7 +2,7 @@ package in.ssi.vadhyaronline.domain;
 
 public class UserDomain {
 
-    private int userId;
+    private Integer userId;
 
     private String firstName;
 
@@ -22,20 +22,30 @@ public class UserDomain {
 
     private String veda;
 
-    public UserDomain(int userId, String firstName, String lastName, String userName, String email, String mobile) {
+    private String status;
+
+    private String role;
+
+    public UserDomain() {
+    }
+
+    public UserDomain(Integer userId, String firstName, String lastName, String userName, String email,
+                      String mobile, String status, String role) {
         this.userId = userId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.userName = userName;
         this.email = email;
         this.mobile = mobile;
+        this.status = status;
+        this.setRole(role);
     }
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -109,5 +119,21 @@ public class UserDomain {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

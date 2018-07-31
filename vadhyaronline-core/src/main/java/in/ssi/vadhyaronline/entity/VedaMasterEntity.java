@@ -2,16 +2,14 @@ package in.ssi.vadhyaronline.entity;
 
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "veda_master")
 public class VedaMasterEntity implements AbstractEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "veda_id")
     private int vedaMasterId;
 

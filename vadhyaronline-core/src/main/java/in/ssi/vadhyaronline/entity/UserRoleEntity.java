@@ -2,16 +2,14 @@ package in.ssi.vadhyaronline.entity;
 
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "user_role")
 public class UserRoleEntity implements AbstractEntity {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "role_id")
     private int roleId;
     @Column(name = "role_name", unique = true)

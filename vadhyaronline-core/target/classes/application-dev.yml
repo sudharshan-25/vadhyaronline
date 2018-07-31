@@ -11,9 +11,13 @@ spring:
     password:
   jpa:
     show-sql: true
+    format-sql: true
     hibernate.ddl-auto: validate
     database-platform: org.hibernate.dialect.H2Dialect
   h2:
     console:
       enabled: true
       path: /console
+  jackson:
+    default-property-inclusion: non_null
+
