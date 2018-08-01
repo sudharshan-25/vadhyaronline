@@ -25,7 +25,8 @@
             "styles": [
               "src/styles.css",
               "node_modules/bootstrap/dist/css/bootstrap.css",
-              "node_modules/bootstrap/dist/css/bootstrap-grid.css"
+              "node_modules/bootstrap/dist/css/bootstrap-grid.css",
+              "node_modules/roboto-fontface/css/roboto/roboto-fontface.css"
             ],
             "scripts": []
           },
@@ -125,5 +126,12 @@
       }
     }
   },
-  "defaultProject": "vadhyaronline-web"
+  "defaultProject": "vadhyaronline-web",
+  "schematics": {
+    "@schematics/angular": {
+      "component": {
+        "spec": false
+      }
+    }
+  }
 }

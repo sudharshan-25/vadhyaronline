@@ -1,0 +1,27 @@
+<nav class="navbar fixed-top flex-md-nowrap p-0 shadow">
+  <a class="navbar-brand col-sm-3 col-md-2" href="#">Vadhyar Online</a>
+  <span class="h4 align-text-top">Vadhyar Online</span>
+  <ul class="navbar-nav px-3">
+    <li class="nav-item text-nowrap">
+      <a class="nav-link" *ngIf="isLoggedIn"><i-log-out></i-log-out>Sign out</a>
+    </li>
+  </ul>
+</nav>
+<div class="container-fluid">
+  <div class="row">
+    <nav class="col-md-2 d-none d-md-block bg-light sidebar" *ngIf="isLoggedIn">
+      <div class="sidebar-sticky">
+          <div class="list-group">
+            <a class="list-group-item list-group-item-action"><i-home></i-home>Home</a>
+            <a class="list-group-item list-group-item-action"><i-clock></i-clock> Event types</a>
+            <a class="list-group-item list-group-item-action"><i-settings></i-settings>Admin Page</a>
+            <a class="list-group-item list-group-item-action"><i-user></i-user>Update Profile</a>
+            <a class="list-group-item list-group-item-action"><i-edit></i-edit>Change Password</a>
+          </div>
+        </div>
+    </nav>
+    <main class="col-md-9" role="main">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+</div>
