@@ -12,6 +12,9 @@
           <input type="text" id="userName" class=" col-8 form-control"
                  [formControl]="loginForm.controls['userName']" placeholder="User Name">
         </div>
+        <span class="text-danger" *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].hasError('required')">
+          User name cannot be empty
+        </span>
       </div>
       <div class="row form-inline login-row  text-left">
         <label for="password" class="sr-only">Password</label>
@@ -24,6 +27,9 @@
           <input type="password" id="password" class=" col-8 form-control"
                  [formControl]="loginForm.controls['password']" placeholder="Password">
         </div>
+        <span class="text-danger" *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].hasError('required')">
+          Password cannot be empty
+        </span>
       </div>
       <div class="row form-inline login-row  text-left" *ngIf="isLoginError">
         <span class="text-danger label">{{ errorMessage }}</span>

@@ -131,6 +131,9 @@
     "@schematics/angular": {
       "component": {
         "spec": false
+      },
+      "service" : {
+        "spec": false
       }
     }
   }

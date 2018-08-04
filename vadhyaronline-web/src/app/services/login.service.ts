@@ -33,4 +33,9 @@ export class LoginService {
   removeUserSession(): void {
     localStorage.clear();
   }
+
+  addUser(user: LoginUser) {
+    localStorage.setItem('loggedInUser', JSON.stringify(user));
+  }
+
 }

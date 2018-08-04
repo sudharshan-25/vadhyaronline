@@ -11,6 +11,5 @@ export class LoginUser {
     } catch (e) {
       throw new Error('Could not parse the user');
     }
-
   }
 }
