@@ -3,7 +3,7 @@
   <span class="h4 align-text-top">Vadhyar Online</span>
   <ul class="navbar-nav px-3">
     <li class="nav-item text-nowrap">
-      <a class="nav-link" *ngIf="isLoggedIn"><i-log-out></i-log-out>Sign out</a>
+      <a class="nav-link" *ngIf="isLoggedIn" (click)="logout()"><i-log-out></i-log-out>Sign out</a>
     </li>
   </ul>
 </nav>

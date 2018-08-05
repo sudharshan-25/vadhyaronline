@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -137,6 +138,7 @@ public class UserController {
             responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
         } catch (Exception ex) {
             response.setError(ex.getMessage());
+			System.err.println(ex.getMessage());
             responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
         }
         return responseEntity;

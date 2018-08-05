@@ -1,0 +1,1 @@
+java -Dspring.profiles.active=dev -jar target\vadhyaronline-core-1.0.jar

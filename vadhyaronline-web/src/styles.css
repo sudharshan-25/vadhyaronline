@@ -2,3 +2,8 @@
 body, html {
   font-family: Roboto, 'Helvetica', sans-serif;
 }
+
+.login-row{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {LoginService} from './services/login.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -10,8 +11,15 @@ export class AppComponent {
 
   isLoggedIn: boolean;
 
-  constructor(public loginService: LoginService) {
+  constructor(private loginService: LoginService, private router: Router) {
     this.isLoggedIn = this.loginService.isUserLoggedIn();
+    this.loginService.emitLoginEvent().subscribe(value => {
+      this.isLoggedIn = value;
+    });
   }
 
+  logout() {
+    this.loginService.removeUserSession();
+    this.router.navigate(['login']);
+  }
 }
