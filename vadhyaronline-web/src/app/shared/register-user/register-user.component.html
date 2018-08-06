@@ -7,6 +7,11 @@
         </span>
       </div>
       <div class="form-row form-inline login-row col-12">
+        <span class="col-10 text-success">
+          {{ successMessage }}
+        </span>
+      </div>
+      <div class="form-row form-inline login-row col-12">
           <span class="col-3 col-form-label text-nowrap">First Name</span>
           <input class="form-control col-5" [formControl]="registerForm.controls['firstName']">
           <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['firstName'].touched &&

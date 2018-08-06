@@ -29,8 +29,14 @@ export class RegisterUserComponent extends AbstractComponent implements OnInit {
         [Validators.required, matchOtherValidator('password')]),
       'role': new FormControl('', [Validators.required]),
     });
-
   }
+
+  initFormValue(): any {
+    return {
+      firstName: '', lastName: '', userName: '', mobile: '', email: '', password: '', passwordRepeat: '', role: ''
+    };
+  }
+
 
   ngOnInit() {
     this.userRoles = [];
@@ -54,7 +60,8 @@ export class RegisterUserComponent extends AbstractComponent implements OnInit {
       delete user['passwordRepeat'];
       this.service.register(user).subscribe(response => {
         if (response.DATA) {
-          this.router.navigate(['login']);
+          this.successMessage = response.DATA;
+          this.registerForm.reset(this.initFormValue(), {onlySelf: false});
         }
       }, (error: HttpErrorResponse) => {
         this.isError = true;
