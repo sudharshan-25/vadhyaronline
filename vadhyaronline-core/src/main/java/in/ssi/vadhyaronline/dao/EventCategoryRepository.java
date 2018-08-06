@@ -9,5 +9,8 @@ import java.util.List;
 @Repository
 public interface EventCategoryRepository extends JpaRepository<EventCategoryEntity, Integer> {
 
-    List<EventCategoryEntity> findEventCategoryEntitiesByCategoryName(String categoryName);
+    List<EventCategoryEntity> findEventCategoryEntitiesByApprovedIsFalse();
+
+    List<EventCategoryEntity> findEventCategoryEntitiesByApprovedIsTrue();
+
 }

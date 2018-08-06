@@ -12,16 +12,19 @@ public class EventTypeVO {
 
     private EventCategoryVO eventCategory;
 
+    private boolean approved;
+
     public EventTypeVO() {
 
     }
 
     public EventTypeVO(int eventTypeId, int eventCategoryId, String eventCategoryName, String eventTypeName,
-                       String eventTypeDescription) {
+                       String eventTypeDescription, boolean approved) {
         this.eventTypeId = eventTypeId;
         this.eventTypeName = eventTypeName;
         this.eventTypeDescription = eventTypeDescription;
         this.eventCategory = new EventCategoryVO(eventCategoryId, eventCategoryName);
+        this.setApproved(approved);
     }
 
     public int getEventTypeId() {
@@ -59,6 +62,14 @@ public class EventTypeVO {
 
     public void setEventCategory(EventCategoryVO eventCategory) {
         this.eventCategory = eventCategory;
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
     }
 
     class EventCategoryVO {

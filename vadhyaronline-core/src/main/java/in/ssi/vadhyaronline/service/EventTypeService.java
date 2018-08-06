@@ -2,16 +2,13 @@ package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.dao.EventCategoryRepository;
 import in.ssi.vadhyaronline.dao.EventTypeRepository;
-import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.domain.EventTypeVO;
 import in.ssi.vadhyaronline.entity.EventCategoryEntity;
 import in.ssi.vadhyaronline.entity.EventTypeEntity;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 
-import javax.validation.constraints.NotNull;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -21,23 +18,24 @@ import java.util.stream.Collectors;
 @Transactional(propagation = Propagation.REQUIRED)
 public class EventTypeService {
 
-    @Autowired
     private EventTypeRepository eventTypeRepo;
 
-    @Autowired
     private EventCategoryRepository eventCategoryRepo;
+
+    public EventTypeService(EventTypeRepository eventTypeRepo, EventCategoryRepository eventCategoryRepo) {
+        this.eventTypeRepo = eventTypeRepo;
+        this.eventCategoryRepo = eventCategoryRepo;
+    }
 
     @Transactional(readOnly = true)
     public Map<String, List<EventTypeVO>> getAllEventTypes() {
-        Map<EventCategoryEntity, List<EventTypeEntity>> objects =
-                eventTypeRepo.findAll().stream().collect(Collectors.groupingBy(EventTypeEntity::getEventCategory));
+        Map<EventCategoryEntity, List<EventTypeEntity>> objects = eventTypeRepo.findAllByApprovedIsTrue()
+                        .stream().collect(Collectors.groupingBy(EventTypeEntity::getEventCategory));
         Map<String, List<EventTypeVO>> returnObject = new LinkedHashMap<>();
-        objects.forEach((key, value) -> {
-            returnObject.put(key.getCategoryName(), value.stream().map(elem ->
-                    new EventTypeVO(elem.getEventTypeId(), key.getCategoryId(), key.getCategoryName(),
-                            elem.getEventTypeName(), elem.getEventTypeDescription())
-            ).collect(Collectors.toList()));
-        });
+        objects.forEach((key, value) ->
+                returnObject.put(key.getCategoryName(), value.stream().
+                        map(EventTypeEntity::toDomain).collect(Collectors.toList()))
+        );
         return returnObject;
     }
 
@@ -48,17 +46,16 @@ public class EventTypeService {
         eventType.setEventCategory(eventCategoryEntity);
         eventType.setEventTypeName(eventTypeVO.getEventTypeName());
         eventType.setEventTypeDescription(eventTypeVO.getEventTypeDescription());
+        eventType.setApproved(false);
         eventTypeRepo.save(eventType);
     }
 
     @Transactional(readOnly = true)
-    public List<EventTypeVO> searchEventTypes(String categoryName) {
-        EventCategoryEntity eventCategory = eventCategoryRepo
-                .findEventCategoryEntitiesByCategoryName(categoryName).get(0);
-        return eventTypeRepo.findEventTypeEntitiesByEventCategory(eventCategory).stream()
-                .map(eventType -> new EventTypeVO(eventType.getEventTypeId(),
-                        eventType.getEventCategory().getCategoryId(), eventType.getEventCategory().getCategoryName(),
-                        eventType.getEventTypeName(), eventType.getEventTypeDescription())).collect(Collectors.toList());
+    public List<EventTypeVO> searchEventTypes(Integer categoryId) {
+        EventCategoryEntity eventCategory = new EventCategoryEntity();
+        eventCategory.setCategoryId(categoryId);
+        return eventTypeRepo.findEventTypeEntitiesByEventCategoryAndApprovedIsTrue(eventCategory).stream()
+                .map(EventTypeEntity::toDomain).collect(Collectors.toList());
     }
 
     @Transactional(rollbackFor = Exception.class)
@@ -68,13 +65,28 @@ public class EventTypeService {
         eventType.setEventTypeName(eventTypeVO.getEventTypeName());
         eventType.setEventTypeDescription(eventTypeVO.getEventTypeDescription());
         eventType.setEventCategory(eventCategory);
+        eventType.setApproved(eventTypeVO.isApproved());
         eventTypeRepo.save(eventType);
     }
 
+
+    @Transactional(readOnly = true)
+    public List<EventTypeVO> unapprovedEventTypes() {
+        return eventTypeRepo.findAllByApprovedIsFalse().stream()
+                .map(EventTypeEntity::toDomain).collect(Collectors.toList());
+    }
+
     @Transactional(rollbackFor = Exception.class)
-    public void deleteEventType(Integer eventTypeId) {
-        EventTypeEntity eventType = eventTypeRepo.getOne(eventTypeId);
-        eventTypeRepo.delete(eventType);
+    public void approveEventType(List<EventTypeVO> eventTypes) {
+        List<Integer> eventTypeIds = eventTypes.stream().map(EventTypeVO::getEventTypeId).collect(Collectors.toList());
+        List<EventTypeEntity> eventTypeEntities = eventTypeRepo.findAllById(eventTypeIds);
+        eventTypeEntities.forEach(eventType -> eventType.setApproved(true));
+        eventTypeRepo.saveAll(eventTypeEntities);
+    }
+
+    @Transactional(rollbackFor = Exception.class)
+    public void deleteEventType(List<Integer> eventTypeIds) {
+        eventTypeIds.forEach(id -> eventTypeRepo.deleteById(id));
     }
 
 }

@@ -1,12 +1,12 @@
 package in.ssi.vadhyaronline.entity;
 
-import in.ssi.vadhyaronline.domain.AbstractResponse;
+import in.ssi.vadhyaronline.domain.EventCategory;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name="event_category")
-public class EventCategoryEntity implements AbstractEntity {
+public class EventCategoryEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +15,9 @@ public class EventCategoryEntity implements AbstractEntity {
 
     @Column(name = "event_category_name")
     private String categoryName;
+
+    @Column(name = "approved")
+    private boolean approved;
 
     public int getCategoryId() {
         return categoryId;
@@ -32,8 +35,16 @@ public class EventCategoryEntity implements AbstractEntity {
         this.categoryName = categoryName;
     }
 
-    @Override
-    public AbstractResponse toDomain() {
-        return new AbstractResponse(this.categoryId, this.categoryName);
+    public boolean isApproved() {
+        return approved;
     }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public EventCategory toDomain() {
+        return new EventCategory(this.categoryId, this.categoryName, this.approved);
+    }
+
 }

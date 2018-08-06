@@ -1,5 +1,7 @@
 package in.ssi.vadhyaronline.entity;
 
+import in.ssi.vadhyaronline.domain.EventTypeVO;
+
 import javax.persistence.*;
 
 @Entity
@@ -20,6 +22,9 @@ public class EventTypeEntity {
 
     @Column(name = "event_type_desc")
     private String eventTypeDescription;
+
+    @Column(name = "approved")
+    private boolean approved;
 
     public int getEventTypeId() {
         return eventTypeId;
@@ -51,5 +56,18 @@ public class EventTypeEntity {
 
     public void setEventTypeDescription(String eventTypeDescription) {
         this.eventTypeDescription = eventTypeDescription;
+    }
+
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public EventTypeVO toDomain() {
+        return new EventTypeVO(eventTypeId, eventCategory.getCategoryId(), eventCategory.getCategoryName(),
+                eventTypeName, eventTypeDescription, approved);
     }
 }

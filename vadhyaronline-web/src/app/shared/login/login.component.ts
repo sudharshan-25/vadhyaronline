@@ -39,7 +39,7 @@ export class LoginComponent extends AbstractComponent implements OnInit {
         .subscribe((response) => {
           const user = LoginUser.parseUser(JSON.stringify(response.DATA));
           this.loginService.addUser(user);
-          this.loginForm.reset(this.initFormValue(), {onlySelf: false})
+          this.loginForm.reset(this.initFormValue(), {onlySelf: false});
           this.router.navigate(['home']);
         }, (error1: HttpErrorResponse) => {
           this.isError = true;

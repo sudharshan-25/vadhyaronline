@@ -7,6 +7,7 @@ CREATE TABLE user_role (
 CREATE TABLE event_category (
 	event_category_id INT AUTO_INCREMENT,
   event_category_name VARCHAR(50),
+  approved bit default 0,
   CONSTRAINT pk_event_category PRIMARY KEY (event_category_id),
   CONSTRAINT uk_event_category_name UNIQUE (event_category_name)
 );
@@ -15,6 +16,7 @@ CREATE TABLE event_type (
   event_category_id INT,
   event_type_name VARCHAR(50),
   event_type_desc VARCHAR(150),
+  approved bit default 0,
   CONSTRAINT pk_event_type_id PRIMARY KEY (event_type_id),
   CONSTRAINT fk_event_type_category FOREIGN KEY  (event_category_id) REFERENCES event_category(event_category_id),
   CONSTRAINT uk_event_type_name UNIQUE (event_type_name)
