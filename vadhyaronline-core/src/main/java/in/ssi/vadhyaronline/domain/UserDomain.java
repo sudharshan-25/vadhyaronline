@@ -26,6 +26,8 @@ public class UserDomain {
 
     private String role;
 
+    private String token;
+
     public UserDomain() {
     }
 
@@ -135,5 +137,13 @@ public class UserDomain {
 
     public void setRole(String role) {
         this.role = role;
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token;
     }
 }

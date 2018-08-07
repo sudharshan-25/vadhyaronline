@@ -38,4 +38,6 @@ INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email,
   VALUES ('Admin', '', 'admin', 'sudharshan.srinivasan@outlook.in', '8695696274', 'password-123', 1, 3, 1, 1);
 
 INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt)
-  VALUES (1, 1, null , 0)
+  VALUES (1, 1, null , 0);
+
+UPDATE user_login_status SET latest_login_token = NULL WHERE 1 != 1;

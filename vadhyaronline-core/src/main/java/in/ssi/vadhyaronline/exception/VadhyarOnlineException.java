@@ -1,6 +1,6 @@
 package in.ssi.vadhyaronline.exception;
 
-public class VadhyarOnlineException extends Exception {
+public class VadhyarOnlineException extends RuntimeException {
 
     public VadhyarOnlineException(String message) {
         super(message);

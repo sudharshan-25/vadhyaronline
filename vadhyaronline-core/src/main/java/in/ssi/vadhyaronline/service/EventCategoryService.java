@@ -1,5 +1,6 @@
 package in.ssi.vadhyaronline.service;
 
+import in.ssi.vadhyaronline.authentication.LoginUserContext;
 import in.ssi.vadhyaronline.dao.EventCategoryRepository;
 import in.ssi.vadhyaronline.domain.EventCategory;
 import in.ssi.vadhyaronline.entity.EventCategoryEntity;
@@ -16,8 +17,11 @@ public class EventCategoryService {
 
     private EventCategoryRepository eventCategoryRepo;
 
-    public EventCategoryService(EventCategoryRepository eventCategoryRepo) {
+    private LoginUserContext loginUserContext;
+
+    public EventCategoryService(EventCategoryRepository eventCategoryRepo, LoginUserContext loginUserContext) {
         this.eventCategoryRepo = eventCategoryRepo;
+        this.loginUserContext = loginUserContext;
     }
 
     @Transactional(readOnly = true)
@@ -32,6 +36,7 @@ public class EventCategoryService {
         eventCategoryEntity.setCategoryName(eventCategory.getEventCategoryName());
         eventCategoryEntity.setCategoryId(0);
         eventCategoryEntity.setApproved(false);
+        eventCategoryEntity.setRequestedBy(loginUserContext.getCurrentUser().getUserId());
         eventCategoryRepo.save(eventCategoryEntity);
     }
 
@@ -53,7 +58,11 @@ public class EventCategoryService {
     public void approveEventCategories(List<EventCategory> eventCats) {
         List<Integer> eventCategoryIds = eventCats.stream().map(EventCategory::getCategoryId).collect(Collectors.toList());
         List<EventCategoryEntity> eventCategories = eventCategoryRepo.findAllById(eventCategoryIds);
-        eventCategories.forEach(eventCategory -> eventCategory.setApproved(true));
+        int approvedBy = loginUserContext.getCurrentUser().getUserId();
+        eventCategories.forEach(eventCategory -> {
+            eventCategory.setApproved(true);
+            eventCategory.setApprovedBy(approvedBy);
+        });
         eventCategoryRepo.saveAll(eventCategories);
     }
 

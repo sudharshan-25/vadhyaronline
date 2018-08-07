@@ -150,6 +150,7 @@ public class UserMasterEntity {
         if (vedaMaster != null) {
             user.setVeda(vedaMaster.getVedaMasterName());
         }
+        user.setToken(userLoginStatus.getLoginToken());
         return user;
     }
 

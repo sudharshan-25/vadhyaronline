@@ -1,5 +1,6 @@
 package in.ssi.vadhyaronline.service;
 
+import in.ssi.vadhyaronline.authentication.LoginUserContext;
 import in.ssi.vadhyaronline.dao.EventCategoryRepository;
 import in.ssi.vadhyaronline.dao.EventTypeRepository;
 import in.ssi.vadhyaronline.domain.EventTypeVO;
@@ -22,15 +23,19 @@ public class EventTypeService {
 
     private EventCategoryRepository eventCategoryRepo;
 
-    public EventTypeService(EventTypeRepository eventTypeRepo, EventCategoryRepository eventCategoryRepo) {
+    private LoginUserContext loginUserContext;
+
+    public EventTypeService(EventTypeRepository eventTypeRepo, EventCategoryRepository eventCategoryRepo,
+                            LoginUserContext loginUserContext) {
         this.eventTypeRepo = eventTypeRepo;
         this.eventCategoryRepo = eventCategoryRepo;
+        this.loginUserContext = loginUserContext;
     }
 
     @Transactional(readOnly = true)
     public Map<String, List<EventTypeVO>> getAllEventTypes() {
         Map<EventCategoryEntity, List<EventTypeEntity>> objects = eventTypeRepo.findAllByApprovedIsTrue()
-                        .stream().collect(Collectors.groupingBy(EventTypeEntity::getEventCategory));
+                .stream().collect(Collectors.groupingBy(EventTypeEntity::getEventCategory));
         Map<String, List<EventTypeVO>> returnObject = new LinkedHashMap<>();
         objects.forEach((key, value) ->
                 returnObject.put(key.getCategoryName(), value.stream().
@@ -47,6 +52,7 @@ public class EventTypeService {
         eventType.setEventTypeName(eventTypeVO.getEventTypeName());
         eventType.setEventTypeDescription(eventTypeVO.getEventTypeDescription());
         eventType.setApproved(false);
+        eventType.setApprovedBy(loginUserContext.getCurrentUser().getUserId());
         eventTypeRepo.save(eventType);
     }
 
@@ -80,7 +86,11 @@ public class EventTypeService {
     public void approveEventType(List<EventTypeVO> eventTypes) {
         List<Integer> eventTypeIds = eventTypes.stream().map(EventTypeVO::getEventTypeId).collect(Collectors.toList());
         List<EventTypeEntity> eventTypeEntities = eventTypeRepo.findAllById(eventTypeIds);
-        eventTypeEntities.forEach(eventType -> eventType.setApproved(true));
+        int approvedBy = loginUserContext.getCurrentUser().getUserId();
+        eventTypeEntities.forEach(eventType -> {
+            eventType.setApproved(true);
+            eventType.setApprovedBy(approvedBy);
+        });
         eventTypeRepo.saveAll(eventTypeEntities);
     }
 

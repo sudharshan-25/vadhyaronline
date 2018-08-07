@@ -7,6 +7,7 @@ import in.ssi.vadhyaronline.entity.UserLoginStatusEntity;
 import in.ssi.vadhyaronline.entity.UserMasterEntity;
 import in.ssi.vadhyaronline.entity.UserRoleEntity;
 import in.ssi.vadhyaronline.exception.VadhyarOnlineException;
+import org.springframework.security.core.token.TokenService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -34,16 +35,19 @@ public class UserMasterService {
 
     private RolesRepository rolesRepository;
 
+    private TokenService tokenService;
+
     public UserMasterService(UserMasterRepository userRepository, StatusMasterRepository statusRepository,
                              VedaMasterRepository vedaMasterRepository, RolesRepository rolesRepository,
                              SoothramMasterRepository soothramMasterRepository,
-                             GothramMasterRepository gothramMasterRepository) {
+                             GothramMasterRepository gothramMasterRepository, TokenService tokenService) {
         this.userRepository = userRepository;
         this.statusRepository = statusRepository;
         this.vedaMasterRepository = vedaMasterRepository;
         this.rolesRepository = rolesRepository;
         this.soothramMasterRepository = soothramMasterRepository;
         this.gothramMasterRepository = gothramMasterRepository;
+        this.tokenService = tokenService;
     }
 
     @Transactional(readOnly = true)
@@ -131,6 +135,7 @@ public class UserMasterService {
             case CommonConstants.StatusConstants.STATUS_INACTIVE_ID:
                 throw new VadhyarOnlineException("User is inactive");
         }
+        userLoginStatus.setLoginToken(tokenService.allocateToken(userName).getKey());
         userLoginStatus.setLoginFailedAttempts((short) 0);
         userLoginStatus.setStatusMaster(EntityHelper.getLoggedInStatus());
         userLoginStatus.setLastSuccessfulLogin(Timestamp.valueOf(LocalDateTime.now()));

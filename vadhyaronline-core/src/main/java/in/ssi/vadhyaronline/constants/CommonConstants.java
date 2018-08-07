@@ -1,5 +1,7 @@
 package in.ssi.vadhyaronline.constants;
 
+import in.ssi.vadhyaronline.authentication.VOAccessRole;
+
 public final class CommonConstants {
 
     public static final class RoleConstants {
@@ -36,5 +38,10 @@ public final class CommonConstants {
 
         public static final String STATUS_LOCKED_VALUE = "Locked";
 
+    }
+
+    public static final class CacheConstants {
+
+        public static final String LOGIN_USERS = "Login-Users";
     }
 }

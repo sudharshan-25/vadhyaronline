@@ -24,6 +24,9 @@ public class UserLoginStatusEntity {
     @JoinColumn(name = "login_status_id")
     private StatusMasterEntity statusMaster;
 
+    @Column(name = "latest_login_token")
+    private String loginToken;
+
     @Column(name = "last_successful_login")
     private Timestamp lastSuccessfulLogin;
 
@@ -68,5 +71,13 @@ public class UserLoginStatusEntity {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+    public String getLoginToken() {
+        return loginToken;
+    }
+
+    public void setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
     }
 }

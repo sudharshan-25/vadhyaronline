@@ -1,9 +1,11 @@
 package in.ssi.vadhyaronline.web;
 
+import in.ssi.vadhyaronline.authentication.VOAccessRole;
+import in.ssi.vadhyaronline.authentication.VOAccessRoles;
+import in.ssi.vadhyaronline.authentication.VOAuthenticated;
 import in.ssi.vadhyaronline.domain.EventTypeVO;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
 import in.ssi.vadhyaronline.service.EventTypeService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -12,7 +14,8 @@ import java.util.Map;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/common")
+@RequestMapping("/master")
+@VOAuthenticated
 public class EventTypeController {
 
     private EventTypeService eventTypeService;
@@ -21,109 +24,67 @@ public class EventTypeController {
         this.eventTypeService = eventTypeService;
     }
 
-    @RequestMapping(value = "/eventTypes", method = RequestMethod.GET)
+    @GetMapping(value = "/eventTypes")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR, VOAccessRole.USER})
     public ResponseEntity<VadhyarResponse> getEventTypes() {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            Map<String, List<EventTypeVO>> eventTypes = eventTypeService.getAllEventTypes();
-            response.setData(eventTypes);
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        Map<String, List<EventTypeVO>> eventTypes = eventTypeService.getAllEventTypes();
+        response.setData(eventTypes);
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventTypes", method = RequestMethod.POST)
+    @PostMapping(value = "/eventTypes")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR})
     public ResponseEntity<VadhyarResponse> addEventTypes(@RequestBody EventTypeVO eventTypeVO) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventTypeService.addEventType(eventTypeVO);
-            response.setData("Event type added successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventTypeService.addEventType(eventTypeVO);
+        response.setData("Event type added successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventTypesForCategory", method = RequestMethod.GET)
+    @GetMapping(value = "/eventTypesForCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR, VOAccessRole.USER})
     public ResponseEntity<VadhyarResponse> searchEventTypes(@RequestParam("categoryId") Integer categoryId) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            List<EventTypeVO> eventTypes = eventTypeService.searchEventTypes(categoryId);
-            response.setData(eventTypes);
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        List<EventTypeVO> eventTypes = eventTypeService.searchEventTypes(categoryId);
+        response.setData(eventTypes);
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventTypes/{eventTypeId}", method = RequestMethod.PUT)
+    @PutMapping(value = "/eventTypes/{eventTypeId}")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> updateEventTypes(@PathVariable("eventTypeId") Integer eventTypeId,
                                                             @RequestBody EventTypeVO eventTypeVO) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventTypeService.updateEventType(eventTypeId, eventTypeVO);
-            response.setData("Event type updated successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventTypeService.updateEventType(eventTypeId, eventTypeVO);
+        response.setData("Event type updated successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventTypes", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/eventTypes")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> deleteEventType(@RequestBody List<Integer> eventTypeIds) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventTypeService.deleteEventType(eventTypeIds);
-            response.setData("Event type(s) deleted successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventTypeService.deleteEventType(eventTypeIds);
+        response.setData("Event type(s) deleted successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/unapprovedEventTypes", method = RequestMethod.GET)
+    @GetMapping(value = "/unapprovedEventTypes")
+    @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
     public ResponseEntity<VadhyarResponse> getUnapprovedEventTypes() {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            List<EventTypeVO> eventTypes = eventTypeService.unapprovedEventTypes();
-            response.setData(eventTypes);
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        List<EventTypeVO> eventTypes = eventTypeService.unapprovedEventTypes();
+        response.setData(eventTypes);
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/approveEventTypes", method = RequestMethod.PUT)
+    @PutMapping(value = "/approveEventTypes")
+    @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
     public ResponseEntity<VadhyarResponse> approvedEventTypes(@RequestBody List<EventTypeVO> eventTypes) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventTypeService.approveEventType(eventTypes);
-            response.setData("Event Type(s) approved successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventTypeService.approveEventType(eventTypes);
+        response.setData("Event Type(s) approved successfully...");
+        return ResponseEntity.ok(response);
     }
 }

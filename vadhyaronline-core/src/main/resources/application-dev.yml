@@ -20,6 +20,8 @@ spring:
       path: /console
   jackson:
     default-property-inclusion: non_null
+  cache:
+    cache-names: restApiAuthTokenCache
 
 management:
   endpoints:

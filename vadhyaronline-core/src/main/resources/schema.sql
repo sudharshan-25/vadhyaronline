@@ -8,6 +8,8 @@ CREATE TABLE event_category (
 	event_category_id INT AUTO_INCREMENT,
   event_category_name VARCHAR(50),
   approved bit default 0,
+  requested_by int,
+  approved_by int,
   CONSTRAINT pk_event_category PRIMARY KEY (event_category_id),
   CONSTRAINT uk_event_category_name UNIQUE (event_category_name)
 );
@@ -17,6 +19,8 @@ CREATE TABLE event_type (
   event_type_name VARCHAR(50),
   event_type_desc VARCHAR(150),
   approved bit default 0,
+  requested_by int,
+  approved_by int,
   CONSTRAINT pk_event_type_id PRIMARY KEY (event_type_id),
   CONSTRAINT fk_event_type_category FOREIGN KEY  (event_category_id) REFERENCES event_category(event_category_id),
   CONSTRAINT uk_event_type_name UNIQUE (event_type_name)
@@ -68,6 +72,7 @@ CREATE TABLE user_master (
 CREATE TABLE user_login_status (
   user_id INT,
   login_status_id INT,
+  latest_login_token varchar(300),
   last_successful_login DATETIME,
   login_failed_attempt SMALLINT,
   CONSTRAINT fk_user_login_id FOREIGN KEY (user_id) REFERENCES user_master(user_id),

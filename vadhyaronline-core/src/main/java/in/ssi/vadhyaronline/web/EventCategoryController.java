@@ -1,9 +1,11 @@
 package in.ssi.vadhyaronline.web;
 
+import in.ssi.vadhyaronline.authentication.VOAccessRole;
+import in.ssi.vadhyaronline.authentication.VOAccessRoles;
+import in.ssi.vadhyaronline.authentication.VOAuthenticated;
 import in.ssi.vadhyaronline.domain.EventCategory;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
 import in.ssi.vadhyaronline.service.EventCategoryService;
-import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,7 +13,8 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@RequestMapping("/common")
+@RequestMapping("/master")
+@VOAuthenticated
 public class EventCategoryController {
 
     private EventCategoryService eventCategoryService;
@@ -20,94 +23,58 @@ public class EventCategoryController {
         this.eventCategoryService = eventCategoryService;
     }
 
-    @RequestMapping(value = "/eventCategory", method = RequestMethod.GET)
+    @GetMapping(value = "/eventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR, VOAccessRole.USER})
     public ResponseEntity<VadhyarResponse> getAllEventCategories() {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            List<EventCategory> eventCategories = eventCategoryService.getAllEventCategories();
-            response.setData(eventCategories);
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        List<EventCategory> eventCategories = eventCategoryService.getAllEventCategories();
+        response.setData(eventCategories);
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventCategory", method = RequestMethod.POST)
+    @PostMapping(value = "/eventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR})
     public ResponseEntity<VadhyarResponse> addEventCategories(@RequestBody EventCategory eventCategory) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventCategoryService.addEventCategory(eventCategory);
-            response.setData("Event category added successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventCategoryService.addEventCategory(eventCategory);
+        response.setData("Event category added successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/eventCategory/{eventCategoryId}", method = RequestMethod.PUT)
+    @PutMapping(value = "/eventCategory/{eventCategoryId}")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> updateEventCategory(@PathVariable("eventCategoryId") Integer eventCategoryId,
                                                                @RequestBody EventCategory eventCategory) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventCategoryService.updateEventCategory(eventCategoryId, eventCategory);
-            response.setData("Event category added successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventCategoryService.updateEventCategory(eventCategoryId, eventCategory);
+        response.setData("Event category added successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/unApprovedEventCategory", method = RequestMethod.GET)
+    @GetMapping(value = "/unApprovedEventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> unapprovedEventCategories() {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            List<EventCategory> eventCategories = eventCategoryService.unapprovedEventCategory();
-            response.setData(eventCategories);
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        List<EventCategory> eventCategories = eventCategoryService.unapprovedEventCategory();
+        response.setData(eventCategories);
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/approveEventCategory", method = RequestMethod.PUT)
+    @PutMapping(value = "/approveEventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> approveEventCategories(@RequestBody List<EventCategory> eventCategoryIds) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventCategoryService.approveEventCategories(eventCategoryIds);
-            response.setData("Event category/s approved successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventCategoryService.approveEventCategories(eventCategoryIds);
+        response.setData("Event category/s approved successfully...");
+        return ResponseEntity.ok(response);
     }
 
-    @RequestMapping(value = "/deleteEventCategory", method = RequestMethod.DELETE)
+    @DeleteMapping(value = "/deleteEventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> deleteEventCategories(@RequestBody List<Integer> eventCategoryIds) {
-        ResponseEntity<VadhyarResponse> responseEntity;
         VadhyarResponse response = new VadhyarResponse();
-        try {
-            eventCategoryService.deleteEventCategories(eventCategoryIds);
-            response.setData("Event category/s deleted successfully...");
-            responseEntity = new ResponseEntity<>(response, HttpStatus.OK);
-        } catch (Exception ex) {
-            response.setError(ex.getMessage());
-            responseEntity = new ResponseEntity<>(response, HttpStatus.NOT_ACCEPTABLE);
-        }
-        return responseEntity;
+        eventCategoryService.deleteEventCategories(eventCategoryIds);
+        response.setData("Event category/s deleted successfully...");
+        return ResponseEntity.ok(response);
     }
 }
