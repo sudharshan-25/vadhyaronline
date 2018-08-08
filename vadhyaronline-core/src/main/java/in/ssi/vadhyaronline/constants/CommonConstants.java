@@ -1,7 +1,5 @@
 package in.ssi.vadhyaronline.constants;
 
-import in.ssi.vadhyaronline.authentication.VOAccessRole;
-
 public final class CommonConstants {
 
     public static final class RoleConstants {
@@ -14,7 +12,11 @@ public final class CommonConstants {
 
         public static final String VADHYAR_ROLE_NAME = "Vadhyar";
 
-        public static final int USER_ROLE_ID = 3;
+        public static final int ASSISTANT_ROLE_ID = 3;
+
+        public static final String ASSISTANT_ROLE_NAME = "Assistant";
+
+        public static final int USER_ROLE_ID = 4;
 
         public static final String USER_ROLE_NAME = "User";
 
@@ -43,5 +45,35 @@ public final class CommonConstants {
     public static final class CacheConstants {
 
         public static final String LOGIN_USERS = "Login-Users";
+
+        public static final String VEDA = "Cache-Veda";
+
+        public static final String STATUS = "Cache-Status";
+
+        public static final String ROLES = "Cache-Roles";
+
+    }
+
+    public static final class EventStatusConstants {
+
+        public static final int EVENT_STATUS_DRAFT_ID = 1;
+
+        public static final String EVENT_STATUS_DRAFT = "Draft";
+
+        public static final int EVENT_STATUS_REQUESTED_ID = 2;
+
+        public static final String EVENT_STATUS_REQUESTED = "Requested";
+
+        public static final int EVENT_STATUS_ACCEPTED_ID = 3;
+
+        public static final String EVENT_STATUS_ACCEPTED = "Accepted";
+
+        public static final int EVENT_STATUS_CANCELLED_ID = 4;
+
+        public static final String EVENT_STATUS_CANCELLED = "Cancelled";
+
+        public static final int EVENT_STATUS_COMPLETED_ID = 5;
+
+        public static final String EVENT_STATUS_COMPLETED = "Completed";
     }
 }

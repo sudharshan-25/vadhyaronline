@@ -3,6 +3,7 @@ package in.ssi.vadhyaronline.entity;
 import in.ssi.vadhyaronline.domain.UserDomain;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name = "user_master")
@@ -49,6 +50,11 @@ public class UserMasterEntity {
 
     @OneToOne(mappedBy = "userMaster", cascade = CascadeType.ALL)
     private UserLoginStatusEntity userLoginStatus;
+
+    @ManyToMany
+    @JoinTable(name = "vadhyar_event_preferences", joinColumns = {@JoinColumn(name = "vadhyar_id")},
+            inverseJoinColumns = {@JoinColumn(name = "event_type_id")} )
+    private List<EventTypeEntity> preferences;
 
     public int getUserId() {
         return userId;
@@ -138,6 +144,22 @@ public class UserMasterEntity {
         this.gothramMaster = gothramMaster;
     }
 
+    public UserLoginStatusEntity getUserLoginStatus() {
+        return userLoginStatus;
+    }
+
+    public void setUserLoginStatus(UserLoginStatusEntity userLoginStatus) {
+        this.userLoginStatus = userLoginStatus;
+    }
+
+    public List<EventTypeEntity> getPreferences() {
+        return preferences;
+    }
+
+    public void setPreferences(List<EventTypeEntity> preferences) {
+        this.preferences = preferences;
+    }
+
     public UserDomain toDomain() {
         UserDomain user = new UserDomain(userId, firstName, lastName, userName, email, mobile,
                 userLoginStatus.getStatusMaster().getStatusName(), this.getUserRole().getRoleName());
@@ -153,13 +175,4 @@ public class UserMasterEntity {
         user.setToken(userLoginStatus.getLoginToken());
         return user;
     }
-
-    public UserLoginStatusEntity getUserLoginStatus() {
-        return userLoginStatus;
-    }
-
-    public void setUserLoginStatus(UserLoginStatusEntity userLoginStatus) {
-        this.userLoginStatus = userLoginStatus;
-    }
-
 }

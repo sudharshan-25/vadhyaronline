@@ -2,11 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="867ab623-7061-4c3c-9e83-77d10f5897b5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/domain/Gotharam.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/domain/Soothram.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/EventStatusEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/EventStatusRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/token-http-interceptor.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/token-http-interceptor.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/services/vadhyar-online-rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/services/vadhyar-online-rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/login/login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/login/login.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/shared/register-user/register-user.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/shared/register-user/register-user.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/Application.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/authentication/VOAccessRole.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/authentication/VOAccessRole.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/constants/CommonConstants.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/constants/CommonConstants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/EntityHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/EntityHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/EventCategoryRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/EventCategoryRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/EventTypeRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/EventTypeRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/GothramMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/GothramMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/RolesRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/RolesRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/SoothramMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/SoothramMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/StatusMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/StatusMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/UserMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/UserMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/dao/VedaMasterRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/repository/VedaMasterRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/GothramMasterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/GothramMasterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/SoothramMasterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/SoothramMasterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/entity/UserMasterEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/EventCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/EventCategoryService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/EventTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/EventTypeService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/GothramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/GothramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/MasterTableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/SoothramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/SoothramService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/service/UserMasterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/EventCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/EventCategoryController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/EventTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/EventTypeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterGothramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterGothramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterSoothramController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/MasterSoothramController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/java/in/ssi/vadhyaronline/web/UserController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-core/src/main/resources/schema.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -21,7 +50,7 @@
     <session id="676868036">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.38" value="1" />
           <entry key="project.open.time.40" value="1" />
           <entry key="project.open.time.41" value="1" />
@@ -29,18 +58,18 @@
           <entry key="project.open.time.43" value="2" />
           <entry key="project.open.time.44" value="2" />
           <entry key="project.open.time.46" value="1" />
-          <entry key="project.open.time.47" value="1" />
+          <entry key="project.open.time.47" value="2" />
           <entry key="project.open.time.54" value="1" />
           <entry key="project.open.time.59" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.73" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="Angular2LanguageService" value="15" />
-          <entry key="TsLintLanguageService" value="12" />
+          <entry key="Angular2LanguageService" value="16" />
+          <entry key="TsLintLanguageService" value="13" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -104,8 +133,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/app/shared/register-user/register-user.component.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="186">
-              <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="39" />
+            <state relative-caret-position="1037">
+              <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -347,6 +376,7 @@
       <workItem from="1533573955167" duration="587000" />
       <workItem from="1533706454439" duration="1695000" />
       <workItem from="1533715616513" duration="3347000" />
+      <workItem from="1533732279762" duration="581000" />
     </task>
     <task id="LOCAL-00001" summary="Login">
       <created>1533146174037</created>
@@ -366,7 +396,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56289000" />
+    <option name="totallyTimeSpent" value="56870000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -714,13 +744,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/app/shared/register-user/register-user.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="67" column="34" lean-forward="true" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/app/services/vadhyar-online-rest.service.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -735,6 +758,13 @@
           <folding>
             <element signature="e#0#48#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/app/shared/register-user/register-user.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1037">
+          <caret line="67" column="34" selection-start-line="67" selection-start-column="34" selection-end-line="67" selection-end-column="39" />
         </state>
       </provider>
     </entry>

@@ -1,7 +1,7 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.constants.CommonConstants;
-import in.ssi.vadhyaronline.dao.*;
+import in.ssi.vadhyaronline.repository.*;
 import in.ssi.vadhyaronline.domain.UserDomain;
 import in.ssi.vadhyaronline.entity.UserLoginStatusEntity;
 import in.ssi.vadhyaronline.entity.UserMasterEntity;

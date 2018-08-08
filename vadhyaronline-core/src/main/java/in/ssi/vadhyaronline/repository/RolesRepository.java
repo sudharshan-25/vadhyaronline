@@ -1,4 +1,4 @@
-package in.ssi.vadhyaronline.dao;
+package in.ssi.vadhyaronline.repository;
 
 import in.ssi.vadhyaronline.entity.UserRoleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;

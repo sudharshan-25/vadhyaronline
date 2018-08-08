@@ -17,7 +17,7 @@ import java.security.SecureRandom;
 
 @ComponentScan(value = "in.ssi.vadhyaronline")
 @EntityScan(value = "in.ssi.vadhyaronline")
-@EnableJpaRepositories(value = "in.ssi.vadhyaronline.dao")
+@EnableJpaRepositories(value = "in.ssi.vadhyaronline.repository")
 @EnableCaching
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class Application {

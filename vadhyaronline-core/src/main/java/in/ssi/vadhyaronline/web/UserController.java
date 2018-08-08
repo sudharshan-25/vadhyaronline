@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping(value = "/")
-    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR})
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public ResponseEntity<VadhyarResponse> listUsers() {
         VadhyarResponse response = new VadhyarResponse();
         List<UserDomain> users = userMasterService.getAllUsers();

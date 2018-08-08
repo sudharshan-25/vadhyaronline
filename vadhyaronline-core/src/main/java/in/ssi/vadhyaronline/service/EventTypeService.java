@@ -1,8 +1,8 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.authentication.LoginUserContext;
-import in.ssi.vadhyaronline.dao.EventCategoryRepository;
-import in.ssi.vadhyaronline.dao.EventTypeRepository;
+import in.ssi.vadhyaronline.repository.EventCategoryRepository;
+import in.ssi.vadhyaronline.repository.EventTypeRepository;
 import in.ssi.vadhyaronline.domain.EventTypeVO;
 import in.ssi.vadhyaronline.entity.EventCategoryEntity;
 import in.ssi.vadhyaronline.entity.EventTypeEntity;
@@ -97,6 +97,13 @@ public class EventTypeService {
     @Transactional(rollbackFor = Exception.class)
     public void deleteEventType(List<Integer> eventTypeIds) {
         eventTypeIds.forEach(id -> eventTypeRepo.deleteById(id));
+    }
+
+    @Transactional(readOnly = true)
+    public List<EventTypeVO> getRequestedEventCategories(){
+        int requestedBy = loginUserContext.getCurrentUser().getUserId();
+        return eventTypeRepo.findAllByRequestedBy(requestedBy)
+                .stream().map(EventTypeEntity::toDomain).collect(Collectors.toList());
     }
 
 }

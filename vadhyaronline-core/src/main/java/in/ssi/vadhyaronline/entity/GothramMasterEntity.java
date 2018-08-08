@@ -1,6 +1,7 @@
 package in.ssi.vadhyaronline.entity;
 
 import in.ssi.vadhyaronline.domain.AbstractResponse;
+import in.ssi.vadhyaronline.domain.Gotharam;
 
 import javax.persistence.*;
 
@@ -65,7 +66,7 @@ public class GothramMasterEntity {
         this.approvedBy = approvedBy;
     }
 
-    public AbstractResponse toDomain() {
-        return new AbstractResponse(this.gothramId, this.gothramName);
+    public Gotharam toDomain() {
+        return new Gotharam(this.gothramId, this.gothramName, this.approved);
     }
 }

@@ -1,6 +1,6 @@
 package in.ssi.vadhyaronline.entity;
 
-import in.ssi.vadhyaronline.domain.AbstractResponse;
+import in.ssi.vadhyaronline.domain.Soothram;
 
 import javax.persistence.*;
 
@@ -65,7 +65,7 @@ public class SoothramMasterEntity {
         this.approvedBy = approvedBy;
     }
 
-    public AbstractResponse toDomain() {
-        return new AbstractResponse(this.soothramId, this.soothramName);
+    public Soothram toDomain() {
+        return new Soothram(this.soothramId, this.soothramName, this.approved);
     }
 }

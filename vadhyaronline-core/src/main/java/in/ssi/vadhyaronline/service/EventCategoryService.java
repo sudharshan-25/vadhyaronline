@@ -1,7 +1,7 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.authentication.LoginUserContext;
-import in.ssi.vadhyaronline.dao.EventCategoryRepository;
+import in.ssi.vadhyaronline.repository.EventCategoryRepository;
 import in.ssi.vadhyaronline.domain.EventCategory;
 import in.ssi.vadhyaronline.entity.EventCategoryEntity;
 import org.springframework.stereotype.Service;
@@ -69,6 +69,13 @@ public class EventCategoryService {
     @Transactional(rollbackFor = Exception.class)
     public void deleteEventCategories(List<Integer> eventCategoryIds) {
         eventCategoryIds.forEach(id -> eventCategoryRepo.deleteById(id));
+    }
+
+    @Transactional(readOnly = true)
+    public List<EventCategory> getRequestedEventCategories(){
+        int requestedBy = loginUserContext.getCurrentUser().getUserId();
+        return eventCategoryRepo.findEventCategoryEntitiesByRequestedBy(requestedBy)
+                .stream().map(EventCategoryEntity::toDomain).collect(Collectors.toList());
     }
 
 }

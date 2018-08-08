@@ -87,4 +87,13 @@ public class EventTypeController {
         response.setData("Event Type(s) approved successfully...");
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping(value = "/requestedEventTypes")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR})
+    public ResponseEntity<VadhyarResponse> getRequestedEventTypes() {
+        VadhyarResponse response = new VadhyarResponse();
+        response.setData(eventTypeService.getRequestedEventCategories());
+        return ResponseEntity.ok(response);
+    }
+
 }

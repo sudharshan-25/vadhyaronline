@@ -77,4 +77,14 @@ public class EventCategoryController {
         response.setData("Event category/s deleted successfully...");
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping(value = "/requestedEventCategory")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN, VOAccessRole.VADHYAR})
+    public ResponseEntity<VadhyarResponse> getRequestedEventCategories() {
+        VadhyarResponse response = new VadhyarResponse();
+        List<EventCategory> eventCategories = eventCategoryService.getRequestedEventCategories();
+        response.setData(eventCategories);
+        return ResponseEntity.ok(response);
+    }
+
 }

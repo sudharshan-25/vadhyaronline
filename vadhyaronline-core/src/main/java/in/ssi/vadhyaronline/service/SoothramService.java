@@ -1,8 +1,8 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.authentication.LoginUserContext;
-import in.ssi.vadhyaronline.dao.SoothramMasterRepository;
-import in.ssi.vadhyaronline.domain.AbstractResponse;
+import in.ssi.vadhyaronline.repository.SoothramMasterRepository;
+import in.ssi.vadhyaronline.domain.Soothram;
 import in.ssi.vadhyaronline.entity.SoothramMasterEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -23,16 +23,16 @@ public class SoothramService {
     }
 
     @Transactional(readOnly = true)
-    public List<AbstractResponse> getAllSoothram() {
+    public List<Soothram> getAllSoothram() {
         return soothramRepository.findSoothramMasterEntitiesByApprovedIsTrue()
                 .stream().map(SoothramMasterEntity::toDomain).collect(Collectors.toList());
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void addSoothram(String soothramName) {
+    public void addSoothram(Soothram soothram) {
         SoothramMasterEntity soothramMaster = new SoothramMasterEntity();
-        soothramMaster.setSoothramName(soothramName);
-        soothramMaster.setApproved(false);
+        soothramMaster.setSoothramName(soothram.getSoothramName());
+        soothramMaster.setApproved(soothram.isApproved());
         soothramMaster.setRequestedBy(loginUserContext.getCurrentUser().getUserId());
         soothramRepository.save(soothramMaster);
     }
@@ -50,14 +50,14 @@ public class SoothramService {
     }
 
     @Transactional(readOnly = true)
-    public List<AbstractResponse> unApprovedSoothrams(){
+    public List<Soothram> unApprovedSoothrams(){
         return soothramRepository.findSoothramMasterEntitiesByApprovedIsFalse()
                 .stream().map(SoothramMasterEntity::toDomain).collect(Collectors.toList());
     }
 
     @Transactional(rollbackFor = Exception.class)
-    public void approveSoothrams(List<AbstractResponse> soothrams) {
-        List<Integer> soothramIds = soothrams.stream().map(AbstractResponse::getId).collect(Collectors.toList());
+    public void approveSoothrams(List<Soothram> soothrams) {
+        List<Integer> soothramIds = soothrams.stream().map(Soothram::getSoothramId).collect(Collectors.toList());
         List<SoothramMasterEntity> unapproved = soothramRepository.findAllById(soothramIds);
         int approvedBy = loginUserContext.getCurrentUser().getUserId();
         unapproved.forEach(soothram -> {
@@ -67,4 +67,10 @@ public class SoothramService {
         soothramRepository.saveAll(unapproved);
     }
 
+    @Transactional(readOnly = true)
+    public List<Soothram> getRequestedBySoothrams() {
+        int requestedBy = loginUserContext.getCurrentUser().getUserId();
+        return soothramRepository.findAllByRequestedBy(requestedBy)
+                .stream().map(SoothramMasterEntity::toDomain).collect(Collectors.toList());
+    }
 }

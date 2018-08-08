@@ -1,4 +1,4 @@
-package in.ssi.vadhyaronline.dao;
+package in.ssi.vadhyaronline.repository;
 
 import in.ssi.vadhyaronline.entity.GothramMasterEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
@@ -15,4 +15,5 @@ public interface GothramMasterRepository extends JpaRepository<GothramMasterEnti
 
     List<GothramMasterEntity> findGothramMasterEntitiesByApprovedIsFalse();
 
+    List<GothramMasterEntity> findAllByRequestedBy(int requestedBy);
 }

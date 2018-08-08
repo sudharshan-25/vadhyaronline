@@ -1,4 +1,4 @@
-package in.ssi.vadhyaronline.dao;
+package in.ssi.vadhyaronline.repository;
 
 import in.ssi.vadhyaronline.entity.EventCategoryEntity;
 import in.ssi.vadhyaronline.entity.EventTypeEntity;
@@ -15,4 +15,6 @@ public interface EventTypeRepository extends JpaRepository<EventTypeEntity, Inte
     List<EventTypeEntity> findAllByApprovedIsTrue();
 
     List<EventTypeEntity> findAllByApprovedIsFalse();
+
+    List<EventTypeEntity> findAllByRequestedBy(int requestedBy);
 }

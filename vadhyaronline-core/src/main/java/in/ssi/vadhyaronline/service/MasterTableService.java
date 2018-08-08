@@ -1,8 +1,9 @@
 package in.ssi.vadhyaronline.service;
 
-import in.ssi.vadhyaronline.dao.RolesRepository;
-import in.ssi.vadhyaronline.dao.StatusMasterRepository;
-import in.ssi.vadhyaronline.dao.VedaMasterRepository;
+import in.ssi.vadhyaronline.constants.CommonConstants;
+import in.ssi.vadhyaronline.repository.RolesRepository;
+import in.ssi.vadhyaronline.repository.StatusMasterRepository;
+import in.ssi.vadhyaronline.repository.VedaMasterRepository;
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.entity.StatusMasterEntity;
 import in.ssi.vadhyaronline.entity.UserRoleEntity;
@@ -35,19 +36,19 @@ public class MasterTableService {
 
 
     @Transactional(readOnly = true)
-    @Cacheable(cacheNames = "veda")
+    @Cacheable(cacheNames = CommonConstants.CacheConstants.VEDA)
     public List<AbstractResponse> getAllVeda() {
         return vedaRepository.findAll().stream().map(VedaMasterEntity::toDomain).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    @Cacheable(cacheNames = "status")
+    @Cacheable(cacheNames = CommonConstants.CacheConstants.STATUS)
     public List<AbstractResponse> getAllStatusMaster() {
         return statusRepository.findAll().stream().map(StatusMasterEntity::toDomain).collect(Collectors.toList());
     }
 
     @Transactional(readOnly = true)
-    @Cacheable(cacheNames = "roles")
+    @Cacheable(cacheNames = CommonConstants.CacheConstants.ROLES)
     public List<AbstractResponse> getAllRoles() {
         return rolesRepository.findAll().stream().map(UserRoleEntity::toDomain).collect(Collectors.toList());
     }
