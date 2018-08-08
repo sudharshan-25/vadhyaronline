@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "veda_master")
-public class VedaMasterEntity implements AbstractEntity {
+public class VedaMasterEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -32,7 +32,6 @@ public class VedaMasterEntity implements AbstractEntity {
         this.vedaMasterName = vedaMasterName;
     }
 
-    @Override
     public AbstractResponse toDomain() {
         return new AbstractResponse(this.vedaMasterId, this.vedaMasterName);
     }

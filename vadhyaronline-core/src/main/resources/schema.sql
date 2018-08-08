@@ -34,12 +34,18 @@ CREATE TABLE veda_master (
 CREATE TABLE soothram_master (
 	soothram_id INT AUTO_INCREMENT,
   soothram_name VARCHAR(20),
+  approved bit default 0,
+  requested_by int,
+  approved_by int,
   CONSTRAINT pk_soothram_master_id PRIMARY KEY (soothram_id),
   CONSTRAINT uk_soothram_master_name UNIQUE (soothram_name)
 );
 CREATE TABLE gothram_master (
 	gothram_id INT AUTO_INCREMENT,
   gothram_name VARCHAR(50),
+  approved bit default 0,
+  requested_by int,
+  approved_by int,
   CONSTRAINT pk_gothram_master_id PRIMARY KEY (gothram_id),
   CONSTRAINT uk_gothram_master_name UNIQUE (gothram_name)
 );

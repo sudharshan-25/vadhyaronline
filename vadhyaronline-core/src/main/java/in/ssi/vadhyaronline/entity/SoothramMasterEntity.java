@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "soothram_master")
-public class SoothramMasterEntity implements AbstractEntity {
+public class SoothramMasterEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,6 +16,14 @@ public class SoothramMasterEntity implements AbstractEntity {
     @Column(name = "soothram_name", unique = true)
     private String soothramName;
 
+    @Column(name = "approved")
+    private boolean approved;
+
+    @Column(name = "requested_by")
+    private Integer requestedBy;
+
+    @Column(name = "approved_by")
+    private Integer approvedBy;
 
     public int getSoothramId() {
         return soothramId;
@@ -33,7 +41,30 @@ public class SoothramMasterEntity implements AbstractEntity {
         this.soothramName = soothramName;
     }
 
-    @Override
+    public boolean isApproved() {
+        return approved;
+    }
+
+    public void setApproved(boolean approved) {
+        this.approved = approved;
+    }
+
+    public int getRequestedBy() {
+        return requestedBy == null ? 0 : requestedBy;
+    }
+
+    public void setRequestedBy(Integer requestedBy) {
+        this.requestedBy = requestedBy;
+    }
+
+    public int getApprovedBy() {
+        return approvedBy == null ? 0 : approvedBy;
+    }
+
+    public void setApprovedBy(Integer approvedBy) {
+        this.approvedBy = approvedBy;
+    }
+
     public AbstractResponse toDomain() {
         return new AbstractResponse(this.soothramId, this.soothramName);
     }

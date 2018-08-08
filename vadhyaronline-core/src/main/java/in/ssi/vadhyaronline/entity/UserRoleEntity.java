@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "user_role")
-public class UserRoleEntity implements AbstractEntity {
+public class UserRoleEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -6,7 +6,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "status_master")
-public class StatusMasterEntity implements AbstractEntity {
+public class StatusMasterEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +16,6 @@ public class StatusMasterEntity implements AbstractEntity {
     @Column(name = "status_master_name", unique = true)
     private String statusName;
 
-    @Override
     public AbstractResponse toDomain() {
         return new AbstractResponse(this.getStatusId(), this.getStatusName());
     }
