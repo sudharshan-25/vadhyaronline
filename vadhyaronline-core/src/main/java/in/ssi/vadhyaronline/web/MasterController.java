@@ -1,8 +1,5 @@
 package in.ssi.vadhyaronline.web;
 
-import in.ssi.vadhyaronline.authentication.VOAccessRole;
-import in.ssi.vadhyaronline.authentication.VOAccessRoles;
-import in.ssi.vadhyaronline.authentication.VOAuthenticated;
 import in.ssi.vadhyaronline.domain.AbstractResponse;
 import in.ssi.vadhyaronline.domain.VadhyarResponse;
 import in.ssi.vadhyaronline.service.MasterTableService;
@@ -14,7 +11,6 @@ import java.util.List;
 
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
-@VOAuthenticated
 @RequestMapping("/master")
 public class MasterController {
 

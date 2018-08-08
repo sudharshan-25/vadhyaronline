@@ -65,7 +65,7 @@ export class RegisterUserComponent extends AbstractComponent implements OnInit {
         }
       }, (error: HttpErrorResponse) => {
         this.isError = true;
-        this.errorMessage = error.message;
+        this.errorMessage = error.error;
       });
     } else {
       Object.keys(this.registerForm.controls).forEach(key => {

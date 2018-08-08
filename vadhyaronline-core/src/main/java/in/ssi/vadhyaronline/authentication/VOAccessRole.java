@@ -4,6 +4,7 @@ import in.ssi.vadhyaronline.constants.CommonConstants;
 
 public enum VOAccessRole {
 
+    ANONYMOUS("Anonymous"),
     ADMIN(CommonConstants.RoleConstants.ADMIN_ROLE_NAME),
     VADHYAR(CommonConstants.RoleConstants.VADHYAR_ROLE_NAME),
     USER(CommonConstants.RoleConstants.USER_ROLE_NAME);

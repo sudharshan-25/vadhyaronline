@@ -41,9 +41,9 @@ export class LoginComponent extends AbstractComponent implements OnInit {
           this.loginService.addUser(user);
           this.loginForm.reset(this.initFormValue(), {onlySelf: false});
           this.router.navigate(['home']);
-        }, (error1: HttpErrorResponse) => {
+        }, (error: HttpErrorResponse) => {
           this.isError = true;
-          this.errorMessage = error1.error['ERROR'];
+          this.errorMessage = error.error;
         });
     } else {
       Object.keys(this.loginForm.controls).forEach(control => {

@@ -19,7 +19,7 @@ export class VadhyarOnlineRestService {
   }
 
   public register(user: any): Observable<VadhyarResponse> {
-    return this.httpClient.post<VadhyarResponse>(`${this.apiURL}/user/`, user, {});
+    return this.httpClient.post<VadhyarResponse>(`${this.apiURL}/user/register`, user, {});
   }
 
   public getRoles(): Observable<VadhyarResponse> {

@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 
 @Service
 @Transactional(propagation = Propagation.REQUIRED)
-public abstract class MasterTableService {
+public class MasterTableService {
 
     private VedaMasterRepository vedaRepository;
 

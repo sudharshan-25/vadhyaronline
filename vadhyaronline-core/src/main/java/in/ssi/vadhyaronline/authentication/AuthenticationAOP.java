@@ -11,6 +11,7 @@ import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
+import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 import org.springframework.util.StringUtils;
 import org.springframework.web.context.request.RequestAttributes;
@@ -22,6 +23,7 @@ import java.util.Arrays;
 
 @Aspect
 @Component
+@Order(1)
 public class AuthenticationAOP {
 
     private CacheManager cacheManager;
@@ -38,7 +40,7 @@ public class AuthenticationAOP {
     }
 
     @Before("interceptAuthenticate()")
-    public void handleAuthentication(JoinPoint joinPoint) throws Throwable {
+    public void handleAuthentication(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         VOAuthenticated authenticated = signature.getMethod().getAnnotation(VOAuthenticated.class);
         if (authenticated == null) {
@@ -58,28 +60,6 @@ public class AuthenticationAOP {
         }
     }
 
-    @Pointcut("@annotation(in.ssi.vadhyaronline.authentication.VOAccessRoles) || ( execution(public * *(..)) && within(@in.ssi.vadhyaronline.authentication.VOAccessRoles *) )")
-    public void interceptAccessRoles() {
-    }
-
-    @Before("interceptAccessRoles()")
-    public void handleAccessRoles(JoinPoint joinPoint) throws Throwable {
-        this.handleAuthentication(joinPoint);
-        MethodSignature signature = (MethodSignature) joinPoint.getSignature();
-        VOAccessRoles roleAccess = signature.getMethod().getAnnotation(VOAccessRoles.class);
-        if (roleAccess == null) {
-            roleAccess = joinPoint.getTarget().getClass().getAnnotation(VOAccessRoles.class);
-        }
-        VOAccessRole[] voAccessRoles = roleAccess.accessRoles();
-        HttpServletRequest request = getCurrentHttpRequest();
-        String token = request.getHeader("X-Auth-Token");
-        UserDomain userDomain = loginUserContext.getCurrentUser();
-        String role = userDomain.getRole();
-        if (Arrays.stream(voAccessRoles).noneMatch(voAccessRole -> voAccessRole.value.equalsIgnoreCase(role))) {
-            throw new NoAccessException("Cannot access the resource");
-        }
-    }
-
     private HttpServletRequest getCurrentHttpRequest() {
         RequestAttributes requestAttributes = RequestContextHolder.getRequestAttributes();
         if (requestAttributes instanceof ServletRequestAttributes) {
@@ -87,4 +67,5 @@ public class AuthenticationAOP {
         }
         return null;
     }
+
 }
