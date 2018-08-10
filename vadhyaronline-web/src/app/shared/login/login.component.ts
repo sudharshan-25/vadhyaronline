@@ -40,7 +40,13 @@ export class LoginComponent extends AbstractComponent implements OnInit {
           const user = LoginUser.parseUser(JSON.stringify(response.DATA));
           this.loginService.addUser(user);
           this.loginForm.reset(this.initFormValue(), {onlySelf: false});
-          this.router.navigate(['home']);
+          if (user['role'] === 'Admin') {
+            this.router.navigate(['adminHome']);
+          } else if (user['role'] === 'Vadhyar') {
+            this.router.navigate(['vadhyarHome']);
+          } else {
+            this.router.navigate(['home']);
+          }
         }, (error: HttpErrorResponse) => {
           this.isError = true;
           this.errorMessage = error.error;

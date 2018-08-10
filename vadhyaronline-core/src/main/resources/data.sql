@@ -43,7 +43,7 @@ INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email,
 
 INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (1, 1, null , 0);
 INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (2, 1, null , 0);
-INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (2, 1, null , 0);
+INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (3, 1, null , 0);
 
 UPDATE user_login_status SET latest_login_token = NULL WHERE 1 != 1;
 

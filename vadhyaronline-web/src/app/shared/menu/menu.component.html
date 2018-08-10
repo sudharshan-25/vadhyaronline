@@ -1,0 +1,143 @@
+<div class="wrapper">
+  <nav id="sidebar">
+    <div class="sidebar-header">
+      <h3>Vadhyar Online</h3>
+    </div>
+    <!-- Menu for Admin -->
+    <ul class="list-unstyled components" *ngIf="isAdmin">
+      <li>
+        <a routerLink="/adminHome"><i-home></i-home>Home</a>
+      </li>
+      <li>
+        <a routerLink="/changePassword"><i-edit></i-edit>Change Password</a>
+      </li>
+      <li>
+        <a ><i-user></i-user>Update Profile</a>
+      </li>
+      <li>
+        <a href="#subMasterTypes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i-folder></i-folder>Approve Master type</a>
+        <ul class="collapse list-unstyled" id="subMasterTypes">
+          <li>
+            <a href="">Event Category</a>
+          </li>
+          <li>
+            <a href="">Event Type</a>
+          </li>
+          <li>
+            <a href="">Gothram</a>
+          </li>
+          <li>
+            <a href="">Soothram</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a href="#announcements"><i-cast></i-cast>Announcements</a>
+      </li>
+      <li>
+        <a href="#requests"><i-folder></i-folder>Requests</a>
+      </li>
+
+      <li>
+        <a><i-calendar></i-calendar>Vadhyar Calender</a>
+      </li>
+      <li>
+        <a href="#eventDesc"><i-book-open></i-book-open>Event Description</a>
+      </li>
+    </ul>
+    <!-- Menu for Vadhyar -->
+    <ul class="list-unstyled components" *ngIf="isVadhyar">
+      <li>
+        <a routerLink="/vadhyarHome"><i-home></i-home>Home</a>
+      </li>
+      <li>
+        <a routerLink="/changePassword"><i-edit></i-edit>Change Password</a>
+      </li>
+      <li>
+        <a href="#subUpdateProfile" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i-user></i-user>Update Profile</a>
+          <ul class="list-unstyled collapse" id="subUpdateProfile">
+            <li>
+              <a>Primary Details</a>
+            </li>
+            <li>
+              <a>Vadhikam Details</a>
+            </li>
+            <li>
+              <a>Vadhyar Qualification</a>
+            </li>
+          </ul>
+      </li>
+      <li>
+        <a><i-sliders></i-sliders>Preferences</a>
+      </li>
+      <li>
+        <a href="#subRequests" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i-folder></i-folder>My Requests
+        </a>
+        <ul id="subRequests" class="list-unstyled collapse">
+          <li>
+            <a href="">Event Category</a>
+          </li>
+          <li>
+            <a href="">Event Type</a>
+          </li>
+          <li>
+            <a href="">Gothram</a>
+          </li>
+          <li>
+            <a href="">Soothram</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a><i-calendar></i-calendar>My Calender</a>
+      </li>
+      <li>
+        <a href="#subAnnouncements" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i-cast></i-cast>Announcements
+        </a>
+        <ul id="subAnnouncements" class="list-unstyled collapse">
+          <li>
+            <a>View List</a>
+          </li>
+          <li>
+            <a>Add Announcements</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+    <!-- Menu for User -->
+    <ul class="list-unstyled components" *ngIf="isUser">
+      <li>
+        <a routerLink="/home"><i-home></i-home>Home</a>
+      </li>
+      <li>
+        <a routerLink="/changePassword"><i-edit></i-edit>Change Password</a>
+      </li>
+      <li>
+        <a><i-user></i-user>Update Profile</a>
+      </li>
+      <li>
+        <a href="#subEvents" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+          <i-check-circle></i-check-circle>Events</a>
+        <ul class="list-unstyled collapse" id="subEvents">
+          <li>
+            <a><i-plus></i-plus>Create New Events</a>
+          </li>
+          <li>
+            <a><i-info></i-info>Pending Events</a>
+          </li>
+          <li>
+            <a><i-book></i-book>Event History</a>
+          </li>
+        </ul>
+      </li>
+      <li>
+        <a><i-book-open></i-book-open>Event Description</a>
+      </li>
+    </ul>
+  </nav>
+</div>
+

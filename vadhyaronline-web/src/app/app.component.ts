@@ -10,11 +10,14 @@ import {Router} from '@angular/router';
 export class AppComponent {
 
   isLoggedIn: boolean;
+  userName: string;
 
   constructor(private loginService: LoginService, private router: Router) {
     this.isLoggedIn = this.loginService.isUserLoggedIn();
+    this.userName = this.loginService.getUser().userName;
     this.loginService.emitLoginEvent().subscribe(value => {
       this.isLoggedIn = value;
+      this.userName = '';
     });
   }
 
