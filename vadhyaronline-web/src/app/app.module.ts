@@ -14,7 +14,7 @@ import {TokenHttpInterceptorService} from './services/token-http-interceptor.ser
 import {MenuComponent} from './shared/menu/menu.component';
 import {ChangePasswordComponent} from './shared/change-password/change-password.component';
 import {AdminHomeComponent} from './shared/adminPages/admin-home/admin-home.component';
-import {VadhyarHomeComponent} from "./shared/vadhyarPages/vadhyar-home/vadhyar-home.component";
+import {VadhyarHomeComponent} from './shared/vadhyarPages/vadhyar-home/vadhyar-home.component';
 
 
 const routes: Routes = [

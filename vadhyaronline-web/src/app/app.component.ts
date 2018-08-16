@@ -14,11 +14,17 @@ export class AppComponent {
 
   constructor(private loginService: LoginService, private router: Router) {
     this.isLoggedIn = this.loginService.isUserLoggedIn();
-    this.userName = this.loginService.getUser().userName;
+    this.setupUserName();
     this.loginService.emitLoginEvent().subscribe(value => {
       this.isLoggedIn = value;
-      this.userName = '';
+      this.setupUserName();
     });
+  }
+
+  private setupUserName(): void {
+    if (this.isLoggedIn) {
+      this.userName = this.loginService.getUser().userName;
+    }
   }
 
   logout() {

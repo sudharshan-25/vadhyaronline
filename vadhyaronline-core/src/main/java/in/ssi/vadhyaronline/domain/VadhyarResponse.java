@@ -7,10 +7,6 @@ public class VadhyarResponse {
     @JsonProperty("DATA")
     private Object data;
 
-    @JsonProperty("ERROR")
-    private Object error;
-
-
     public Object getData() {
         return data;
     }
@@ -19,11 +15,4 @@ public class VadhyarResponse {
         this.data = data;
     }
 
-    public Object getError() {
-        return error;
-    }
-
-    public void setError(Object error) {
-        this.error = error;
-    }
 }
