@@ -14,8 +14,7 @@ export class VadhyarOnlineRestService {
   }
 
   public login(userName: string, password: string): Observable<VadhyarResponse> {
-    const url = `${this.apiURL}/user/login?userName=${userName}&password=${password}`;
-    return this.httpClient.get<VadhyarResponse>(url);
+    return this.httpClient.get<VadhyarResponse>(`${this.apiURL}/user/login?userName=${userName}&password=${password}`);
   }
 
   public register(user: any): Observable<VadhyarResponse> {
@@ -24,6 +23,14 @@ export class VadhyarOnlineRestService {
 
   public getRoles(): Observable<VadhyarResponse> {
     return this.httpClient.get<VadhyarResponse>(`${this.apiURL}/master/userRoles`);
+  }
+
+  public getUser(userId: number): Observable<VadhyarResponse> {
+    return this.httpClient.get<VadhyarResponse>(`${this.apiURL}/user/${userId}`);
+  }
+
+  public updateUser(userId: number, userDetails: any): Observable<VadhyarResponse> {
+    return this.httpClient.put<VadhyarResponse>(`${this.apiURL}/user/${userId}`, userDetails);
   }
 
 }

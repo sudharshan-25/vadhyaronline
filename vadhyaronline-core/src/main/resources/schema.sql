@@ -84,6 +84,15 @@ CREATE TABLE user_login_status (
   CONSTRAINT fk_user_login_id FOREIGN KEY (user_id) REFERENCES user_master(user_id),
   CONSTRAINT fk_user_login_status_id FOREIGN KEY (login_status_id) REFERENCES status_master (status_master_id)
 );
+CREATE TABLE user_address (
+  user_id INT,
+  address_flat_number VARCHAR(10),
+  address_street_name VARCHAR(500),
+  address_city VARCHAR(20),
+  address_state VARCHAR(50),
+  address_zipcode VARCHAR(10),
+  CONSTRAINT fk_user_address_id FOREIGN KEY (user_id) REFERENCES user_master(user_id),
+);
 CREATE TABLE vadhyar_event_preferences (
   preference_id INT AUTO_INCREMENT,
   vadhyar_id INT,

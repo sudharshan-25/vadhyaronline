@@ -15,6 +15,7 @@ import {MenuComponent} from './shared/menu/menu.component';
 import {ChangePasswordComponent} from './shared/change-password/change-password.component';
 import {AdminHomeComponent} from './shared/adminPages/admin-home/admin-home.component';
 import {VadhyarHomeComponent} from './shared/vadhyarPages/vadhyar-home/vadhyar-home.component';
+import {PrimaryDetailsComponent} from './shared/profile-details/primary-details/primary-details.component';
 
 
 const routes: Routes = [
@@ -23,6 +24,7 @@ const routes: Routes = [
   {path: 'adminHome', component: AdminHomeComponent, canActivate: [LoginUserGuard]},
   {path: 'vadhyarHome', component: VadhyarHomeComponent, canActivate: [LoginUserGuard]},
   {path: 'changePassword', component: ChangePasswordComponent, canActivate: [LoginUserGuard]},
+  {path: 'primaryDetails', component: PrimaryDetailsComponent, canActivate: [LoginUserGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterUserComponent}
 ];
@@ -31,7 +33,7 @@ const routes: Routes = [
   declarations: [
     AppComponent,
     AdminHomeComponent, VadhyarHomeComponent, HomeComponent,
-    MenuComponent, ChangePasswordComponent,
+    MenuComponent, ChangePasswordComponent, PrimaryDetailsComponent,
     LoginComponent, RegisterUserComponent
   ],
   imports: [

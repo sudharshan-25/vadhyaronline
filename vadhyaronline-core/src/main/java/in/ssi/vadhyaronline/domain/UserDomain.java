@@ -1,5 +1,7 @@
 package in.ssi.vadhyaronline.domain;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
+
 public class UserDomain {
 
     private Integer userId;
@@ -28,6 +30,9 @@ public class UserDomain {
 
     private String token;
 
+    @JsonProperty("address")
+    private UserAddress userAddress;
+
     public UserDomain() {
     }
 
@@ -40,7 +45,7 @@ public class UserDomain {
         this.email = email;
         this.mobile = mobile;
         this.status = status;
-        this.setRole(role);
+        this.role = role;
     }
 
     public Integer getUserId() {
@@ -145,5 +150,13 @@ public class UserDomain {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public UserAddress getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(UserAddress userAddress) {
+        this.userAddress = userAddress;
     }
 }

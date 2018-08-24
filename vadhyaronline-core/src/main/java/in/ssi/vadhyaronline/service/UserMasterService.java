@@ -1,6 +1,9 @@
 package in.ssi.vadhyaronline.service;
 
 import in.ssi.vadhyaronline.constants.CommonConstants;
+import in.ssi.vadhyaronline.domain.LoginUser;
+import in.ssi.vadhyaronline.domain.UserAddress;
+import in.ssi.vadhyaronline.entity.UserAddressEntity;
 import in.ssi.vadhyaronline.repository.*;
 import in.ssi.vadhyaronline.domain.UserDomain;
 import in.ssi.vadhyaronline.entity.UserLoginStatusEntity;
@@ -25,8 +28,6 @@ public class UserMasterService {
 
     private UserMasterRepository userRepository;
 
-    private StatusMasterRepository statusRepository;
-
     private VedaMasterRepository vedaMasterRepository;
 
     private SoothramMasterRepository soothramMasterRepository;
@@ -37,12 +38,11 @@ public class UserMasterService {
 
     private TokenService tokenService;
 
-    public UserMasterService(UserMasterRepository userRepository, StatusMasterRepository statusRepository,
+    public UserMasterService(UserMasterRepository userRepository, TokenService tokenService,
                              VedaMasterRepository vedaMasterRepository, RolesRepository rolesRepository,
                              SoothramMasterRepository soothramMasterRepository,
-                             GothramMasterRepository gothramMasterRepository, TokenService tokenService) {
+                             GothramMasterRepository gothramMasterRepository) {
         this.userRepository = userRepository;
-        this.statusRepository = statusRepository;
         this.vedaMasterRepository = vedaMasterRepository;
         this.rolesRepository = rolesRepository;
         this.soothramMasterRepository = soothramMasterRepository;
@@ -68,6 +68,27 @@ public class UserMasterService {
         userLoginStatus.setStatusMaster(EntityHelper.getActiveStatus());
         userLoginStatus.setUserMaster(userMaster);
         userMaster.setUserLoginStatus(userLoginStatus);
+        userMaster.setPassword(userDomain.getPassword());
+        Integer roleId = Integer.parseInt(userDomain.getRole());
+        UserRoleEntity userRole = rolesRepository.getOne(roleId);
+        userMaster.setUserRole(userRole);
+
+        int vedaId = StringUtils.isEmpty(userDomain.getVeda()) ?
+                0 : Integer.parseInt(userDomain.getVeda());
+        int soothramId = StringUtils.isEmpty(userDomain.getSoothram()) ?
+                0 : Integer.parseInt(userDomain.getSoothram());
+        int gothramId = StringUtils.isEmpty(userDomain.getGothram()) ?
+                0 : Integer.parseInt(userDomain.getGothram());
+        if (vedaId != 0) {
+            userMaster.setVedaMaster(vedaMasterRepository.getOne(vedaId));
+        }
+        if (soothramId != 0) {
+            userMaster.setSoothramMaster(soothramMasterRepository.getOne(soothramId));
+        }
+        if (gothramId != 0) {
+            userMaster.setGothramMaster(gothramMasterRepository.getOne(gothramId));
+        }
+
         updateUserEntityFromDomain(userDomain, userMaster);
     }
 
@@ -79,10 +100,6 @@ public class UserMasterService {
     @Transactional(rollbackFor = Exception.class)
     public void updateUser(UserDomain userDomain) {
         UserMasterEntity userMaster = userRepository.getOne(userDomain.getUserId());
-        UserLoginStatusEntity userLoginStatus = userMaster.getUserLoginStatus();
-        userLoginStatus.setStatusMaster(statusRepository.getOne(1));
-        userLoginStatus.setUserMaster(userMaster);
-        userMaster.setUserLoginStatus(userLoginStatus);
         updateUserEntityFromDomain(userDomain, userMaster);
     }
 
@@ -109,7 +126,7 @@ public class UserMasterService {
         userRepository.save(userMaster);
     }
 
-    public UserDomain login(String userName, String password) throws VadhyarOnlineException {
+    public LoginUser login(String userName, String password) throws VadhyarOnlineException {
 
         UserMasterEntity userMaster = userRepository.findUserMasterEntityByUserName(userName);
         if (userMaster == null) {
@@ -139,34 +156,31 @@ public class UserMasterService {
         userLoginStatus.setLoginFailedAttempts((short) 0);
         userLoginStatus.setStatusMaster(EntityHelper.getLoggedInStatus());
         userLoginStatus.setLastSuccessfulLogin(Timestamp.valueOf(LocalDateTime.now()));
-        return userRepository.save(userMaster).toDomain();
+        return userRepository.save(userMaster).toLoginDomain();
     }
 
+    /**
+     * @param userDomain User domain from request
+     * @param userMaster for updating db
+     */
     private void updateUserEntityFromDomain(UserDomain userDomain, UserMasterEntity userMaster) {
-        int vedaId = StringUtils.isEmpty(userDomain.getVeda()) ?
-                0 : Integer.parseInt(userDomain.getVeda());
-        int soothramId = StringUtils.isEmpty(userDomain.getSoothram()) ?
-                0 : Integer.parseInt(userDomain.getSoothram());
-        int gothramId = StringUtils.isEmpty(userDomain.getGothram()) ?
-                0 : Integer.parseInt(userDomain.getGothram());
-
-        Integer roleId = Integer.parseInt(userDomain.getRole());
-        UserRoleEntity userRole = rolesRepository.getOne(roleId);
-        userMaster.setUserRole(userRole);
         userMaster.setFirstName(userDomain.getFirstName());
         userMaster.setLastName(userDomain.getLastName());
         userMaster.setUserName(userDomain.getUserName());
         userMaster.setEmail(userDomain.getEmail());
-        userMaster.setPassword(userDomain.getPassword());
         userMaster.setMobile(userDomain.getMobile());
-        if (vedaId != 0) {
-            userMaster.setVedaMaster(vedaMasterRepository.getOne(vedaId));
-        }
-        if (soothramId != 0) {
-            userMaster.setSoothramMaster(soothramMasterRepository.getOne(soothramId));
-        }
-        if (gothramId != 0) {
-            userMaster.setGothramMaster(gothramMasterRepository.getOne(gothramId));
+        if (userDomain.getUserAddress() != null) {
+            UserAddress userAddress = userDomain.getUserAddress();
+            UserAddressEntity userAddressEntity = userMaster.getUserAddress();
+            if(userAddressEntity == null){
+                userAddressEntity = new UserAddressEntity();
+                userAddressEntity.setUserMaster(userMaster);
+            }
+            userAddressEntity.setCity(userAddress.getCity());
+            userAddressEntity.setFlatNumber(userAddress.getFlatNumber());
+            userAddressEntity.setStreetName(userAddress.getStreetName());
+            userAddressEntity.setState(userAddress.getState());
+            userAddressEntity.setZipCode(userAddress.getZipCode());
         }
         userRepository.save(userMaster);
     }

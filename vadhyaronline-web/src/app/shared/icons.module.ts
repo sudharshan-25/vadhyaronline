@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {
   IconBook,
-  IconBookOpen,
+  IconBookOpen, IconBriefcase,
   IconCalendar,
   IconCast,
   IconCheckCircle,
@@ -26,11 +26,11 @@ import {
 const icons = [
   IconHome, IconEdit, IconSettings, IconUser, IconClock, IconLogOut, IconLogIn, IconUserPlus,
   IconEyeOff, IconSlash, IconCast, IconFeather, IconFolder, IconSliders, IconCheckCircle,
-  IconPlus, IconInfo, IconBook, IconBookOpen, IconCalendar, IconRefreshCw, IconPlay
+  IconPlus, IconInfo, IconBook, IconBookOpen, IconCalendar, IconRefreshCw, IconPlay, IconBriefcase
 ];
 
 @NgModule({
-  exports: icons
+  exports: icons,
 })
 export class IconsModule {
 }

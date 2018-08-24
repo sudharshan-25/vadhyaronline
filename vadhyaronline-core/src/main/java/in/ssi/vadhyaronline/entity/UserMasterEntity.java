@@ -1,5 +1,6 @@
 package in.ssi.vadhyaronline.entity;
 
+import in.ssi.vadhyaronline.domain.LoginUser;
 import in.ssi.vadhyaronline.domain.UserDomain;
 
 import javax.persistence.*;
@@ -50,6 +51,9 @@ public class UserMasterEntity {
 
     @OneToOne(mappedBy = "userMaster", cascade = CascadeType.ALL)
     private UserLoginStatusEntity userLoginStatus;
+
+    @OneToOne(mappedBy = "userMaster", cascade = CascadeType.ALL)
+    private UserAddressEntity userAddress;
 
     @ManyToMany
     @JoinTable(name = "vadhyar_event_preferences", joinColumns = {@JoinColumn(name = "vadhyar_id")},
@@ -160,6 +164,21 @@ public class UserMasterEntity {
         this.preferences = preferences;
     }
 
+    public UserAddressEntity getUserAddress() {
+        return userAddress;
+    }
+
+    public void setUserAddress(UserAddressEntity userAddress) {
+        this.userAddress = userAddress;
+    }
+
+
+    public LoginUser toLoginDomain(){
+        LoginUser loginUser = new LoginUser(this.userId, this.userName, this.userRole.getRoleName());
+        loginUser.setToken(this.userLoginStatus.getLoginToken());
+        return loginUser;
+    }
+
     public UserDomain toDomain() {
         UserDomain user = new UserDomain(userId, firstName, lastName, userName, email, mobile,
                 userLoginStatus.getStatusMaster().getStatusName(), this.getUserRole().getRoleName());
@@ -172,7 +191,9 @@ public class UserMasterEntity {
         if (vedaMaster != null) {
             user.setVeda(vedaMaster.getVedaMasterName());
         }
-        user.setToken(userLoginStatus.getLoginToken());
+        if(this.userAddress != null) {
+            user.setUserAddress(this.userAddress.toDomain());
+        }
         return user;
     }
 }
