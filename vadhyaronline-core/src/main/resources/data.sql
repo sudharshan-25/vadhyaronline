@@ -1,7 +1,7 @@
-INSERT INTO user_role(role_id, role_name) VALUES (1, 'Admin');
-INSERT INTO user_role(role_id, role_name) VALUES (2, 'Vadhyar');
-INSERT INTO user_role(role_id, role_name) VALUES (3, 'Assistant');
-INSERT INTO user_role(role_id, role_name) VALUES (4, 'User');
+INSERT INTO role_master(role_id, role_name) VALUES (1, 'Admin');
+INSERT INTO role_master(role_id, role_name) VALUES (2, 'Vadhyar');
+INSERT INTO role_master(role_id, role_name) VALUES (3, 'Assistant');
+INSERT INTO role_master(role_id, role_name) VALUES (4, 'User');
 
 INSERT INTO event_category(event_category_name, approved) VALUES ('Homa', 1);
 INSERT INTO event_category(event_category_name, approved) VALUES ('Tharpanam', 1);
@@ -16,10 +16,10 @@ INSERT INTO event_type(event_category_id, event_type_name, event_type_desc, appr
 INSERT INTO event_type(event_category_id, event_type_name, event_type_desc, approved) VALUES (4 , 'Sandiyavandanam', '', 0);
 INSERT INTO event_type(event_category_id, event_type_name, event_type_desc, approved) VALUES (5 , 'Bhagavad Gita', '', 1);
 
-INSERT INTO veda_master (veda_name ) VALUES ('Rig Veda');
-INSERT INTO veda_master (veda_name ) VALUES ('Yajur Veda');
-INSERT INTO veda_master (veda_name ) VALUES ('Sama Veda');
-INSERT INTO veda_master (veda_name ) VALUES ('Atharvana Veda');
+INSERT INTO veda_master (veda_id, veda_name ) VALUES (1, 'Rig Veda');
+INSERT INTO veda_master (veda_id, veda_name ) VALUES (2, 'Yajur Veda');
+INSERT INTO veda_master (veda_id, veda_name ) VALUES (3, 'Sama Veda');
+INSERT INTO veda_master (veda_id, veda_name ) VALUES (4, 'Atharvana Veda');
 
 INSERT INTO soothram_master (soothram_name, approved) VALUES ('Thrahyayana Soothram', 1);
 INSERT INTO soothram_master (soothram_name, approved) VALUES ('Bhodhayana Soothram', 1);
@@ -34,12 +34,15 @@ INSERT INTO status_master (status_master_id, status_master_name) VALUES (2, 'Ina
 INSERT INTO status_master (status_master_id, status_master_name) VALUES (3, 'Logged In');
 INSERT INTO status_master (status_master_id, status_master_name) VALUES (4, 'Locked');
 
-INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id, user_veda_id, user_soothram_id, user_gothram_id)
-  VALUES ('Admin', '', 'admin', 'admin@vadhyaronline.in', '1234567890', 'password-123', 1, 3, 1, 1);
-INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id, user_veda_id, user_soothram_id, user_gothram_id)
-  VALUES ('Vadhyar', '', 'vadhyar', 'vadhyar@vadhyaronline.in', '0123456789', 'password-123', 2, 3, 1, 1);
 INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id)
-  VALUES ('User', '', 'user', 'user@vadhyaronline.in', '123456789', 'password-123', 4);
+  VALUES ('Admin', '', 'admin', 'admin@vadhyar.in', '1234567890', 'password-123', 1);
+INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id)
+  VALUES ('Vadhyar', '', 'vadhyar', 'vadhyar@vadhyar.in', '0123456789', 'password-123', 2);
+INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id)
+  VALUES ('User', '', 'user', 'user@vadhyar.in', '123456789', 'password-123', 4);
+
+INSERT INTO user_vaidhikam_details (user_id, user_veda_id, user_gothram_id, user_soothram_id) VALUES (1,3,1,1);
+INSERT INTO user_vaidhikam_details (user_id, user_veda_id, user_gothram_id, user_soothram_id) VALUES (2,3,1,1);
 
 INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (1, 1, null , 0);
 INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (2, 1, null , 0);

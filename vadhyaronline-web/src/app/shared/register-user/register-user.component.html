@@ -12,64 +12,72 @@
         </span>
       </div>
       <div class="form-row form-inline login-row col-12">
-          <span class="col-3 col-form-label text-nowrap">First Name</span>
-          <input class="form-control col-5" [formControl]="registerForm.controls['firstName']">
-          <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['firstName'].touched &&
-                registerForm.controls['firstName'].hasError('required')">First Name cannot be empty</span>
+        <span class="col-3 col-form-label text-nowrap">First Name</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['firstName']" id="firstName"
+               title="First Name">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['firstName'])">
+          First Name cannot be empty</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">Last Name</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['lastName']">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['lastName'].touched &&
-                registerForm.controls['lastName'].hasError('required')">Last Name cannot be empty</span>
+        <input class="form-control col-5" id="lastName" [formControl]="registerForm.controls['lastName']"
+               title="Last Name">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['lastName'])">
+          Last Name cannot be empty</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">User Name</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['userName']">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['userName'].touched &&
-                registerForm.controls['userName'].hasError('required')">User Name cannot be empty</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['userName']" id="userName"
+               title="User Name">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['userName'])">
+          User Name cannot be empty</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">Mobile</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['mobile']">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['mobile'].touched &&
-                registerForm.controls['mobile'].hasError('required')">Mobile number cannot be empty</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['mobile']" id="mobile" title="Mobile">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['mobile'])">
+          Mobile number cannot be empty</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">Email</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['email']">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['email'].touched &&
-                registerForm.controls['email'].hasError('required')">Email cannot be empty</span>
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['email'].touched &&
-                registerForm.controls['email'].hasError('email')">Email invalid format</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['email']" title="Email">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['email'])">
+          Email cannot be empty</span>
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['email'], 'email')">
+          Email invalid format</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">Password</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['password']" type="password">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['password'].touched &&
-                registerForm.controls['password'].hasError('required')">Password cannot be empty</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['password']" type="password"
+               title="Password">
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['password'])">
+          Password cannot be empty</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">Password Repeat</span>
-        <input class="form-control col-5" [formControl]="registerForm.controls['passwordRepeat']" type="password">
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['passwordRepeat'].touched &&
-                registerForm.controls['passwordRepeat'].hasError('doesNotMatch')">Password do not match</span>
+        <input class="form-control col-5" [formControl]="registerForm.controls['passwordRepeat']" type="password"
+               title="Password Repeat">
+        <span class="col-4 text-nowrap text-danger"
+              *ngIf="isRequiredError(registerForm.controls['passwordRepeat'],'doesNotMatch')"> Password do not match</span>
       </div>
       <div class="form-row form-inline login-row col-12">
         <span class="col-3 col-form-label text-nowrap">User Role</span>
-        <select class="col-5 custom-select" [formControl]="registerForm.controls['role']">
+        <select class="col-5 custom-select" [formControl]="registerForm.controls['role']" title="User Role">
           <option value="">Select</option>
           <option *ngFor="let role of userRoles" [value]="role['id']">{{role['value']}}</option>
         </select>
-        <span class="col-4 text-nowrap text-danger" *ngIf="registerForm.controls['role'].touched &&
-                registerForm.controls['role'].hasError('required')">Role should be selected</span>
+        <span class="col-4 text-nowrap text-danger" *ngIf="isRequiredError(registerForm.controls['role'])">
+          Role should be selected</span>
       </div>
-
       <div class="form-row form-inline login-row">
         <button class="col-3 offset-1 btn btn-outline-success" (click)="registerUser()">
-          <i-user-plus></i-user-plus>Save</button>
+          <i-user-plus>Save User</i-user-plus>
+          Save
+        </button>
         <button class="col-3 offset-1 btn btn-outline-secondary" (click)="cancelRegister()">
-          <i-slash></i-slash>Cancel</button>
+          <i-slash>Cancel</i-slash>
+          Cancel
+        </button>
       </div>
     </form>
   </div>

@@ -9,13 +9,14 @@ import {HomeComponent} from './shared/userPages/home/home.component';
 import {LoginUserGuard} from './services/login-user.guard';
 import {LoginComponent} from './shared/login/login.component';
 import {RegisterUserComponent} from './shared/register-user/register-user.component';
-import {IconsModule} from './shared/icons.module';
+import {IconsModule} from './services/icons.module';
 import {TokenHttpInterceptorService} from './services/token-http-interceptor.service';
 import {MenuComponent} from './shared/menu/menu.component';
 import {ChangePasswordComponent} from './shared/change-password/change-password.component';
 import {AdminHomeComponent} from './shared/adminPages/admin-home/admin-home.component';
 import {VadhyarHomeComponent} from './shared/vadhyarPages/vadhyar-home/vadhyar-home.component';
 import {PrimaryDetailsComponent} from './shared/profile-details/primary-details/primary-details.component';
+import { VaidhikamDetailsComponent } from './shared/profile-details/vaidhikam-details/vaidhikam-details.component';
 
 
 const routes: Routes = [
@@ -25,6 +26,7 @@ const routes: Routes = [
   {path: 'vadhyarHome', component: VadhyarHomeComponent, canActivate: [LoginUserGuard]},
   {path: 'changePassword', component: ChangePasswordComponent, canActivate: [LoginUserGuard]},
   {path: 'primaryDetails', component: PrimaryDetailsComponent, canActivate: [LoginUserGuard]},
+  {path: 'vaidhikamDetails', component: VaidhikamDetailsComponent, canActivate: [LoginUserGuard]},
   {path: 'login', component: LoginComponent},
   {path: 'register', component: RegisterUserComponent}
 ];
@@ -34,7 +36,7 @@ const routes: Routes = [
     AppComponent,
     AdminHomeComponent, VadhyarHomeComponent, HomeComponent,
     MenuComponent, ChangePasswordComponent, PrimaryDetailsComponent,
-    LoginComponent, RegisterUserComponent
+    LoginComponent, RegisterUserComponent, VaidhikamDetailsComponent
   ],
   imports: [
     BrowserModule, ReactiveFormsModule, IconsModule, HttpClientModule,

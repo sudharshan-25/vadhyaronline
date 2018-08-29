@@ -2,145 +2,72 @@
   <form name="primaryDetails" [formGroup]="primaryDetails" (submit)="updateUserDetails(primaryDetails.value)">
     <fieldset>
       <legend>Primary Details</legend>
-      <div class="form-row login-row">
-        <div class="col-2">
-          <label>First Name</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['firstName']">
-        </div>
-        <div class="col-3 text-danger">
-          <span
-            *ngIf="primaryDetails.controls['firstName'].touched && primaryDetails.controls['firstName'].hasError('required')">
-            First Name is mandatory
-          </span>
-        </div>
+      <div class="form-row form-inline login-row">
+        <span class="col-10 text-success"> {{ successMessage }} </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>Last Name</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['lastName']">
-        </div>
-        <div class="col-3 text-danger">
-          <span
-            *ngIf="primaryDetails.controls['lastName'].touched && primaryDetails.controls['lastName'].hasError('required')">
-            Last Name is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> First Name </span>
+        <input class="form-control col-5" [formControl]="primaryDetails.controls['firstName']" title="First Name">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(primaryDetails.controls['firstName'])">
+          First Name is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>User Name</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['userName']">
-        </div>
-        <div class="col-3 text-danger">
-          <span
-            *ngIf="primaryDetails.controls['userName'].touched && primaryDetails.controls['userName'].hasError('required')">
-            User Name is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> Last Name</span>
+        <input class="form-control col-5" [formControl]="primaryDetails.controls['lastName']" title="Last Name">
+        <span class="col-3 text-danger"
+              *ngIf="primaryDetails.controls['lastName'].touched && primaryDetails.controls['lastName'].hasError('required')">
+            Last Name is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>Mobile Number</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['mobile']" type="tel">
-        </div>
-        <div class="col-3 text-danger">
-          <span
-            *ngIf="primaryDetails.controls['mobile'].touched && primaryDetails.controls['mobile'].hasError('required')">
-            Mobile Number is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> User Name </span>
+        <input class="form-control col-5" [formControl]="primaryDetails.controls['userName']" title="User Name">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(primaryDetails.controls['userName'])">
+            User Name is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>Email</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['email']">
-        </div>
-        <div class="col-3 text-danger">
-          <span
-            *ngIf="primaryDetails.controls['email'].touched && primaryDetails.controls['email'].hasError('required')">
-            User Name is mandatory
-          </span>
-          <span *ngIf="primaryDetails.controls['email'].touched && primaryDetails.controls['email'].hasError('email')">
+        <span class="col-3 col-form-label text-nowrap"> Mobile Number </span>
+        <input class="form-control col-5" [formControl]="primaryDetails.controls['mobile']" type="tel" title="Mobile">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(primaryDetails.controls['mobile'])">
+            Mobile Number is mandatory </span>
+      </div>
+      <div class="form-row login-row">
+        <span class="col-3 col-form-label text-nowrap"> Email </span>
+        <input class="form-control col-5" [formControl]="primaryDetails.controls['email']" title="Email Id">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(primaryDetails.controls['email'])">
+            User Name is mandatory           </span>
+        <span class="col-3 text-danger" *ngIf="isRequiredError(primaryDetails.controls['email'], 'email')">
             Email invalid format</span>
-        </div>
       </div>
     </fieldset>
     <fieldset>
       <legend>Address Details</legend>
-      <div class="form-row login-row" [formGroup]="primaryDetails.controls['address']">
-        <div class="col-2">
-          <label>House/Flat Number</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['address'].controls['flatNumber']">
-        </div>
-        <div class="col-3 text-danger">
-          <span *ngIf="primaryDetails.controls['address'].controls['flatNumber'].touched &&
-              primaryDetails.controls['address'].controls['flatNumber'].hasError('required')"> Flat Number is mandatory
-          </span>
-        </div>
+      <div class="form-row login-row" [formGroup]="address">
+        <span class="col-3 col-form-label text-nowrap"> House/Flat Number</span>
+        <input class="form-control col-5" [formControl]="address.controls['flatNumber']" title="Flat Number">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(address.controls['flatNumber'])">
+          Flat Number is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>Street Name</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['address'].controls['streetName']">
-        </div>
-        <div class="col-3 text-danger">
-          <span *ngIf="primaryDetails.controls['address'].controls['streetName'].touched &&
-             primaryDetails.controls['address'].controls['streetName'].hasError('required')"> Street Name is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> Street Name </span>
+        <input class="form-control col-5" [formControl]="address.controls['streetName']" title="Street Name">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(address.controls['streetName'])">
+          Street Name is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>City</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['address'].controls['city']">
-        </div>
-        <div class="col-3 text-danger">
-          <span *ngIf="primaryDetails.controls['address'].controls['city'].touched &&
-            primaryDetails.controls['address'].controls['city'].hasError('required')"> City is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> City </span>
+        <input class="form-control col-5" [formControl]="address.controls['city']" title="City">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(address.controls['city'])"> City is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>State</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['address'].controls['state']">
-        </div>
-        <div class="col-3 text-danger">
-          <span *ngIf="primaryDetails.controls['address'].controls['state'].touched &&
-            primaryDetails.controls['address'].controls['state'].hasError('required')"> State is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> State </span>
+        <input class="form-control col-5" [formControl]="address.controls['state']" title="State">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(address.controls['state'])"> State is mandatory </span>
       </div>
       <div class="form-row login-row">
-        <div class="col-2">
-          <label>Zip Code</label>
-        </div>
-        <div class="col-5">
-          <input class="form-control col-12" [formControl]="primaryDetails.controls['address'].controls['zipCode']">
-        </div>
-        <div class="col-3 text-danger">
-          <span *ngIf="primaryDetails.controls['address'].controls['zipCode'].touched &&
-            primaryDetails.controls['address'].controls['zipCode'].hasError('required')"> Zip Code is mandatory
-          </span>
-        </div>
+        <span class="col-3 col-form-label text-nowrap"> Zip Code </span>
+        <input class="form-control col-5" [formControl]="address.controls['zipCode']" title="Zip Code">
+        <span class="col-3 text-danger" *ngIf="isRequiredError(address.controls['zipCode'])"> Zip Code is mandatory
+        </span>
       </div>
     </fieldset>
     <div class="form-row login-row">

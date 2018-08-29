@@ -13,40 +13,49 @@ import {HttpErrorResponse} from '@angular/common/http';
 export class PrimaryDetailsComponent extends AbstractComponent implements OnInit {
 
   primaryDetails: FormGroup;
+  address: FormGroup;
 
   constructor(fb: FormBuilder, private loginService: LoginService, private restService: VadhyarOnlineRestService) {
     super();
+    this.address = fb.group({
+      'flatNumber': new FormControl('', [Validators.required]),
+      'streetName': new FormControl('', [Validators.required]),
+      'city': new FormControl('', [Validators.required]),
+      'state': new FormControl('', [Validators.required]),
+      'zipCode': new FormControl('', [Validators.required]),
+    });
     this.primaryDetails = fb.group({
+      'userId': new FormControl('', [Validators.required]),
       'firstName': new FormControl('', [Validators.required]),
       'lastName': new FormControl('', [Validators.required]),
       'userName': new FormControl('', [Validators.required]),
       'mobile': new FormControl('', [Validators.required]),
       'email': new FormControl('', [Validators.required, Validators.email]),
-      'address' : fb.group({
-        'flatNumber': new FormControl('', [Validators.required]),
-        'streetName': new FormControl('', [Validators.required]),
-        'city': new FormControl('', [Validators.required]),
-        'state': new FormControl('', [Validators.required]),
-        'zipCode': new FormControl('', [Validators.required]),
-      })
+      'address': this.address
     });
-    console.log(this.primaryDetails.controls['address']);
   }
 
   initFormValue() {
     this.isError = false;
     const loginUser = this.loginService.getUser();
-    this.restService.getUser(loginUser.userId).subscribe(value => {
+    if (loginUser.role !== 'Admin') {
+      this.loadUser(loginUser.userId);
+    }
+  }
+
+  loadUser(userId: number) {
+    this.restService.getUser(userId).subscribe(value => {
       const userDetails = value.DATA;
       const address = userDetails['address'] ? userDetails['address'] : {};
       this.primaryDetails.reset({
+        'userId': userId,
         'firstName': userDetails['firstName'],
         'lastName': userDetails['lastName'],
         'userName': userDetails['userName'],
         'mobile': userDetails['mobile'],
         'email': userDetails['email'],
-        'address' : {
-          'flatNumber' : address['flatNumber'],
+        'address': {
+          'flatNumber': address['flatNumber'],
           'streetName': address['streetName'],
           'city': address['city'],
           'state': address['state'],

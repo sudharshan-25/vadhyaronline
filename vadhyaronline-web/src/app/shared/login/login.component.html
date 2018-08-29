@@ -6,13 +6,13 @@
         <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <i-user></i-user>
+              <i-user>User</i-user>
             </div>
           </div>
           <input type="text" id="userName" class=" col-8 form-control"
                  [formControl]="loginForm.controls['userName']" placeholder="User Name">
         </div>
-        <span class="text-danger" *ngIf="loginForm.controls['userName'].touched && loginForm.controls['userName'].hasError('required')">
+        <span class="text-danger" *ngIf="isRequiredError(loginForm.controls['userName'])">
           User name cannot be empty
         </span>
       </div>
@@ -21,13 +21,13 @@
         <div class="input-group mb-2">
           <div class="input-group-prepend">
             <div class="input-group-text">
-              <i-eye-off></i-eye-off>
+              <i-eye-off>Eye-Off</i-eye-off>
             </div>
           </div>
           <input type="password" id="password" class=" col-8 form-control"
                  [formControl]="loginForm.controls['password']" placeholder="Password">
         </div>
-        <span class="text-danger" *ngIf="loginForm.controls['password'].touched && loginForm.controls['password'].hasError('required')">
+        <span class="text-danger" *ngIf="isRequiredError(loginForm.controls['password'])">
           Password cannot be empty
         </span>
       </div>
@@ -36,11 +36,11 @@
       </div>
       <div class="row form-inline login-row">
         <button class="btn btn-outline-primary" (click)="login()">
-          <i-log-in></i-log-in>
+          <i-log-in>Login</i-log-in>
           Login
         </button>
         <button class="btn btn-outline-success offset-1" (click)="registerNow()">
-          <i-user-plus></i-user-plus>
+          <i-user-plus>Register</i-user-plus>
           Register
         </button>
       </div>

@@ -16,9 +16,20 @@
           Change Password</a>
       </li>
       <li>
-        <a routerLink="/primaryDetails">
-          <i-user></i-user>
+        <a href="#subUpdateProfileAdmin" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
           Update Profile</a>
+        <ul class="list-unstyled collapse" id="subUpdateProfileAdmin">
+          <li>
+            <a routerLink="/primaryDetails">
+              <i-user></i-user>
+              Primary Details</a>
+          </li>
+          <li>
+            <a routerLink="/vaidhikamDetails">
+              <i-briefcase></i-briefcase>
+              Vadhikam Details</a>
+          </li>
+        </ul>
       </li>
       <li>
         <a href="#subMasterTypes" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
@@ -83,7 +94,7 @@
               Primary Details</a>
           </li>
           <li>
-            <a>
+            <a routerLink="/vaidhikamDetails">
               <i-briefcase></i-briefcase>
               Vadhikam Details</a>
           </li>
@@ -181,4 +192,3 @@
     </ul>
   </nav>
 </div>
-
