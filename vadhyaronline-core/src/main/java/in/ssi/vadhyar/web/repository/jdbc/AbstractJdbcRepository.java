@@ -15,4 +15,6 @@ public interface AbstractJdbcRepository {
 
     boolean isExistsByKey(String key);
 
+    boolean canDelete(Integer id);
+
 }

@@ -1,18 +1,20 @@
 package in.ssi.vadhyar.web.entity;
 
+import in.ssi.vadhyar.web.domain.EventType;
+
 import javax.persistence.*;
 import java.sql.Timestamp;
 
 @Entity
 @Table(name = "event_type")
-@NamedQuery(name = "EventTypeEntity.findOnlyApproved",
+@NamedQuery(name = "EventTypeEntity.findByApproved",
         query = "SELECT et FROM EventTypeEntity et WHERE et.approved = :approved AND et.eventCategory.approved = :approved")
 public class EventTypeEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "event_type_id")
-    int eventTYpeId;
+    int eventTypeId;
 
     @Column(name = "event_type_name", unique = true)
     String eventTypeName;
@@ -39,12 +41,12 @@ public class EventTypeEntity {
     @Column(name = "approved_on")
     private Timestamp approvedOn;
 
-    public int getEventTYpeId() {
-        return eventTYpeId;
+    public int getEventTypeId() {
+        return eventTypeId;
     }
 
-    public void setEventTYpeId(int eventTYpeId) {
-        this.eventTYpeId = eventTYpeId;
+    public void setEventTypeId(int eventTypeId) {
+        this.eventTypeId = eventTypeId;
     }
 
     public String getEventTypeName() {
@@ -111,4 +113,11 @@ public class EventTypeEntity {
     public void setApprovedOn(Timestamp approvedOn) {
         this.approvedOn = approvedOn;
     }
+
+    public EventType toDomain() {
+        EventType eventType = new EventType();
+
+        return eventType;
+    }
+
 }

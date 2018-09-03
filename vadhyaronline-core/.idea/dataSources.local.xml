@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="dataSourceStorageLocal">
-    <data-source name="@localhost" uuid="417621a3-2392-446a-81e2-a073dfefc7dd">
+    <data-source name="local-dev" uuid="5030ab90-5473-48c2-9676-fe0de19f0d58">
       <database-info product="Oracle" version="Oracle Database 12c Standard Edition Release 12.1.0.2.0 - 64bit Production" jdbc-version="4.0" driver-name="Oracle JDBC driver" driver-version="12.1.0.2.0" family="ORACLE" exact-version="12.1.0.2">
         <extra-name-characters>$#</extra-name-characters>
         <identifier-quote-string>&quot;</identifier-quote-string>
       </database-info>
       <case-sensitivity plain-identifiers="upper" quoted-identifiers="exact" />
       <secret-storage>master_key</secret-storage>
-      <user-name>vadhyardev</user-name>
+      <user-name>devuser</user-name>
       <introspection-schemas>*:@</introspection-schemas>
     </data-source>
   </component>

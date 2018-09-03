@@ -40,6 +40,13 @@ public class EventCategoryController {
         return response;
     }
 
+    @GetMapping("/requested")
+    @VOAccessRoles(accessRoles = {VOAccessRole.VADHYAR, VOAccessRole.USER})
+    public VOResponse getRequestedEventCategories() {
+        VOResponse response = new VOResponse();
+        response.setData(eventCategoryService.getMyRequestedEventCategories());
+        return response;
+    }
 
     @PostMapping("/")
     public VOResponse createEventCategory(@RequestBody EventCategory eventCategory) {

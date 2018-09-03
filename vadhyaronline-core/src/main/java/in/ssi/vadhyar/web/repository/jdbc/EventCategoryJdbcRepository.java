@@ -18,11 +18,14 @@ import java.util.List;
 @Repository
 public class EventCategoryJdbcRepository implements AbstractJdbcRepository {
 
-    @Autowired
     private NamedParameterJdbcOperations jdbcOperations;
 
-    @Autowired
     private LoginUserContext loginUserContext;
+
+    public EventCategoryJdbcRepository(NamedParameterJdbcOperations jdbcOperations, LoginUserContext loginUserContext) {
+        this.jdbcOperations = jdbcOperations;
+        this.loginUserContext = loginUserContext;
+    }
 
     private static final String DROP_DOWN_SQL =
             " SELECT EVENT_CATEGORY_ID, EVENT_CATEGORY_NAME FROM  EVENT_CATEGORY WHERE APPROVED = :APPROVED ";
@@ -38,6 +41,8 @@ public class EventCategoryJdbcRepository implements AbstractJdbcRepository {
     private static final String APPROVE_EVENT_CATEGORY =
             " UPDATE EVENT_CATEGORY SET APPROVED = :APPROVED, APPROVED_BY = :APPROVED_BY, APPROVED_ON = :APPROVED_ON "
                     + WHERE_BY_ID;
+
+    private static final String CAN_DELETE_QUERY = " SELECT 1 FROM EVENT_TYPE " + WHERE_BY_ID;
 
     @Override
     public List<DropDownChoice> getDropDownList() {
@@ -79,5 +84,12 @@ public class EventCategoryJdbcRepository implements AbstractJdbcRepository {
         return ((rs, rowNum) ->
                 new DropDownChoice(rs.getInt("EVENT_CATEGORY_ID"), rs.getString("EVENT_CATEGORY_Name"))
         );
+    }
+
+    @Override
+    public boolean canDelete(Integer id) {
+        MapSqlParameterSource map = new MapSqlParameterSource();
+        map.addValue("EVENT_CATEGORY_ID", id);
+        return !jdbcOperations.query(CAN_DELETE_QUERY, map, ResultSet::next);
     }
 }

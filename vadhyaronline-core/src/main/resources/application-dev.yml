@@ -5,10 +5,10 @@ server:
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:vadhyar
+    url: jdbc:oracle:thin:@localhost:1521:vadhyardev
     driverClassName: oracle.jdbc.OracleDriver
-    username: vadhyardev
-    password: VadhyarDev123
+    username: devuser
+    password: DevUser123
   jpa:
     show-sql: true
     hibernate.ddl-auto: validate

@@ -6,9 +6,7 @@ import in.ssi.vadhyar.web.entity.EventCategoryEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.EventCategoryJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.EventCategoryJpaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 import java.sql.Timestamp;
 import java.time.Instant;
@@ -18,14 +16,18 @@ import java.util.stream.Collectors;
 @Service
 public class EventCategoryService {
 
-    @Autowired
     private LoginUserContext loginContext;
 
-    @Autowired
     private EventCategoryJpaRepository eventCategoryJpaRepository;
 
-    @Autowired
     private EventCategoryJdbcRepository eventCategoryJdbcRepository;
+
+    public EventCategoryService(LoginUserContext loginContext, EventCategoryJpaRepository eventCategoryJpaRepository,
+                                EventCategoryJdbcRepository eventCategoryJdbcRepository) {
+        this.loginContext = loginContext;
+        this.eventCategoryJpaRepository = eventCategoryJpaRepository;
+        this.eventCategoryJdbcRepository = eventCategoryJdbcRepository;
+    }
 
     public List<EventCategory> getAllEventCategories() {
         return eventCategoryJpaRepository.findAll().stream().map(EventCategoryEntity::toDomain)
@@ -35,6 +37,11 @@ public class EventCategoryService {
     public List<EventCategory> getApprovedEventCategories(boolean approvedStatus) {
         return eventCategoryJpaRepository.findByApproved(approvedStatus).stream()
                 .map(EventCategoryEntity::toDomain).collect(Collectors.toList());
+    }
+
+    public List<EventCategory> getMyRequestedEventCategories() {
+        return eventCategoryJpaRepository.findAllByRequestedBy(loginContext.getCurrentUser().getUserId())
+                .stream().map(EventCategoryEntity::toDomain).collect(Collectors.toList());
     }
 
     public void createEventCategory(EventCategory eventCategory) {
@@ -59,7 +66,11 @@ public class EventCategoryService {
     }
 
     public void deleteEventCategory(Integer eventCategoryId) {
-        eventCategoryJpaRepository.deleteById(eventCategoryId);
+        if (eventCategoryJdbcRepository.canDelete(eventCategoryId)) {
+            eventCategoryJpaRepository.deleteById(eventCategoryId);
+            return;
+        }
+        throw new VadhyarOnlineException("Links already exists. Cannot delete Event Category");
     }
 
 }

@@ -9,5 +9,7 @@ import java.util.List;
 @Repository
 public interface EventTypeJpaRepository extends JpaRepository<EventTypeEntity, Integer> {
 
-    List<EventTypeEntity> findOnlyApproved(boolean approved);
+    List<EventTypeEntity> findByApproved(boolean approved);
+
+    List<EventTypeEntity> findByRequestedBy(int requestedBy);
 }
