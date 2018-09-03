@@ -75,7 +75,7 @@ public class EventTypeController {
         return response;
     }
 
-    @PutMapping("/{eventTypeId}")
+    @DeleteMapping("/{eventTypeId}")
     public VOResponse deleteEventType(@PathVariable Integer eventTypeId) {
         VOResponse response = new VOResponse();
         eventTypeService.deleteEventType(eventTypeId);
