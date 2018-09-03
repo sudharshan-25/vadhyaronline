@@ -3,7 +3,6 @@ package in.ssi.vadhyar.web.repository.jdbc;
 import in.ssi.vadhyar.web.constants.CommonConstants;
 import in.ssi.vadhyar.web.domain.DropDownChoice;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
@@ -15,8 +14,11 @@ import java.util.List;
 @Repository
 public class RoleJdbcRepository implements AbstractJdbcRepository {
 
-    @Autowired
     private NamedParameterJdbcOperations jdbcOperations;
+
+    public RoleJdbcRepository(NamedParameterJdbcOperations jdbcOperations) {
+        this.jdbcOperations = jdbcOperations;
+    }
 
     private final String CHOICE_SELECT_SQL = " SELECT ROLE_ID, ROLE_NAME FROM ROLE_MASTER ";
 
@@ -46,5 +48,10 @@ public class RoleJdbcRepository implements AbstractJdbcRepository {
     public RowMapper<DropDownChoice> getDropDownMapper() {
         return ((rs, rowNum) ->
                 new DropDownChoice(rs.getInt("ROLE_ID"), rs.getString("ROLE_NAME")));
+    }
+
+    @Override
+    public boolean canDelete(Integer id) {
+        return false;
     }
 }

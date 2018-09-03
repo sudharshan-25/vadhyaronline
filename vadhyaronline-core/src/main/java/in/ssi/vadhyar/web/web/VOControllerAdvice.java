@@ -12,17 +12,17 @@ public class VOControllerAdvice {
 
     @ExceptionHandler(AlreadyLoggedInException.class)
     public ResponseEntity<String> handleLoggedInException(AlreadyLoggedInException ex) {
-        return new ResponseEntity(ex.getMessage(), HttpStatus.UNAUTHORIZED);
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.UNAUTHORIZED);
     }
 
     @ExceptionHandler(NoAccessException.class)
     public ResponseEntity<String> handleAccessException(NoAccessException ex) {
-        return new ResponseEntity(ex.getMessage(), HttpStatus.FORBIDDEN);
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.FORBIDDEN);
     }
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<String> handleException(Exception ex) {
-        return new ResponseEntity(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
+        return new ResponseEntity<>(ex.getMessage(), HttpStatus.NOT_ACCEPTABLE);
     }
 
 }
