@@ -11,12 +11,14 @@ import org.springframework.cache.concurrent.ConcurrentMapCacheManager;
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.token.KeyBasedPersistenceTokenService;
 import org.springframework.security.core.token.TokenService;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.security.SecureRandom;
 
 
-@EntityScan(value = "in.ssi.vadhyar.entity")
+@EntityScan(value = "in.ssi.vadhyar.web")
 @EnableCaching
+@EnableTransactionManagement
 @SpringBootApplication(exclude = SecurityAutoConfiguration.class)
 public class Application extends SpringBootServletInitializer {
     public static void main(String... args) {

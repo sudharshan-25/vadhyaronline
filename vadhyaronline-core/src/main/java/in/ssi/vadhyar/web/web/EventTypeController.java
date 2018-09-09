@@ -8,6 +8,9 @@ import in.ssi.vadhyar.web.domain.VOResponse;
 import in.ssi.vadhyar.web.service.EventTypeService;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("eventType")
 @VOAuthenticated
@@ -20,26 +23,20 @@ public class EventTypeController {
     }
 
     @GetMapping("/")
-    public VOResponse getEventTypes() {
-        VOResponse response = new VOResponse();
-        response.setData(eventTypeService.getAllApproved());
-        return response;
+    public List<EventType> getEventTypes() {
+        return eventTypeService.getAllApproved();
     }
 
     @GetMapping("/all")
     @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
-    public VOResponse getApprovedEventTypes() {
-        VOResponse response = new VOResponse();
-        response.setData(eventTypeService.getAllEventTypes());
-        return response;
+    public List<EventType> getApprovedEventTypes() {
+        return eventTypeService.getAllEventTypes();
     }
 
     @GetMapping("/unapproved")
     @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
-    public VOResponse getUnApprovedEventTypes() {
-        VOResponse response = new VOResponse();
-        response.setData(eventTypeService.getAllUnApproved());
-        return response;
+    public List<EventType> getUnApprovedEventTypes() {
+        return eventTypeService.getAllUnApproved();
     }
 
     @GetMapping("/requested")
@@ -55,6 +52,13 @@ public class EventTypeController {
         VOResponse response = new VOResponse();
         eventTypeService.createEventType(eventType);
         response.setData("Event Type created successfully");
+        return response;
+    }
+
+    @GetMapping("/{eventTypeId}")
+    public VOResponse getEventType(@PathVariable Integer eventTypeId) {
+        VOResponse response = new VOResponse();
+        response.setData(eventTypeService.getEventType(eventTypeId));
         return response;
     }
 

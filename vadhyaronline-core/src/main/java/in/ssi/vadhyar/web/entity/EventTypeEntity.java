@@ -7,8 +7,6 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "event_type")
-@NamedQuery(name = "EventTypeEntity.findByApproved",
-        query = "SELECT et FROM EventTypeEntity et WHERE et.approved = :approved AND et.eventCategory.approved = :approved")
 public class EventTypeEntity {
 
     @Id
@@ -116,7 +114,14 @@ public class EventTypeEntity {
 
     public EventType toDomain() {
         EventType eventType = new EventType();
-
+        eventType.setEventTypeId(this.eventTypeId);
+        eventType.setEventTypeName(this.eventTypeName);
+        eventType.setApproved(this.approved);
+        eventType.setApprovedBy("" + this.approvedBy);
+        eventType.setRequestedBy("" + this.requestedBy);
+        eventType.setEventTypeName(this.eventTypeName);
+        eventType.setEventCategoryId(this.eventCategory.getEventCategoryId());
+        eventType.setEventCategoryName(this.eventCategory.getEventCategoryName());
         return eventType;
     }
 

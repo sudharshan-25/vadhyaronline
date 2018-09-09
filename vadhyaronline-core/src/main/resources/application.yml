@@ -5,7 +5,7 @@ server:
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521:vadhyar
+    url: jdbc:oracle:thin:@localhost:1521:vadhyardev
     driverClassName: oracle.jdbc.driver.OracleDriver
     username: vadhyardev
     password: VadhyarDev123

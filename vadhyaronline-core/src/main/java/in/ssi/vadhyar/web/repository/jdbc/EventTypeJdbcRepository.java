@@ -14,7 +14,7 @@ import java.time.Instant;
 import java.util.List;
 
 @Repository
-public class EventTypeJdbcRepository implements AbstractJdbcRepository {
+public class EventTypeJdbcRepository implements IJdbcRepository {
 
     private LoginUserContext loginUserContext;
 

@@ -12,7 +12,7 @@ import java.sql.ResultSet;
 import java.util.List;
 
 @Repository
-public class RoleJdbcRepository implements AbstractJdbcRepository {
+public class RoleJdbcRepository implements IJdbcRepository {
 
     private NamedParameterJdbcOperations jdbcOperations;
 

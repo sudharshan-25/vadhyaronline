@@ -7,19 +7,21 @@ public class LoginUser {
     public LoginUser() {
     }
 
-    public LoginUser(int userId, String userName, String role) {
+    public LoginUser(int userId, String userName, String role, String loginToken) {
         this();
         this.userId = userId;
         this.userName = userName;
         this.role = role;
+        this.loginToken = loginToken;
     }
 
     private int userId;
 
     private String userName;
 
-    private String role;
+    private String loginToken;
 
+    private String role;
 
     public String getUserName() {
         return userName;
@@ -55,5 +57,14 @@ public class LoginUser {
 
     public void setUserId(int userId) {
         this.userId = userId;
+    }
+
+
+    public String getLoginToken() {
+        return loginToken;
+    }
+
+    public void setLoginToken(String loginToken) {
+        this.loginToken = loginToken;
     }
 }

@@ -7,7 +7,6 @@ import in.ssi.vadhyar.web.entity.EventTypeEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.EventTypeJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.EventTypeJpaRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -36,18 +35,22 @@ public class EventTypeService {
     }
 
     public List<EventType> getAllApproved() {
-        return eventTypeJpaRepository.findByApproved(Boolean.TRUE).stream()
+        return eventTypeJpaRepository.findAllByApproved(Boolean.TRUE).stream()
                 .map(EventTypeEntity::toDomain).collect(Collectors.toList());
     }
 
     public List<EventType> getAllUnApproved() {
-        return eventTypeJpaRepository.findByApproved(Boolean.FALSE).stream()
+        return eventTypeJpaRepository.findAllByApproved(Boolean.FALSE).stream()
                 .map(EventTypeEntity::toDomain).collect(Collectors.toList());
     }
 
     public List<EventType> getAllRequested() {
         return eventTypeJpaRepository.findByRequestedBy(loginContext.getCurrentUser().getUserId()).stream()
                 .map(EventTypeEntity::toDomain).collect(Collectors.toList());
+    }
+
+    public EventType getEventType(Integer eventTypeId) {
+        return eventTypeJpaRepository.getOne(eventTypeId).toDomain();
     }
 
     public void createEventType(EventType eventType) {
@@ -73,8 +76,8 @@ public class EventTypeService {
     }
 
 
-    public void approveEventType(int eventTYpeId) {
-        eventTypeJdbcRepository.approveEventType(eventTYpeId);
+    public void approveEventType(int eventTypeId) {
+        eventTypeJdbcRepository.approveEventType(eventTypeId);
     }
 
     public void deleteEventType(int eventTypeId) {

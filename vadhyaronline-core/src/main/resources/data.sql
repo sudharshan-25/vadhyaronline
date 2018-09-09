@@ -41,14 +41,7 @@ INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email,
 INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email, user_mobile, user_password, user_role_id)
   VALUES ('User', '', 'user', 'user@vadhyar.in', '123456789', 'password-123', 4);
 
-INSERT INTO user_vaidhikam_details (user_id, user_veda_id, user_gothram_id, user_soothram_id) VALUES (1,3,1,1);
-INSERT INTO user_vaidhikam_details (user_id, user_veda_id, user_gothram_id, user_soothram_id) VALUES (2,3,1,1);
 
-INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (1, 1, null , 0);
-INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (2, 1, null , 0);
-INSERT INTO user_login_status (user_id, login_status_id, last_successful_login, login_failed_attempt) VALUES (3, 1, null , 0);
-
-UPDATE user_login_status SET latest_login_token = NULL WHERE 1 != 1;
 
 INSERT INTO event_status (event_status_id, event_status_name) VALUES (1, 'Draft');
 INSERT INTO event_status (event_status_id, event_status_name) VALUES (2, 'Requested');

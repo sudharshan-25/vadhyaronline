@@ -44,6 +44,10 @@ public class EventCategoryService {
                 .stream().map(EventCategoryEntity::toDomain).collect(Collectors.toList());
     }
 
+    public EventCategory getEventCategory(Integer eventCategoryId) {
+        return eventCategoryJpaRepository.getOne(eventCategoryId).toDomain();
+    }
+
     public void createEventCategory(EventCategory eventCategory) {
         if (eventCategoryJdbcRepository.isExistsByKey(eventCategory.getEventCategoryName()))
             throw new VadhyarOnlineException("Category Name Already exists");

@@ -1,0 +1,823 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="local-dev">
+  <database-model serializer="dbm" rdbms="ORACLE" format-version="4.11">
+    <root id="1">
+      <ServerVersion>12.1.0.2</ServerVersion>
+    </root>
+    <schema id="2" parent="1" name="DEVUSER">
+      <ObjectId>103</ObjectId>
+      <IntrospectionTimestamp>2018-09-09.20:00:24</IntrospectionTimestamp>
+      <CreatedTimestamp>2018-09-02.00:48:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:46:49</ModifiedTimestamp>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="3" parent="1" name="PUBLIC">
+      <ObjectId>1</ObjectId>
+    </schema>
+    <schema id="4" parent="1" name="SYS">
+      <ObjectId>0</ObjectId>
+    </schema>
+    <schema id="5" parent="1" name="AUDSYS">
+      <ObjectId>7</ObjectId>
+    </schema>
+    <schema id="6" parent="1" name="SYSTEM">
+      <ObjectId>8</ObjectId>
+    </schema>
+    <schema id="7" parent="1" name="OUTLN">
+      <ObjectId>13</ObjectId>
+    </schema>
+    <schema id="8" parent="1" name="GSMADMIN_INTERNAL">
+      <ObjectId>21</ObjectId>
+    </schema>
+    <schema id="9" parent="1" name="GSMUSER">
+      <ObjectId>22</ObjectId>
+    </schema>
+    <schema id="10" parent="1" name="DIP">
+      <ObjectId>23</ObjectId>
+    </schema>
+    <schema id="11" parent="1" name="ORACLE_OCM">
+      <ObjectId>36</ObjectId>
+    </schema>
+    <schema id="12" parent="1" name="DBSNMP">
+      <ObjectId>48</ObjectId>
+    </schema>
+    <schema id="13" parent="1" name="APPQOSSYS">
+      <ObjectId>49</ObjectId>
+    </schema>
+    <schema id="14" parent="1" name="XDB">
+      <ObjectId>50</ObjectId>
+    </schema>
+    <schema id="15" parent="1" name="ANONYMOUS">
+      <ObjectId>51</ObjectId>
+    </schema>
+    <schema id="16" parent="1" name="GSMCATUSER">
+      <ObjectId>61</ObjectId>
+    </schema>
+    <schema id="17" parent="1" name="WMSYS">
+      <ObjectId>62</ObjectId>
+    </schema>
+    <schema id="18" parent="1" name="OJVMSYS">
+      <ObjectId>70</ObjectId>
+    </schema>
+    <schema id="19" parent="1" name="CTXSYS">
+      <ObjectId>73</ObjectId>
+    </schema>
+    <schema id="20" parent="1" name="ORDSYS">
+      <ObjectId>75</ObjectId>
+    </schema>
+    <schema id="21" parent="1" name="ORDDATA">
+      <ObjectId>76</ObjectId>
+    </schema>
+    <schema id="22" parent="1" name="ORDPLUGINS">
+      <ObjectId>77</ObjectId>
+    </schema>
+    <schema id="23" parent="1" name="SI_INFORMTN_SCHEMA">
+      <ObjectId>78</ObjectId>
+    </schema>
+    <schema id="24" parent="1" name="MDSYS">
+      <ObjectId>79</ObjectId>
+    </schema>
+    <schema id="25" parent="1" name="OLAPSYS">
+      <ObjectId>82</ObjectId>
+    </schema>
+    <schema id="26" parent="1" name="MDDATA">
+      <ObjectId>85</ObjectId>
+    </schema>
+    <schema id="27" parent="1" name="SPATIAL_WFS_ADMIN_USR">
+      <ObjectId>87</ObjectId>
+    </schema>
+    <schema id="28" parent="1" name="SPATIAL_CSW_ADMIN_USR">
+      <ObjectId>90</ObjectId>
+    </schema>
+    <schema id="29" parent="1" name="LBACSYS">
+      <ObjectId>92</ObjectId>
+    </schema>
+    <schema id="30" parent="1" name="FLOWS_FILES">
+      <ObjectId>94</ObjectId>
+    </schema>
+    <schema id="31" parent="1" name="APEX_PUBLIC_USER">
+      <ObjectId>95</ObjectId>
+    </schema>
+    <schema id="32" parent="1" name="APEX_040200">
+      <ObjectId>98</ObjectId>
+    </schema>
+    <schema id="33" parent="1" name="DVF">
+      <ObjectId>99</ObjectId>
+    </schema>
+    <schema id="34" parent="1" name="SCOTT">
+      <ObjectId>102</ObjectId>
+    </schema>
+    <schema id="35" parent="1" name="DVSYS">
+      <ObjectId>1279990</ObjectId>
+    </schema>
+    <schema id="36" parent="1" name="SYSBACKUP">
+      <ObjectId>2147483617</ObjectId>
+    </schema>
+    <schema id="37" parent="1" name="SYSDG">
+      <ObjectId>2147483618</ObjectId>
+    </schema>
+    <schema id="38" parent="1" name="SYSKM">
+      <ObjectId>2147483619</ObjectId>
+    </schema>
+    <schema id="39" parent="1" name="XS$NULL">
+      <ObjectId>2147483638</ObjectId>
+    </schema>
+    <sequence id="40" parent="2" name="ISEQ$$_91959">
+      <ObjectId>91960</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="41" parent="2" name="ISEQ$$_91963">
+      <ObjectId>91964</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="42" parent="2" name="ISEQ$$_92253">
+      <ObjectId>92254</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-09-09.16:42:04</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:04</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="43" parent="2" name="ISEQ$$_92257">
+      <ObjectId>92258</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-09-09.16:42:11</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <sequence id="44" parent="2" name="ISEQ$$_92261">
+      <ObjectId>92262</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-09-09.16:44:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="45" parent="2" name="EVENT_CATEGORY">
+      <ObjectId>91959</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="46" parent="2" name="EVENT_TYPE">
+      <ObjectId>91963</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="47" parent="2" name="GOTHRAM_MASTER">
+      <ObjectId>92253</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:04</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:04</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="48" parent="2" name="ROLE_MASTER">
+      <ObjectId>91956</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:48:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:48:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="49" parent="2" name="SOOTHRAM_MASTER">
+      <ObjectId>92257</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:11</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="50" parent="2" name="STATUS_MASTER">
+      <ObjectId>91974</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:07:44</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:07:44</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="51" parent="2" name="USER_ADDRESS">
+      <ObjectId>92269</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:46:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:46:49</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="52" parent="2" name="USER_DETAILS">
+      <ObjectId>92266</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="53" parent="2" name="USER_MASTER">
+      <ObjectId>92261</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="54" parent="2" name="VEDA_MASTER">
+      <ObjectId>91971</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:06:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:06:06</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <column id="55" parent="45" name="EVENT_CATEGORY_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="56" parent="45" name="EVENT_CATEGORY_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="57" parent="45" name="APPROVED">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="58" parent="45" name="REQUESTED_BY">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="59" parent="45" name="REQUESTED_ON">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="60" parent="45" name="APPROVED_BY">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="61" parent="45" name="APPROVED_ON">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <index id="62" parent="45" name="PK_EVENT_CATEGORY">
+      <ObjectId>91961</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>EVENT_CATEGORY_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="63" parent="45" name="UK_EVENT_CATEGORY_NAME">
+      <ObjectId>91962</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>EVENT_CATEGORY_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="64" parent="45" name="PK_EVENT_CATEGORY">
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <ColNames>EVENT_CATEGORY_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_EVENT_CATEGORY</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="65" parent="45" name="UK_EVENT_CATEGORY_NAME">
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <ColNames>EVENT_CATEGORY_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_EVENT_CATEGORY_NAME</UnderlyingIndexName>
+    </key>
+    <column id="66" parent="46" name="EVENT_TYPE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="67" parent="46" name="EVENT_CATEGORY_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="68" parent="46" name="EVENT_TYPE_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="69" parent="46" name="EVENT_TYPE_DESC">
+      <Position>4</Position>
+      <DataType>VARCHAR2(150 byte)|0s</DataType>
+    </column>
+    <column id="70" parent="46" name="APPROVED">
+      <Position>5</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="71" parent="46" name="REQUESTED_BY">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="72" parent="46" name="REQUESTED_ON">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="73" parent="46" name="APPROVED_BY">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="74" parent="46" name="APPROVED_ON">
+      <Position>9</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <index id="75" parent="46" name="PK_EVENT_TYPE_ID">
+      <ObjectId>91965</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>EVENT_TYPE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="76" parent="46" name="UK_EVENT_TYPE_NAME">
+      <ObjectId>91966</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:49:16</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>EVENT_TYPE_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="77" parent="46" name="PK_EVENT_TYPE_ID">
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <ColNames>EVENT_TYPE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_EVENT_TYPE_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="78" parent="46" name="UK_EVENT_TYPE_NAME">
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <ColNames>EVENT_TYPE_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_EVENT_TYPE_NAME</UnderlyingIndexName>
+    </key>
+    <foreign-key id="79" parent="46" name="FK_EVENT_TYPE_CATEGORY">
+      <ModifiedTimestamp>2018-09-02.00:49:16</ModifiedTimestamp>
+      <ColNames>EVENT_CATEGORY_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>EVENT_CATEGORY</RefTableName>
+      <RefKeyName>PK_EVENT_CATEGORY</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="80" parent="47" name="GOTHRAM_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="81" parent="47" name="GOTHRAM_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="82" parent="47" name="APPROVED">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="83" parent="47" name="REQUESTED_BY">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="84" parent="47" name="REQUESTED_ON">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="85" parent="47" name="APPROVED_BY">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="86" parent="47" name="APPROVED_ON">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <index id="87" parent="47" name="PK_GOTHRAM_MASTER_ID">
+      <ObjectId>92255</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:05</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:05</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>GOTHRAM_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="88" parent="47" name="UK_GOTHRAM_MASTER_NAME">
+      <ObjectId>92256</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:05</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:05</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>GOTHRAM_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="47" name="PK_GOTHRAM_MASTER_ID">
+      <ModifiedTimestamp>2018-09-09.16:42:05</ModifiedTimestamp>
+      <ColNames>GOTHRAM_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_GOTHRAM_MASTER_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="90" parent="47" name="UK_GOTHRAM_MASTER_NAME">
+      <ModifiedTimestamp>2018-09-09.16:42:05</ModifiedTimestamp>
+      <ColNames>GOTHRAM_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_GOTHRAM_MASTER_NAME</UnderlyingIndexName>
+    </key>
+    <column id="91" parent="48" name="ROLE_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="92" parent="48" name="ROLE_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(25 byte)|0s</DataType>
+    </column>
+    <index id="93" parent="48" name="PK_USER_ROLE">
+      <ObjectId>91957</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:48:50</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:48:50</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ROLE_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="94" parent="48" name="UK_USER_ROLE_NAME">
+      <ObjectId>91958</ObjectId>
+      <CreatedTimestamp>2018-09-02.00:48:50</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-02.00:48:50</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ROLE_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="95" parent="48" name="PK_USER_ROLE">
+      <ModifiedTimestamp>2018-09-02.00:48:50</ModifiedTimestamp>
+      <ColNames>ROLE_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_USER_ROLE</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="96" parent="48" name="UK_USER_ROLE_NAME">
+      <ModifiedTimestamp>2018-09-02.00:48:50</ModifiedTimestamp>
+      <ColNames>ROLE_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_USER_ROLE_NAME</UnderlyingIndexName>
+    </key>
+    <column id="97" parent="49" name="SOOTHRAM_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="98" parent="49" name="SOOTHRAM_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <column id="99" parent="49" name="APPROVED">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <DefaultExpression>0</DefaultExpression>
+    </column>
+    <column id="100" parent="49" name="REQUESTED_BY">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="101" parent="49" name="REQUESTED_ON">
+      <Position>5</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="102" parent="49" name="APPROVED_BY">
+      <Position>6</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="103" parent="49" name="APPROVED_ON">
+      <Position>7</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <index id="104" parent="49" name="PK_SOOTHRAM_MASTER_ID">
+      <ObjectId>92259</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:11</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>SOOTHRAM_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="105" parent="49" name="UK_SOOTHRAM_MASTER_NAME">
+      <ObjectId>92260</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:42:11</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>SOOTHRAM_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="106" parent="49" name="PK_SOOTHRAM_MASTER_ID">
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <ColNames>SOOTHRAM_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_SOOTHRAM_MASTER_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="107" parent="49" name="UK_SOOTHRAM_MASTER_NAME">
+      <ModifiedTimestamp>2018-09-09.16:42:11</ModifiedTimestamp>
+      <ColNames>SOOTHRAM_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_SOOTHRAM_MASTER_NAME</UnderlyingIndexName>
+    </key>
+    <column id="108" parent="50" name="STATUS_MASTER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="109" parent="50" name="STATUS_MASTER_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <index id="110" parent="50" name="PK_STATUS_MASTER_ID">
+      <ObjectId>91975</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:07:44</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:07:44</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>STATUS_MASTER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="111" parent="50" name="UK_STATUS_MASTER_NAME">
+      <ObjectId>91976</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:07:44</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:07:44</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>STATUS_MASTER_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="112" parent="50" name="PK_STATUS_MASTER_ID">
+      <ModifiedTimestamp>2018-09-03.16:07:44</ModifiedTimestamp>
+      <ColNames>STATUS_MASTER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_STATUS_MASTER_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="113" parent="50" name="UK_STATUS_MASTER_NAME">
+      <ModifiedTimestamp>2018-09-03.16:07:44</ModifiedTimestamp>
+      <ColNames>STATUS_MASTER_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_STATUS_MASTER_NAME</UnderlyingIndexName>
+    </key>
+    <column id="114" parent="51" name="USER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="115" parent="51" name="ADDRESS_FLAT_NUMBER">
+      <Position>2</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <column id="116" parent="51" name="ADDRESS_STREET_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(500 byte)|0s</DataType>
+    </column>
+    <column id="117" parent="51" name="ADDRESS_CITY">
+      <Position>4</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <column id="118" parent="51" name="ADDRESS_STATE">
+      <Position>5</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="119" parent="51" name="ADDRESS_ZIPCODE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(10 byte)|0s</DataType>
+    </column>
+    <index id="120" parent="51" name="UK_USER_ADDRESS_ID">
+      <ObjectId>92270</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:46:49</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:46:49</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="121" parent="51" name="UK_USER_ADDRESS_ID">
+      <ModifiedTimestamp>2018-09-09.16:46:49</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_USER_ADDRESS_ID</UnderlyingIndexName>
+    </key>
+    <foreign-key id="122" parent="51" name="FK_USER_ADDRESS_ID">
+      <ModifiedTimestamp>2018-09-09.16:46:49</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>USER_MASTER</RefTableName>
+      <RefKeyName>PK_USER_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="123" parent="52" name="USER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="124" parent="52" name="USER_VEDA_ID">
+      <Position>2</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="125" parent="52" name="USER_SOOTHRAM_ID">
+      <Position>3</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="126" parent="52" name="USER_GOTHRAM_ID">
+      <Position>4</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <index id="127" parent="52" name="UK_USER_DETAILS_ID">
+      <ObjectId>92267</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:29</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="128" parent="52" name="UK_USER_DETAILS_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_USER_DETAILS_ID</UnderlyingIndexName>
+    </key>
+    <foreign-key id="129" parent="52" name="FK_USER_DETAILS_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>USER_MASTER</RefTableName>
+      <RefKeyName>PK_USER_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="130" parent="52" name="FK_USER_VEDA_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <ColNames>USER_VEDA_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>VEDA_MASTER</RefTableName>
+      <RefKeyName>PK_VEDA_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="131" parent="52" name="FK_USER_SOOTHRAM_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <ColNames>USER_SOOTHRAM_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>SOOTHRAM_MASTER</RefTableName>
+      <RefKeyName>PK_SOOTHRAM_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="132" parent="52" name="FK_USER_GOTHRAM_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:29</ModifiedTimestamp>
+      <ColNames>USER_GOTHRAM_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>GOTHRAM_MASTER</RefTableName>
+      <RefKeyName>PK_GOTHRAM_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="133" parent="53" name="USER_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="134" parent="53" name="USER_FIRST_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="135" parent="53" name="USER_LAST_NAME">
+      <Position>3</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+    </column>
+    <column id="136" parent="53" name="USER_NAME">
+      <Position>4</Position>
+      <DataType>VARCHAR2(15 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="137" parent="53" name="USER_EMAIL">
+      <Position>5</Position>
+      <DataType>VARCHAR2(75 byte)|0s</DataType>
+    </column>
+    <column id="138" parent="53" name="USER_MOBILE">
+      <Position>6</Position>
+      <DataType>VARCHAR2(13 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="139" parent="53" name="USER_PASSWORD">
+      <Position>7</Position>
+      <DataType>VARCHAR2(50 byte)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="140" parent="53" name="USER_ROLE_ID">
+      <Position>8</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="141" parent="53" name="LOGIN_STATUS_ID">
+      <Position>9</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <column id="142" parent="53" name="LATEST_LOGIN_TOKEN">
+      <Position>10</Position>
+      <DataType>VARCHAR2(300 byte)|0s</DataType>
+    </column>
+    <column id="143" parent="53" name="LAST_SUCCESSFUL_LOGIN">
+      <Position>11</Position>
+      <DataType>TIMESTAMP(6)|0s</DataType>
+    </column>
+    <column id="144" parent="53" name="LOGIN_FAILED_ATTEMPT">
+      <Position>12</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+    </column>
+    <index id="145" parent="53" name="PK_USER_MASTER_ID">
+      <ObjectId>92263</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="146" parent="53" name="UK_USER_MASTER_NAME">
+      <ObjectId>92264</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="147" parent="53" name="UK_USER_MOBILE">
+      <ObjectId>92265</ObjectId>
+      <CreatedTimestamp>2018-09-09.16:44:18</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>USER_MOBILE</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="148" parent="53" name="PK_USER_MASTER_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <ColNames>USER_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_USER_MASTER_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="149" parent="53" name="UK_USER_MASTER_NAME">
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <ColNames>USER_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_USER_MASTER_NAME</UnderlyingIndexName>
+    </key>
+    <key id="150" parent="53" name="UK_USER_MOBILE">
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <ColNames>USER_MOBILE</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_USER_MOBILE</UnderlyingIndexName>
+    </key>
+    <foreign-key id="151" parent="53" name="FK_USER_ROLE_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <ColNames>USER_ROLE_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>ROLE_MASTER</RefTableName>
+      <RefKeyName>PK_USER_ROLE</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <foreign-key id="152" parent="53" name="FK_USER_LOGIN_STATUS_ID">
+      <ModifiedTimestamp>2018-09-09.16:44:18</ModifiedTimestamp>
+      <ColNames>LOGIN_STATUS_ID</ColNames>
+      <RefSchemaName>DEVUSER</RefSchemaName>
+      <RefTableName>STATUS_MASTER</RefTableName>
+      <RefKeyName>PK_STATUS_MASTER_ID</RefKeyName>
+      <OnDelete>restrict</OnDelete>
+    </foreign-key>
+    <column id="153" parent="54" name="VEDA_ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0s</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="154" parent="54" name="VEDA_NAME">
+      <Position>2</Position>
+      <DataType>VARCHAR2(20 byte)|0s</DataType>
+    </column>
+    <index id="155" parent="54" name="PK_VEDA_MASTER_ID">
+      <ObjectId>91972</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:06:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:06:06</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>VEDA_ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="156" parent="54" name="UK_VEDA_MASTER_NAME">
+      <ObjectId>91973</ObjectId>
+      <CreatedTimestamp>2018-09-03.16:06:06</CreatedTimestamp>
+      <ModifiedTimestamp>2018-09-03.16:06:06</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>VEDA_NAME</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="157" parent="54" name="PK_VEDA_MASTER_ID">
+      <ModifiedTimestamp>2018-09-03.16:06:06</ModifiedTimestamp>
+      <ColNames>VEDA_ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>PK_VEDA_MASTER_ID</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="158" parent="54" name="UK_VEDA_MASTER_NAME">
+      <ModifiedTimestamp>2018-09-03.16:06:06</ModifiedTimestamp>
+      <ColNames>VEDA_NAME</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>UK_VEDA_MASTER_NAME</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

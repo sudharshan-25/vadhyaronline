@@ -4,7 +4,6 @@ import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.domain.DropDownChoice;
 import in.ssi.vadhyar.web.domain.EventCategory;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;
@@ -16,7 +15,7 @@ import java.time.Instant;
 import java.util.List;
 
 @Repository
-public class EventCategoryJdbcRepository implements AbstractJdbcRepository {
+public class EventCategoryJdbcRepository implements IJdbcRepository {
 
     private NamedParameterJdbcOperations jdbcOperations;
 

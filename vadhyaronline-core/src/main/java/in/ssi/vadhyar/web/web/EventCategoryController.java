@@ -9,13 +9,17 @@ import in.ssi.vadhyar.web.service.EventCategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+@CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("/eventCategory")
 @VOAuthenticated
 public class EventCategoryController {
 
-    @Autowired
     private EventCategoryService eventCategoryService;
+
+    public EventCategoryController(EventCategoryService eventCategoryService) {
+        this.eventCategoryService = eventCategoryService;
+    }
 
     @GetMapping("/")
     public VOResponse getEventCategories() {
@@ -53,6 +57,13 @@ public class EventCategoryController {
         VOResponse response = new VOResponse();
         eventCategoryService.createEventCategory(eventCategory);
         response.setData("Event Category created successfully");
+        return response;
+    }
+
+    @GetMapping("/{eventCategoryId}")
+    public VOResponse getEventCategory(@PathVariable Integer eventCategoryId) {
+        VOResponse response = new VOResponse();
+        response.setData(eventCategoryService.getEventCategory(eventCategoryId));
         return response;
     }
 

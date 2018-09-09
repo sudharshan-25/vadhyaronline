@@ -5,7 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 
 import java.util.List;
 
-public interface AbstractJdbcRepository {
+public interface IJdbcRepository {
 
     List<DropDownChoice> getDropDownList();
 
