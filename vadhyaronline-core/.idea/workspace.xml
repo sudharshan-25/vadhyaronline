@@ -2,48 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a44938-7c9a-4c59-a34a-38d913c07677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/Gothram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/Soothram.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/UserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/GothramEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/LoginUserEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/SoothramEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/StatusMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/UserMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/VedaMasterEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/helper/LoginStatusHelper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/GothramJdbcRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/SoothramJdbcRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/VedaMasterJdbcRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/GothramJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/SoothramJpaRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/GothramService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/SoothramService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/GothramController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/SoothramController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/sudha.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dictionaries/sudha.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/LoginUserJdbcRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/LoginUserJpaRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/LoginService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/Application.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/Application.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/LoginUserContext.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/LoginUserContext.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/LoginUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/LoginUser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventTypeEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventTypeEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/AbstractJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/IJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/EventCategoryJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/EventCategoryJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/EventTypeJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/EventTypeJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/RoleJdbcRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/RoleJdbcRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventTypeJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventTypeJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/ChoiceService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/ChoiceService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/ChoicesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/ChoicesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventCategoryController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventCategoryController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.editorconfig" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.editorconfig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.idea/misc.xml" afterDir="false" />
@@ -172,7 +135,7 @@
           <entry key="STATUS_MASTER" value="2" />
           <entry key="USER_DETAILS" value="1" />
           <entry key="class" value="1" />
-          <entry key="java" value="143" />
+          <entry key="java" value="148" />
           <entry key="sql" value="13" />
           <entry key="xml" value="3" />
           <entry key="yml" value="6" />
@@ -182,7 +145,7 @@
         <counts>
           <entry key="CLASS" value="1" />
           <entry key="Database Element" value="3" />
-          <entry key="JAVA" value="143" />
+          <entry key="JAVA" value="148" />
           <entry key="SQL" value="13" />
           <entry key="Scratch" value="1" />
           <entry key="XML" value="3" />
@@ -191,17 +154,17 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7694" />
+          <entry key="java" value="8448" />
           <entry key="sql" value="72" />
-          <entry key="txt" value="23" />
+          <entry key="txt" value="24" />
           <entry key="xml" value="13" />
           <entry key="yml" value="30" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7694" />
-          <entry key="PLAIN_TEXT" value="23" />
+          <entry key="JAVA" value="8448" />
+          <entry key="PLAIN_TEXT" value="24" />
           <entry key="SQL" value="72" />
           <entry key="XML" value="13" />
           <entry key="YAML" value="30" />
@@ -219,156 +182,57 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="77" column="22" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/UserMasterEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/LoginUserJpaRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="30" selection-start-line="30" selection-end-line="31" selection-end-column="28" />
+            <state relative-caret-position="153">
+              <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1069#1070#0" expanded="true" />
-                <element signature="e#1098#1099#0" expanded="true" />
-                <element signature="e#1139#1140#0" expanded="true" />
-                <element signature="e#1175#1176#0" expanded="true" />
-                <element signature="e#1215#1216#0" expanded="true" />
-                <element signature="e#1251#1252#0" expanded="true" />
-                <element signature="e#1309#1310#0" expanded="true" />
-                <element signature="e#1359#1360#0" expanded="true" />
-                <element signature="e#1398#1399#0" expanded="true" />
-                <element signature="e#1433#1434#0" expanded="true" />
-                <element signature="e#1489#1490#0" expanded="true" />
-                <element signature="e#1537#1538#0" expanded="true" />
-                <element signature="e#1572#1573#0" expanded="true" />
-                <element signature="e#1603#1604#0" expanded="true" />
-                <element signature="e#1651#1652#0" expanded="true" />
-                <element signature="e#1691#1692#0" expanded="true" />
-                <element signature="e#1727#1728#0" expanded="true" />
-                <element signature="e#1759#1760#0" expanded="true" />
-                <element signature="e#1809#1810#0" expanded="true" />
-                <element signature="e#1851#1852#0" expanded="true" />
-                <element signature="e#1888#1889#0" expanded="true" />
-                <element signature="e#1921#1922#0" expanded="true" />
-                <element signature="e#1973#1974#0" expanded="true" />
-                <element signature="e#2017#2018#0" expanded="true" />
-                <element signature="e#2052#2053#0" expanded="true" />
-                <element signature="e#2083#2084#0" expanded="true" />
-                <element signature="e#2131#2132#0" expanded="true" />
-                <element signature="e#2171#2172#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/UserDetails.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/LoginService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" selection-start-line="19" selection-end-line="19" />
+            <state relative-caret-position="179">
+              <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
               <folding>
-                <element signature="e#292#293#0" expanded="true" />
-                <element signature="e#321#322#0" expanded="true" />
-                <element signature="e#362#363#0" expanded="true" />
-                <element signature="e#398#399#0" expanded="true" />
-                <element signature="e#433#434#0" expanded="true" />
-                <element signature="e#464#465#0" expanded="true" />
-                <element signature="e#512#513#0" expanded="true" />
-                <element signature="e#552#553#0" expanded="true" />
-                <element signature="e#587#588#0" expanded="true" />
-                <element signature="e#618#619#0" expanded="true" />
-                <element signature="e#666#667#0" expanded="true" />
-                <element signature="e#706#707#0" expanded="true" />
-                <element signature="e#742#743#0" expanded="true" />
-                <element signature="e#774#775#0" expanded="true" />
-                <element signature="e#824#825#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1052#1053#0" expanded="true" />
-                <element signature="e#1080#1081#0" expanded="true" />
-                <element signature="e#1122#1123#0" expanded="true" />
-                <element signature="e#1156#1157#0" expanded="true" />
-                <element signature="e#1189#1190#0" expanded="true" />
-                <element signature="e#1218#1219#0" expanded="true" />
-                <element signature="e#1262#1263#0" expanded="true" />
-                <element signature="e#1298#1299#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/LoginUserEntity.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="367">
-              <caret line="104" column="104" selection-start-line="104" selection-start-column="104" selection-end-line="104" selection-end-column="104" />
+            <state relative-caret-position="340">
+              <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#760#761#0" expanded="true" />
-                <element signature="e#789#790#0" expanded="true" />
-                <element signature="e#830#831#0" expanded="true" />
-                <element signature="e#866#867#0" expanded="true" />
-                <element signature="e#901#902#0" expanded="true" />
-                <element signature="e#932#933#0" expanded="true" />
-                <element signature="e#980#981#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1226#1227#0" expanded="true" />
-                <element signature="e#1257#1258#0" expanded="true" />
-                <element signature="e#1305#1306#0" expanded="true" />
-                <element signature="e#1345#1346#0" expanded="true" />
-                <element signature="e#1061#1062#0" expanded="true" />
-                <element signature="e#1088#1089#0" expanded="true" />
-                <element signature="e#1138#1139#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1220#1221#0" expanded="true" />
-                <element signature="e#1254#1255#0" expanded="true" />
-                <element signature="e#1320#1321#0" expanded="true" />
-                <element signature="e#1366#1367#0" expanded="true" />
-                <element signature="e#1409#1410#0" expanded="true" />
-                <element signature="e#1448#1449#0" expanded="true" />
-                <element signature="e#1512#1513#0" expanded="true" />
-                <element signature="e#1568#1569#0" expanded="true" />
-                <element signature="e#1617#1618#0" expanded="true" />
-                <element signature="e#1659#1660#0" expanded="true" />
-                <element signature="e#1836#1837#0" expanded="true" />
-                <element signature="e#1877#1878#0" expanded="true" />
-                <element signature="e#1942#1943#0" expanded="true" />
-                <element signature="e#2002#2003#0" expanded="true" />
+                <element signature="e#375#376#0" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/LoginUser.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/LoginUserJdbcRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+            <state relative-caret-position="503">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
               <folding>
-                <element signature="e#1273#1274#0" expanded="true" />
-                <element signature="e#1306#1307#0" expanded="true" />
-                <element signature="e#1358#1359#0" expanded="true" />
-                <element signature="e#1402#1403#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/LoginUserContext.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="12" column="27" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-              <folding>
-                <element signature="e#542#543#0" expanded="true" />
-                <element signature="e#585#586#0" expanded="true" />
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -440,6 +304,10 @@
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/LoginUser.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/LoginUserContext.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/LoginUserEntity.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/LoginUserJpaRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/LoginUserJdbcRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/LoginService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java" />
       </list>
     </option>
   </component>
@@ -529,16 +397,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
@@ -558,11 +417,11 @@
     <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
-    <property name="RequestMappingsPanelWidth0" value="627" />
-    <property name="RequestMappingsPanelWidth1" value="627" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536487292088" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1536489602201" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -614,7 +473,7 @@
       <workItem from="1536386251106" duration="591000" />
       <workItem from="1536387078550" duration="104000" />
       <workItem from="1536412812116" duration="1079000" />
-      <workItem from="1536471091005" duration="14248000" />
+      <workItem from="1536471091005" duration="16548000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC and JPA changes">
       <created>1535947654310</created>
@@ -637,11 +496,18 @@
       <option name="project" value="LOCAL" />
       <updated>1535950702968</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="JDBC and JPA changes">
+      <created>1536487613988</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1536487613988</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="37649000" />
+    <option name="totallyTimeSpent" value="39949000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -657,12 +523,12 @@
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3289689" />
       <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.5433715" />
+      <window_info anchor="bottom" id="Event Log" order="2" sideWeight="0.50075644" side_tool="true" weight="0.542517" />
       <window_info anchor="bottom" id="Java Enterprise" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="4" />
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
-      <window_info anchor="bottom" id="Run" order="7" weight="0.5008183" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.5" />
       <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49924356" weight="0.5433715" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
@@ -764,43 +630,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="38" column="50" selection-start-line="38" selection-start-column="50" selection-end-line="38" selection-end-column="50" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#801#802#0" expanded="true" />
-            <element signature="e#857#858#0" expanded="true" />
-            <element signature="e#988#989#0" expanded="true" />
-            <element signature="e#1046#1047#0" expanded="true" />
-            <element signature="e#1186#1187#0" expanded="true" />
-            <element signature="e#1244#1245#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="46" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/VOControllerAdvice.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -923,16 +752,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="12" column="4" selection-start-line="12" selection-start-column="4" selection-end-line="12" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1197,13 +1016,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="77" column="22" lean-forward="true" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/domain/UserDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -1305,8 +1117,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/LoginUserEntity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="367">
-          <caret line="104" column="104" selection-start-line="104" selection-start-column="104" selection-end-line="104" selection-end-column="104" />
+        <state>
+          <caret lean-forward="true" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#760#761#0" expanded="true" />
@@ -1339,6 +1151,65 @@
             <element signature="e#1877#1878#0" expanded="true" />
             <element signature="e#1942#1943#0" expanded="true" />
             <element signature="e#2002#2003#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/LoginUserJpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="52" selection-start-line="9" selection-start-column="52" selection-end-line="9" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="77" column="22" selection-start-line="77" selection-start-column="2" selection-end-line="77" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jdbc/LoginUserJdbcRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/Application.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/LoginService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="179">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="20" column="65" selection-start-line="20" selection-start-column="65" selection-end-line="20" selection-end-column="65" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#375#376#0" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
           </folding>
         </state>
       </provider>
