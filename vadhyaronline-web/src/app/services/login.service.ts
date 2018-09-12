@@ -1,12 +1,13 @@
 import {EventEmitter, Injectable} from '@angular/core';
-import {LoginUser} from '../domain/login-user';
+import {LoginUser} from '../domain/domain';
+import {Router} from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoginService {
 
-  constructor() {
+  constructor(private router: Router) {
   }
 
   private loginEvent: EventEmitter<boolean> = new EventEmitter();
@@ -15,7 +16,7 @@ export class LoginService {
     const loginUserString = localStorage.getItem('loggedInUser');
     if (loginUserString !== null) {
       try {
-        LoginUser.parseUser(loginUserString);
+        JSON.parse(loginUserString);
         return true;
       } catch (e) {
         return false;
@@ -27,9 +28,10 @@ export class LoginService {
   getUser(): LoginUser {
     if (this.isUserLoggedIn()) {
       const loginUserString = localStorage.getItem('loggedInUser');
-      return LoginUser.parseUser(loginUserString);
+      return JSON.parse(loginUserString);
     }
-    throw new Error('No Logged in user');
+    this.router.navigate(['/login'], {queryParams: {'page': 'Unauthorized'}});
+    // throw new Error('No Logged in user');
   }
 
   removeUserSession(): void {
@@ -45,5 +47,4 @@ export class LoginService {
   public emitLoginEvent(): EventEmitter<boolean> {
     return this.loginEvent;
   }
-
 }

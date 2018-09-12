@@ -1,9 +1,2 @@
-/* You can add global styles to this file, and also import other style files */
-body, html {
-  font-family: Roboto, 'Helvetica', sans-serif;
-}
-
-.login-row{
-  padding-top: 5px;
-  padding-bottom: 5px;
-}
+@import "~bootstrap/dist/css/bootstrap.css";
+@import "~font-awesome/css/font-awesome.css";

@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "",
       "schematics": {},
       "architect": {
         "build": {
@@ -24,12 +24,9 @@
             ],
             "styles": [
               "src/styles.css",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css",
-              "node_modules/bootstrap/dist/css/bootstrap-grid.min.css"
+              "node_modules/amexio-ng-extensions/styles/css/at-am-limegreen.css"
             ],
             "scripts": [
-              "node_modules/jquery/dist/jquery.slim.min.js",
-              "node_modules/bootstrap/dist/js/bootstrap.min.js"
             ]
           },
           "configurations": {
@@ -134,10 +131,16 @@
       "component": {
         "spec": false
       },
-      "service" : {
+      "service": {
         "spec": false
       },
-      "pipe" : {
+      "module": {
+        "spec": false
+      },
+      "pipe": {
+        "spec": false
+      },
+      "guard": {
         "spec": false
       }
     }
