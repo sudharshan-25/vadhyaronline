@@ -1,0 +1,58 @@
+{
+  "menus": {
+    "user": {
+      "data": [
+        {
+          "text": "Home",
+          "icon": "fa fa-home fa-fw",
+          "mdaIcon": "home",
+          "link": "/user/home/",
+          "selected": true
+        },
+        {
+          "text": "Change Password",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/user/change-password/"
+        },
+        {
+          "text": "Update Profile",
+          "icon": "fa fa-user-circle fa-fw",
+          "mdaIcon": "profile",
+          "link": "/update-profile/"
+        },
+        {
+          "text": "Events",
+          "icon": "fa fa-calendar fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "Create/Resume Event",
+              "icon": "fa fa-edit fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Pending Event",
+              "icon": "fa fa-bookmark fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            },
+            {
+              "text": "Event History",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/event-history/"
+            }
+          ]
+        }
+      ]
+    },
+    "vadhyar": {
+      "data": []
+    },
+    "admin": {
+      "data": []
+    }
+  }
+}
