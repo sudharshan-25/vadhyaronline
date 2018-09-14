@@ -11,6 +11,7 @@ export const APP_ROUTES: Routes = [
   {path: 'admin', loadChildren: './shared/admin/admin.module#AdminModule', canActivate: [AdminGuard]},
   {path: 'user', loadChildren: './shared/user/user.module#UserModule', canActivate: [UserGuard]},
   {path: 'login', loadChildren: './shared/login/login.module#LoginModule'},
+  {path: 'register', loadChildren: './shared/register/register.module#RegisterModule'},
   {path: 'home', component: HomeRedirectComponent},
   {path: '**', redirectTo: '/login/404'}
 ];

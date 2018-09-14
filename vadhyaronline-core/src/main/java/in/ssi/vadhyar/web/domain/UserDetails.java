@@ -16,17 +16,21 @@ public class UserDetails {
 
     private String mobile;
 
+    private String role;
+
     public UserDetails(){
 
     }
 
-    public UserDetails(int userId, String userName, String firstName, String lastName, String email, String mobile) {
+    public UserDetails(int userId, String userName, String firstName, String lastName, String email,
+                       String mobile, String role) {
         this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
         this.email = email;
         this.mobile = mobile;
+        this.setRole(role);
     }
 
     public int getUserId() {
@@ -83,5 +87,13 @@ public class UserDetails {
 
     public void setMobile(String mobile) {
         this.mobile = mobile;
+    }
+
+    public String getRole() {
+        return role;
+    }
+
+    public void setRole(String role) {
+        this.role = role;
     }
 }

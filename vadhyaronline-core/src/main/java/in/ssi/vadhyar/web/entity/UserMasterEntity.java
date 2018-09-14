@@ -31,6 +31,9 @@ public class UserMasterEntity {
     @Column(name = "user_password")
     private String password;
 
+    @ManyToOne
+    @JoinColumn(name = "user_role_id")
+    private RoleMasterEntity roleMasterEntity;
 
     public int getUserId() {
         return userId;
@@ -88,7 +91,16 @@ public class UserMasterEntity {
         this.password = password;
     }
 
+    public RoleMasterEntity getRoleMasterEntity() {
+        return roleMasterEntity;
+    }
+
+    public void setRoleMasterEntity(RoleMasterEntity roleMasterEntity) {
+        this.roleMasterEntity = roleMasterEntity;
+    }
+
     public UserDetails toDomain() {
-        return new UserDetails(userId, userName, userFirstName, userLastName, userEmail, userMobile);
+        return new UserDetails(userId, userName, userFirstName, userLastName, userEmail, userMobile,
+                roleMasterEntity.getRoleName());
     }
 }

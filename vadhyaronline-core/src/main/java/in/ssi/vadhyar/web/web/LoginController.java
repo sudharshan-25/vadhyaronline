@@ -1,8 +1,11 @@
 package in.ssi.vadhyar.web.web;
 
 import in.ssi.vadhyar.web.authentication.VOAuthenticated;
+import in.ssi.vadhyar.web.domain.UserDetails;
 import in.ssi.vadhyar.web.domain.VOResponse;
 import in.ssi.vadhyar.web.service.LoginService;
+import in.ssi.vadhyar.web.service.UserService;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin("http://localhost:4200")
@@ -12,8 +15,11 @@ public class LoginController {
 
     private LoginService loginService;
 
-    public LoginController(LoginService loginService) {
+    private UserService userService;
+
+    public LoginController(LoginService loginService, UserService userService) {
         this.loginService = loginService;
+        this.userService = userService;
     }
 
     @GetMapping("/login")
@@ -32,4 +38,11 @@ public class LoginController {
         return voResponse;
     }
 
+    @PostMapping(value = "/register")
+    public ResponseEntity<VOResponse> registerUser(@RequestBody UserDetails userDomain) {
+        VOResponse response = new VOResponse();
+        userService.createUser(userDomain);
+        response.setData("User Added successfully");
+        return ResponseEntity.ok(response);
+    }
 }

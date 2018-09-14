@@ -12,3 +12,14 @@ export interface LoginResponse {
 export interface DefaultStringResponse {
   data: string;
 }
+
+export interface DropDownChoices {
+  key: number;
+  value: string;
+  criteriaId: number;
+  criteriaValue: string;
+}
+
+export interface ChoiceResponse {
+  data: DropDownChoices[];
+}

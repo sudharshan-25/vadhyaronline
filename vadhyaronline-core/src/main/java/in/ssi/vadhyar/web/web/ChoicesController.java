@@ -18,6 +18,7 @@ public class ChoicesController {
     }
 
     @GetMapping("/role")
+    @VOAuthenticated(authenticate = false)
     public VOResponse getRoles() {
         VOResponse response = new VOResponse();
         response.setData(choiceService.getRoles());

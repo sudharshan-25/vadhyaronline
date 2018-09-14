@@ -34,7 +34,7 @@ public class ChoiceService {
 
     public List<DropDownChoice> getRoles() {
         List<DropDownChoice> roles = roleJdbcRepository.getDropDownList();
-        if (loginUserContext.getCurrentUser().isAdmin()) {
+        if (loginUserContext.getCurrentUser() == null || !loginUserContext.getCurrentUser().isAdmin()) {
             roles.remove(RoleJdbcRepository.ADMIN_CHOICE);
         }
         return roles;

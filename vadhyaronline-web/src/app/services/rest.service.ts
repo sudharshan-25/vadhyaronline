@@ -1,7 +1,7 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {DefaultStringResponse, LoginResponse} from '../domain/domain';
+import {ChoiceResponse, DefaultStringResponse, DropDownChoices, LoginResponse} from '../domain/domain';
 
 @Injectable({
   providedIn: 'root'
@@ -17,6 +17,14 @@ export class RestService {
 
   public logout(): Observable<DefaultStringResponse> {
     return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/user/logout`, null, {});
+  }
+
+  public getRoles(): Observable<ChoiceResponse> {
+    return this.httpClient.get<ChoiceResponse>(`${this.apiURL}/choices/role`);
+  }
+
+  public registerUser(userDetails: any): Observable<DefaultStringResponse> {
+    return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/user/register`, userDetails, {});
   }
 
 }

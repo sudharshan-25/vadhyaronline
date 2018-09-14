@@ -14,11 +14,13 @@ export class TokenHttpInterceptorService implements HttpInterceptor {
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
     const url = req.url;
     if ((url.indexOf('/user/login') === -1 && url.indexOf('/user/register') === -1)) {
-      req = req.clone({
-        setHeaders: {
-          'X-Auth-Token': this.loginService.getUser().loginToken
-        }
-      });
+      if (this.loginService.isUserLoggedIn()) {
+        req = req.clone({
+          setHeaders: {
+            'X-Auth-Token': this.loginService.getUser().loginToken
+          }
+        });
+      }
     }
     return next.handle(req);
   }

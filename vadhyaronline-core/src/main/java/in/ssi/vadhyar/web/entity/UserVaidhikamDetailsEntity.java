@@ -31,4 +31,44 @@ public class UserVaidhikamDetailsEntity {
     @JoinColumn(name = "user_gothram_id")
     private GothramEntity gothram;
 
+
+    public int getUserId() {
+        return userId;
+    }
+
+    public void setUserId(int userId) {
+        this.userId = userId;
+    }
+
+    public UserMasterEntity getUserMaster() {
+        return userMaster;
+    }
+
+    public void setUserMaster(UserMasterEntity userMaster) {
+        this.userMaster = userMaster;
+    }
+
+    public VedaMasterEntity getVedaMaster() {
+        return vedaMaster;
+    }
+
+    public void setVedaMaster(VedaMasterEntity vedaMaster) {
+        this.vedaMaster = vedaMaster;
+    }
+
+    public SoothramEntity getSoothram() {
+        return soothram;
+    }
+
+    public void setSoothram(SoothramEntity soothram) {
+        this.soothram = soothram;
+    }
+
+    public GothramEntity getGothram() {
+        return gothram;
+    }
+
+    public void setGothram(GothramEntity gothram) {
+        this.gothram = gothram;
+    }
 }
