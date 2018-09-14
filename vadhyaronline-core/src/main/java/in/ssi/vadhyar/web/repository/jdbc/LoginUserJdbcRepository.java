@@ -20,6 +20,9 @@ public class LoginUserJdbcRepository {
     private static final String UPDATED_FAILED_ATTEMPT_QUERY =
             " UPDATE USER_MASTER SET LOGIN_FAILED_ATTEMPT = :LOGIN_FAILED_ATTEMPT WHERE USER_ID = :USER_ID ";
 
+    private static final String UPDATED_LOGOUT_QUERY =
+            " UPDATE USER_MASTER SET LATEST_LOGIN_TOKEN = :LATEST_LOGIN_TOKEN, LOGIN_STATUS_ID = :LOGIN_STATUS_ID " +
+                    " WHERE USER_ID = :USER_ID ";
 
     public void lockUser(Integer userId) {
         MapSqlParameterSource map = new MapSqlParameterSource();
@@ -33,6 +36,14 @@ public class LoginUserJdbcRepository {
         map.addValue("USER_ID", userId);
         map.addValue("LOGIN_FAILED_ATTEMPT", failedAttempts);
         jdbcOperations.update(UPDATED_FAILED_ATTEMPT_QUERY, map);
+    }
+
+    public void updateLogOut(Integer userId){
+        MapSqlParameterSource map = new MapSqlParameterSource();
+        map.addValue("USER_ID", userId);
+        map.addValue("LOGIN_STATUS_ID", CommonConstants.StatusConstants.STATUS_ACTIVE_ID);
+        map.addValue("LATEST_LOGIN_TOKEN", null);
+        jdbcOperations.update(UPDATED_LOGOUT_QUERY, map);
     }
 
 }

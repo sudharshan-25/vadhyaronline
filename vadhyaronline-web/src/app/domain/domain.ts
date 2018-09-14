@@ -1,11 +1,14 @@
 export interface LoginUser {
   userId: number;
-  firstName: string;
-  lastName: string;
   userName: string;
   role: string;
+  loginToken: string;
 }
 
 export interface LoginResponse {
   data: LoginUser;
+}
+
+export interface DefaultStringResponse {
+  data: string;
 }

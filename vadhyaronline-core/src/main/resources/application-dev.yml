@@ -16,7 +16,7 @@ spring:
   jackson:
     default-property-inclusion: non_null
   cache:
-    cache-names: restApiAuthTokenCache
+    cache-names: restApiAuthTokenCache,LoginUsers
 
 management:
   endpoints:

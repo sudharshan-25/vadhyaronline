@@ -44,7 +44,7 @@ public final class CommonConstants {
 
     public static final class CacheConstants {
 
-        public static final String LOGIN_USERS = "Login-Users";
+        public static final String LOGIN_USERS = "LoginUsers";
 
         public static final String VEDA = "Cache-Veda";
 

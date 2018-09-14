@@ -15,7 +15,7 @@ export class VadhyarGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     if (this.loginService.isUserLoggedIn()) {
-      return 'vadhyar' === this.loginService.getUser().role;
+      return 'vadhyar' === this.loginService.getUser().role.toLowerCase();
     } else {
       this.router.navigate(['/login'], {queryParams: [{'reason': 'Unauthorized'}]});
     }

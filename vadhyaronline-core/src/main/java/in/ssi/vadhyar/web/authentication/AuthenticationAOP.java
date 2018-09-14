@@ -5,6 +5,8 @@ import in.ssi.vadhyar.web.domain.LoginUser;
 import in.ssi.vadhyar.web.exception.AlreadyLoggedInException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.cache.Cache;
 import org.springframework.cache.CacheManager;
@@ -31,11 +33,11 @@ public class AuthenticationAOP {
         this.loginUserContext = loginUserContext;
     }
 
-    // @Pointcut("@annotation(VOAuthenticated) || ( execution(public * *(..)) && within(@VOAuthenticated *) )")
+    @Pointcut("@annotation(VOAuthenticated) || ( execution(public * *(..)) && within(@VOAuthenticated *) )")
     public void interceptAuthenticate() {
     }
 
-    // @Before("interceptAuthenticate()")
+    @Before("interceptAuthenticate()")
     public void handleAuthentication(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         VOAuthenticated authenticated = signature.getMethod().getAnnotation(VOAuthenticated.class);

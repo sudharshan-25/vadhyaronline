@@ -29,7 +29,7 @@ export class UserLoginComponent implements OnInit {
   }
 
   initFormValue() {
-    this.loginForm.reset(this.initFormValue(), {onlySelf: false});
+    this.loginForm.reset({userName: '', password: ''}, {onlySelf: false});
   }
 
   login() {
@@ -39,13 +39,7 @@ export class UserLoginComponent implements OnInit {
         .subscribe((response) => {
           const user: LoginUser = response.data;
           this.loginService.addUser(user);
-          if (user['role'] === 'Admin') {
-            this.router.navigate(['/admin/home']);
-          } else if (user['role'] === 'Vadhyar') {
-            this.router.navigate(['/vadhyar/home']);
-          } else {
-            this.router.navigate(['/user/home']);
-          }
+          this.router.navigate(['/']);
         }, (error: HttpErrorResponse) => {
           this.isError = true;
           this.errorMessage = error.error;

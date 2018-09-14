@@ -1,5 +1,6 @@
 package in.ssi.vadhyar.web.service;
 
+import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.constants.CommonConstants;
 import in.ssi.vadhyar.web.domain.LoginUser;
 import in.ssi.vadhyar.web.entity.LoginUserEntity;
@@ -8,6 +9,7 @@ import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.helper.LoginStatusHelper;
 import in.ssi.vadhyar.web.repository.jdbc.LoginUserJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.LoginUserJpaRepository;
+import org.springframework.cache.CacheManager;
 import org.springframework.security.core.token.TokenService;
 import org.springframework.stereotype.Service;
 
@@ -24,11 +26,18 @@ public class LoginService {
 
     private TokenService tokenService;
 
+    private LoginUserContext loginUserContext;
+
+    private CacheManager cacheManager;
+
     public LoginService(TokenService tokenService, LoginUserJpaRepository loginUserJpaRepository,
-                        LoginUserJdbcRepository loginUserJdbcRepository) {
+                        LoginUserJdbcRepository loginUserJdbcRepository, LoginUserContext loginUserContext,
+                        CacheManager cacheManager) {
         this.tokenService = tokenService;
         this.loginUserJpaRepository = loginUserJpaRepository;
         this.loginUserJdbcRepository = loginUserJdbcRepository;
+        this.loginUserContext = loginUserContext;
+        this.cacheManager = cacheManager;
     }
 
     public LoginUser login(String userName, String password) {
@@ -49,6 +58,11 @@ public class LoginService {
         }
 
         StatusMasterEntity userLoginStatus = loginUser.getLoginStatus();
+        if(userLoginStatus == null){
+            userLoginStatus = new StatusMasterEntity();
+            userLoginStatus.setStatusMasterId(CommonConstants.StatusConstants.STATUS_ACTIVE_ID);
+            loginUser.setLoginStatus(userLoginStatus);
+        }
         int userStatus = userLoginStatus.getStatusMasterId();
         switch (userStatus) {
             case CommonConstants.StatusConstants.STATUS_LOCKED_ID:
@@ -60,7 +74,12 @@ public class LoginService {
         loginUser.setLoginFailedAttempt(0);
         loginUser.setLoginStatus(LoginStatusHelper.getLoggedInStatus());
         loginUser.setLastSuccessfulLogin(Timestamp.from(Instant.now()));
-        return loginUserJpaRepository.save(loginUser).toDomain();
+        LoginUser user = loginUserJpaRepository.save(loginUser).toDomain();
+        cacheManager.getCache(CommonConstants.CacheConstants.LOGIN_USERS).put(user.getLoginToken(), user);
+        return user;
     }
 
+    public void logOut() {
+        loginUserJdbcRepository.updateLogOut(loginUserContext.getCurrentUser().getUserId());
+    }
 }

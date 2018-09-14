@@ -10,8 +10,7 @@ public class LoginUserContext {
     private ThreadLocal<LoginUser> currentUser = new InheritableThreadLocal<>();
 
     public LoginUser getCurrentUser() {
-        return new LoginUser(1, "Admin", CommonConstants.RoleConstants.ADMIN_ROLE_NAME, "");
-        //return currentUser.get();
+        return currentUser.get();
     }
 
     public void setCurrentUser(LoginUser userDomain) {

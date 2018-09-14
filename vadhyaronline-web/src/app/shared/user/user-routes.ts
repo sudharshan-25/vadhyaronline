@@ -4,7 +4,7 @@ import {ChangePasswordComponent} from './change-password/change-password.compone
 
 
 export const USER_APP_ROUTES: Routes = [
-  {path: 'user', redirectTo: 'user/home', pathMatch: 'prefix'},
+  {path: '', redirectTo: 'home', pathMatch: 'prefix'},
   {path: 'home', component: UserHomeComponent},
   {path: 'change-password', component: ChangePasswordComponent}
 ];

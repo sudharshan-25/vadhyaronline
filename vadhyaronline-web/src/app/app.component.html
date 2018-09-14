@@ -1,4 +1,11 @@
-<app-menu></app-menu>
+<app-top-menu></app-top-menu>
 <div class="page-content">
-  <router-outlet></router-outlet>
+  <amexio-row>
+    <amexio-column [size]="3">
+      <app-menu></app-menu>
+    </amexio-column>
+    <amexio-column [size]="9">
+      <router-outlet></router-outlet>
+    </amexio-column>
+  </amexio-row>
 </div>

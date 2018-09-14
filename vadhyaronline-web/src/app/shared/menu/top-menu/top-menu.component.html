@@ -1,0 +1,14 @@
+<nav class="navbar navbar-light bg-green mb-1">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Vadhyar Online</a>
+    <div class="navbar-expand mr-auto">
+      <div class="navbar-nav">&nbsp;</div>
+    </div>
+    <div class="navbar-expand ml-auto navbar-nav">
+      <div class="navbar-nav">
+        <a *ngIf="showLogout" class="nav-item nav-link" (click)="logout()"> Log out
+          <i class="fa fa-sign-out" aria-hidden="true"></i></a>
+      </div>
+    </div>
+  </div>
+</nav>

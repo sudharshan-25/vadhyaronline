@@ -19,7 +19,13 @@
           "text": "Update Profile",
           "icon": "fa fa-user-circle fa-fw",
           "mdaIcon": "profile",
-          "link": "/update-profile/"
+          "link": "#/update-profile/"
+        },
+        {
+          "text": "Display Preferences",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/user/change-password/"
         },
         {
           "text": "Events",
@@ -45,14 +51,253 @@
               "link": "/events/event-history/"
             }
           ]
+        },
+        {
+          "text": "Event Types",
+          "icon": "fa  fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "Description and Uses",
+              "icon": "fa  fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/eventType/description/"
+            },
+            {
+              "text": "History and Evolutions",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            }
+          ]
         }
       ]
     },
     "vadhyar": {
-      "data": []
+      "data": [
+        {
+          "text": "Home",
+          "icon": "fa fa-home fa-fw",
+          "mdaIcon": "home",
+          "link": "/vadhyar/home/",
+          "selected": true
+        },
+        {
+          "text": "Change Password",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/user/change-password/"
+        },
+        {
+          "text": "Event Requests",
+          "icon": "fa fa-history fa-fw",
+          "mdaIcon": "pendingEvent",
+          "link": "/events/event-history/"
+        },
+        {
+          "text": "Display Preferences",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/user/change-password/"
+        },
+        {
+          "text": "Update Profile",
+          "icon": "fa fa-user-circle fa-fw",
+          "mdaIcon": "profile",
+          "children": [
+            {
+              "text": "Primary Details",
+              "icon": "fa fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Vaidhikam Details",
+              "icon": "fa fa-edit fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Address",
+              "icon": "fa fa-address fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            }
+          ]
+        },
+        {
+          "text": "Event Preferences",
+          "icon": "fa fa-fw",
+          "mdaIcon": "updateEvent",
+          "link": "/events/update-event/"
+        },
+        {
+          "text": "Requested Master Types",
+          "icon": "fa fa- fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "Event Category",
+              "icon": "fa fa-edit fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Event types",
+              "icon": "fa fa-bookmark fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            },
+            {
+              "text": "Gothram",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/event-history/"
+            },
+            {
+              "text": "Soothrams",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/event-history/"
+            }
+          ]
+        },
+        {
+          "text": "My Calender",
+          "icon": "fa  fa-fw",
+          "mdaIcon": "updateEvent",
+          "link": "/eventType/description/"
+        },
+        {
+          "text": "Announcements",
+          "icon": "fa  fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "View List",
+              "icon": "fa  fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/eventType/description/"
+            },
+            {
+              "text": "Add/Edit/Delete",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            }
+          ]
+        }
+      ]
     },
     "admin": {
-      "data": []
+      "data": [
+        {
+          "text": "Home",
+          "icon": "fa fa-home fa-fw",
+          "mdaIcon": "home",
+          "link": "/admin/home/",
+          "selected": true
+        },
+        {
+          "text": "Change Password",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/admin/change-password/"
+        },
+        {
+          "text": "Display Preferences",
+          "icon": "fa fa-user-secret fa-fw",
+          "mdaIcon": "password",
+          "link": "/user/change-password/"
+        },
+        {
+          "text": "Update Profile",
+          "icon": "fa fa-user-circle fa-fw",
+          "mdaIcon": "profile",
+          "children": [
+            {
+              "text": "Primary Details",
+              "icon": "fa fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Vaidhikam Details",
+              "icon": "fa fa-edit fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Address",
+              "icon": "fa fa-address fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            }
+          ]
+        },
+        {
+          "text": "Approve Master Types",
+          "icon": "fa fa-calendar fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "Event Category",
+              "icon": "fa fa-edit fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/events/update-event/"
+            },
+            {
+              "text": "Event types",
+              "icon": "fa fa-bookmark fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            },
+            {
+              "text": "Gothram",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/event-history/"
+            },
+            {
+              "text": "Soothrams",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/event-history/"
+            }
+          ]
+        },
+        {
+          "text": "Announcements",
+          "icon": "fa fa-history fa-fw",
+          "mdaIcon": "pendingEvent",
+          "link": "/events/event-history/"
+        },
+        {
+          "text": "Event Request",
+          "icon": "fa fa-history fa-fw",
+          "mdaIcon": "pendingEvent",
+          "link": "/events/event-history/"
+        },
+        {
+          "text": "Event Types",
+          "icon": "fa  fa-fw",
+          "mdaIcon": "events",
+          "children": [
+            {
+              "text": "Description and Uses",
+              "icon": "fa  fa-fw",
+              "mdaIcon": "updateEvent",
+              "link": "/eventType/description/"
+            },
+            {
+              "text": "History and Evolutions",
+              "icon": "fa fa-history fa-fw",
+              "mdaIcon": "pendingEvent",
+              "link": "/events/pending-event/"
+            }
+          ]
+        }
+      ]
     }
   }
 }

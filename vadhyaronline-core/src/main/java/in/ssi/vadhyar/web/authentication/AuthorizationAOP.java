@@ -4,6 +4,8 @@ import in.ssi.vadhyar.web.domain.LoginUser;
 import in.ssi.vadhyar.web.exception.NoAccessException;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
+import org.aspectj.lang.annotation.Before;
+import org.aspectj.lang.annotation.Pointcut;
 import org.aspectj.lang.reflect.MethodSignature;
 import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
@@ -21,11 +23,11 @@ public class AuthorizationAOP {
         this.loginUserContext = loginUserContext;
     }
 
-    // @Pointcut("@annotation(VOAccessRoles) || ( execution(public * *(..)) && within(@VOAccessRoles *) )")
+    @Pointcut("@annotation(VOAccessRoles) || ( execution(public * *(..)) && within(@VOAccessRoles *) )")
     public void interceptAccessRoles() {
     }
 
-    // @Before("interceptAccessRoles()")
+    @Before("interceptAccessRoles()")
     public void handleAccessRoles(JoinPoint joinPoint) {
         MethodSignature signature = (MethodSignature) joinPoint.getSignature();
         VOAccessRoles roleAccess = signature.getMethod().getAnnotation(VOAccessRoles.class);

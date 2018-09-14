@@ -12,7 +12,7 @@ public class LoginUserEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private int userId;
+    private Integer userId;
 
     @Column(name = "user_name")
     private String userName;
@@ -35,13 +35,13 @@ public class LoginUserEntity {
     private Timestamp lastSuccessfulLogin;
 
     @Column(name = "login_failed_attempt")
-    private int loginFailedAttempt;
+    private Integer loginFailedAttempt;
 
-    public int getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(int userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -93,11 +93,11 @@ public class LoginUserEntity {
         this.lastSuccessfulLogin = lastSuccessfulLogin;
     }
 
-    public int getLoginFailedAttempt() {
+    public Integer getLoginFailedAttempt() {
         return loginFailedAttempt;
     }
 
-    public void setLoginFailedAttempt(int loginFailedAttempt) {
+    public void setLoginFailedAttempt(Integer loginFailedAttempt) {
         this.loginFailedAttempt = loginFailedAttempt;
     }
 
