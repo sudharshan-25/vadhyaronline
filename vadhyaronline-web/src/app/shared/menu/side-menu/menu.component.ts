@@ -1,7 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {IconLoaderService} from 'amexio-ng-extensions';
 import {LoginService} from '../../../services/login.service';
-import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,11 +8,13 @@ import {Router} from '@angular/router';
 })
 export class MenuComponent implements OnInit {
 
-  dataReader: string;
   showMenu: boolean;
 
-  constructor(private iconService: IconLoaderService, private loginService: LoginService, private router: Router) {
-    this.iconService.iconToUse = 'fa';
+  admin: boolean;
+  vadhyar: boolean;
+  user: boolean;
+
+  constructor(private loginService: LoginService) {
     if (this.loginService.isUserLoggedIn()) {
       this.initMenu();
     } else {
@@ -29,20 +29,23 @@ export class MenuComponent implements OnInit {
   }
 
   private initMenu() {
+    this.admin = false;
+    this.vadhyar = false;
+    this.user = false;
     const loginUser = this.loginService.getUser();
     if (loginUser) {
       switch (loginUser.role.toLowerCase()) {
         case 'admin':
-          this.dataReader = 'menus.admin.data';
+          this.admin = true;
           break;
         case 'vadhyar':
-          this.dataReader = 'menus.vadhyar.data';
+          this.vadhyar = true;
           break;
         case 'user':
-          this.dataReader = 'menus.user.data';
+          this.user = true;
           break;
-        default:
-          this.dataReader = 'menus.user.data';
+        case 'assistant':
+          this.vadhyar = true;
       }
       this.showMenu = true;
     } else {
@@ -51,13 +54,6 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
-
-  nodeClicked(event) {
-    if (event.link) {
-      console.log(event.link);
-      this.router.navigate([event.link]);
-    }
   }
 
 }

@@ -1,4 +1,174 @@
-<amexio-side-nav [http-url]="'assets/menu/menu.data.json'" [http-method]="'get'" (nodeClick)="nodeClicked($event)"
-                 *ngIf="showMenu" [data-reader]="dataReader" [height]="'85%'" [width]="'100%'"
-                 [position]="'relative'">
-</amexio-side-nav>
+<!-- User Role -->
+<div *ngIf="showMenu && user">
+  <ul nz-menu [nzMode]="'inline'">
+    <li nz-menu-item routerLink="/user/home">
+      <span title>Home</span>
+    </li>
+    <li nz-menu-item routerLink="/user/change-password">
+      <span title>Change Password</span>
+    </li>
+    <li nz-menu-item routerLink="/user/update-profile">
+      <span title>Update Profile</span>
+    </li>
+    <li nz-menu-item routerLink="/user/display-preferences">
+      <span title>Display Preferences</span>
+    </li>
+    <li nz-submenu>
+      <span title>Events</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/user/events/">
+          <span title>Create/Resume Events</span>
+        </li>
+        <li nz-menu-item routerLink="/user/events/pending">
+          <span title>Pending Events</span>
+        </li>
+        <li nz-menu-item routerLink="/user/events/history">
+          <span title>Event History</span>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>Events Types</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/user/event-types/desc">
+          <span title>Descriptions</span>
+        </li>
+        <li nz-menu-item routerLink="/user/event-types/history">
+          <span title>History</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- Vadhyar Role -->
+<div *ngIf="showMenu && vadhyar">
+  <ul nz-menu [nzMode]="'inline'">
+    <li nz-menu-item routerLink="/vadhyar/home">
+      <span title>Home</span>
+    </li>
+    <li nz-menu-item routerLink="/vadhyar/change-password">
+      <span title>Change Password</span>
+    </li>
+    <li nz-menu-item routerLink="/vadhyar/event-requests">
+      <span title>Event Requests</span>
+    </li>
+    <li nz-menu-item routerLink="/vadhyar/display-preferences">
+      <span title>Display Preferences</span>
+    </li>
+    <li nz-submenu>
+      <span title>Update Profile</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/vadhyar/profile/primary">
+          <span title>Primary Details</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/profile/vaidhikam">
+          <span title>Vaidhikam Details</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/profile/address">
+          <span title>Address Details</span>
+        </li>
+      </ul>
+    </li>
+    <li nz-menu-item routerLink="/vadhyar/event-preferences">
+      <span title>Event Preferences</span>
+    </li>
+    <li nz-submenu>
+      <span title>Requested Master type</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/vadhyar/requested/event-category">
+          <span title>Event Category</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/requested/event-type">
+          <span title>Event Type</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/requested/gothram">
+          <span title>Gothram</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/requested/soothram">
+          <span title>Soothram</span>
+        </li>
+      </ul>
+    </li>
+    <li nz-menu-item routerLink="/vadhyar/calender">
+      <span title>My Calender</span>
+    </li>
+    <li nz-submenu>
+      <span title>Announcements</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/vadhyar/announcement/view">
+          <span title>View List</span>
+        </li>
+        <li nz-menu-item routerLink="/vadhyar/announcement/edit">
+          <span title>Edit Announcement</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+
+<!-- Admin Role -->
+<div *ngIf="showMenu && admin">
+  <ul nz-menu [nzMode]="'inline'">
+    <li nz-menu-item routerLink="/admin/home">
+      <span title>Home</span>
+    </li>
+    <li nz-menu-item routerLink="/admin/change-password">
+      <span title>Change Password</span>
+    </li>
+    <li nz-menu-item routerLink="/admin/display-preferences">
+      <span title>Display Preferences</span>
+    </li>
+    <li nz-submenu>
+      <span title>Update Profile</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/admin/profile/primary">
+          <span title>Primary Details</span>
+        </li>
+        <li nz-menu-item routerLink="/admin/profile/vaidhikam">
+          <span title>Vaidhikam Details</span>
+        </li>
+        <li nz-menu-item routerLink="/admin/profile/address">
+          <span title>Address Details</span>
+        </li>
+      </ul>
+    </li>
+    <li nz-submenu>
+      <span title>Approve Master type</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/admin/approve/event-category">
+          <span title>Event Category</span>
+        </li>
+        <li nz-menu-item routerLink="/admin/approve/event-type">
+          <span title>Event Type</span>
+        </li>
+        <li nz-menu-item routerLink="/admin/approve/gothram">
+          <span title>Gothram</span>
+        </li>
+        <li nz-menu-item routerLink="/admin/approve/soothram">
+          <span title>Soothram</span>
+        </li>
+      </ul>
+    </li>
+    <li nz-menu-item routerLink="/admin/announcements">
+      <span title>Announcements</span>
+    </li>
+    <li nz-menu-item routerLink="/admin/event-history">
+      <span title>Event History</span>
+    </li>
+    <li nz-menu-item routerLink="/admin/calender">
+      <span title>View Calender</span>
+    </li>
+    <li nz-submenu>
+      <span title>Events Types</span>
+      <ul nz-menu-group>
+        <li nz-menu-item routerLink="/user/event-types/desc">
+          <span title>Descriptions</span>
+        </li>
+        <li nz-menu-item routerLink="/user/event-types/history">
+          <span title>History</span>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>

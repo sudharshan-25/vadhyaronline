@@ -1,11 +1,13 @@
 <app-top-menu></app-top-menu>
 <div class="page-content">
-  <amexio-row>
-    <amexio-column [size]="3">
+
+  <div nz-row>
+    <div nz-col nzSpan="5">
       <app-menu></app-menu>
-    </amexio-column>
-    <amexio-column [size]="9">
+    </div>
+    <div nz-col nzSpan="19">
       <router-outlet></router-outlet>
-    </amexio-column>
-  </amexio-row>
+    </div>
+  </div>
+
 </div>
