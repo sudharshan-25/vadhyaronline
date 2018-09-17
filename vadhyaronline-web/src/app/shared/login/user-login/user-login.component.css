@@ -1,7 +1,28 @@
-#loginForm {
-  background: #85d894;
+
+#loginSection {
+  padding-top: 25px;
+  height: 350px;
+  width: 500px;
+  left: 30%;
+  position: absolute;
 }
 
-#loginSection{
-  padding-top: 10px;
+.login-form-forgot {
+  float: right;
+}
+
+.login-form-button {
+  width: 45%;
+}
+
+.register-form-button {
+  width: 45%;
+}
+
+[nz-form] {
+  max-width: 400px;
+}
+
+[nz-button] {
+  margin-left: 10px;
 }

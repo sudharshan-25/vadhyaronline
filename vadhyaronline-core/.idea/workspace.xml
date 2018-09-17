@@ -4,15 +4,16 @@
     <list default="true" id="32a44938-7c9a-4c59-a34a-38d913c07677" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/angular.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/login.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/login.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.css" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/login/user-login/user-login.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/menu/side-menu/menu.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/menu/side-menu/menu.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/menu/side-menu/menu.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/menu/side-menu/menu.component.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/styles.css" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -56,7 +57,7 @@
     <session id="-337981254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="15" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.26" value="2" />
@@ -71,7 +72,8 @@
           <entry key="project.open.time.79" value="1" />
           <entry key="project.open.time.83" value="1" />
           <entry key="project.open.time.86" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.open.time.98" value="1" />
+          <entry key="project.opened" value="16" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -137,11 +139,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="629">
-              <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+            <state relative-caret-position="69">
+              <caret line="42" selection-start-line="42" selection-end-line="42" />
             </state>
           </provider>
         </entry>
@@ -149,7 +151,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/UserService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="595">
               <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -205,11 +207,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5030ab90-5473-48c2-9676-fe0de19f0d58/console.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="113" />
+              <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="95" />
             </state>
           </provider>
         </entry>
@@ -337,29 +339,14 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scratches and Consoles" type="1a2a3e82:ScratchProjectViewPane$MyProjectNode" />
-              <item name="Database Consoles" type="d62648e6:ScratchProjectViewPane$MyRootNode" />
-              <item name="5030ab90-5473-48c2-9676-fe0de19f0d58" type="1e004dc1:ScratchProjectViewPane$MyRootNode$1$1" />
             </path>
           </expand>
           <select />
@@ -436,7 +423,8 @@
       <workItem from="1536852878024" duration="5731000" />
       <workItem from="1536895841037" duration="2324000" />
       <workItem from="1536944069026" duration="7200000" />
-      <workItem from="1537017692543" duration="3334000" />
+      <workItem from="1537017692543" duration="3414000" />
+      <workItem from="1537204161361" duration="974000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC and JPA changes">
       <created>1535947654310</created>
@@ -484,7 +472,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61832000" />
+    <option name="totallyTimeSpent" value="62886000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -496,7 +484,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" weight="0.32980332" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.30030257" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.30484116" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Bean Validation" order="8" weight="0.32980332" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3289689" />
@@ -507,7 +495,7 @@
       <window_info anchor="bottom" id="Message" order="5" />
       <window_info anchor="bottom" id="Find" order="6" />
       <window_info anchor="bottom" id="Run" order="7" weight="0.5" />
-      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49924356" weight="0.5595238" />
+      <window_info anchor="bottom" id="Debug" order="8" sideWeight="0.49924356" visible="true" weight="0.5595238" />
       <window_info anchor="bottom" id="Cvs" order="9" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="10" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="11" />
@@ -517,7 +505,7 @@
       <window_info anchor="right" id="Palette" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Maven Projects" order="2" weight="0.32980332" />
-      <window_info anchor="right" id="Database" order="3" visible="true" weight="0.32980332" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32980332" />
       <window_info anchor="right" id="Palette&#9;" order="4" />
       <window_info anchor="right" id="Theme Preview" order="5" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
@@ -811,10 +799,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="21" selection-start-line="11" selection-start-column="21" selection-end-line="11" selection-end-column="21" />
-          <folding>
-            <element signature="e#351#352#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -822,9 +806,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="42" column="22" selection-start-line="42" selection-start-column="22" selection-end-line="42" selection-end-column="22" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,28 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="34" column="3" selection-start-line="34" selection-start-column="3" selection-end-line="34" selection-end-column="3" />
-          <folding>
-            <element signature="e#869#870#0" expanded="true" />
-            <element signature="e#898#899#0" expanded="true" />
-            <element signature="e#939#940#0" expanded="true" />
-            <element signature="e#975#976#0" expanded="true" />
-            <element signature="e#1022#1023#0" expanded="true" />
-            <element signature="e#1055#1056#0" expanded="true" />
-            <element signature="e#1117#1118#0" expanded="true" />
-            <element signature="e#1161#1162#0" expanded="true" />
-            <element signature="e#1208#1209#0" expanded="true" />
-            <element signature="e#1241#1242#0" expanded="true" />
-            <element signature="e#1303#1304#0" expanded="true" />
-            <element signature="e#1347#1348#0" expanded="true" />
-            <element signature="e#1390#1391#0" expanded="true" />
-            <element signature="e#1421#1422#0" expanded="true" />
-            <element signature="e#1477#1478#0" expanded="true" />
-            <element signature="e#1517#1518#0" expanded="true" />
-            <element signature="e#1558#1559#0" expanded="true" />
-            <element signature="e#1588#1589#0" expanded="true" />
-            <element signature="e#1641#1642#0" expanded="true" />
-            <element signature="e#1679#1680#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -861,12 +820,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="418">
           <caret line="90" column="4" selection-start-line="90" selection-start-column="4" selection-end-line="90" selection-end-column="4" />
-          <folding>
-            <element signature="e#1776#1777#0" expanded="true" />
-            <element signature="e#1803#1804#0" expanded="true" />
-            <element signature="e#1843#1844#0" expanded="true" />
-            <element signature="e#1875#1876#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -881,12 +834,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="486">
           <caret line="103" column="16" selection-start-line="103" selection-start-column="16" selection-end-line="103" selection-end-column="16" />
-          <folding>
-            <element signature="e#2137#2138#0" expanded="true" />
-            <element signature="e#2176#2177#0" expanded="true" />
-            <element signature="e#2250#2251#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -946,10 +893,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java">
+    <entry file="file://$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/register/user-registration/user-registration.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="629">
-          <caret line="43" column="25" selection-start-line="43" selection-start-column="25" selection-end-line="43" selection-end-column="25" />
+        <state relative-caret-position="69">
+          <caret line="13" selection-end-line="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/register/user-registration/user-registration.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5030ab90-5473-48c2-9676-fe0de19f0d58/schema/DEVUSER/table/ROLE_MASTER">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/UserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="595">
+          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -992,44 +963,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/register/user-registration/user-registration.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="13" selection-end-line="83" />
-          <folding>
-            <element signature="e#0#48#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/register/user-registration/user-registration.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="41" column="30" lean-forward="true" selection-start-line="41" selection-start-column="30" selection-end-line="41" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/UserService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="45" column="25" selection-start-line="45" selection-start-column="25" selection-end-line="45" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://5030ab90-5473-48c2-9676-fe0de19f0d58/schema/DEVUSER/table/ROLE_MASTER">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/5030ab90-5473-48c2-9676-fe0de19f0d58/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="113" />
+          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="95" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/LoginController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="69">
+          <caret line="42" selection-start-line="42" selection-end-line="42" />
         </state>
       </provider>
     </entry>

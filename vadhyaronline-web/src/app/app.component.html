@@ -1,13 +1,14 @@
-<app-top-menu></app-top-menu>
-<div class="page-content">
-
-  <div nz-row>
-    <div nz-col nzSpan="5">
+<nz-layout>
+  <nz-header>
+    <app-top-menu></app-top-menu>
+  </nz-header>
+  <nz-layout style="height: 650px; overflow-y: auto;">
+    <nz-sider *ngIf="showMenu">
       <app-menu></app-menu>
-    </div>
-    <div nz-col nzSpan="19">
+    </nz-sider>
+    <nz-content>
       <router-outlet></router-outlet>
-    </div>
-  </div>
-
-</div>
+    </nz-content>
+  </nz-layout>
+  <nz-footer style="text-align: center;">Vadhyar Online ©2018</nz-footer>
+</nz-layout>

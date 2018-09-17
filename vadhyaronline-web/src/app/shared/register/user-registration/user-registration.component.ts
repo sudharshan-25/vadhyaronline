@@ -71,6 +71,7 @@ export class UserRegistrationComponent implements OnInit {
       Object.keys(this.registerForm.controls).forEach(key => {
         if (this.registerForm.controls[key].invalid) {
           this.registerForm.controls[key].markAsTouched();
+          this.registerForm.controls[key].markAsDirty();
         }
       });
     }

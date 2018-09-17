@@ -49,13 +49,14 @@ export class UserLoginComponent implements OnInit {
       Object.keys(this.loginForm.controls).forEach(control => {
         if (this.loginForm.controls[control].invalid) {
           this.loginForm.controls[control].markAsTouched();
+          this.loginForm.controls[control].markAsDirty();
         }
       });
     }
   }
 
   registerNow() {
-    this.router.navigate(['register']);
+    this.router.navigate(['/register']);
   }
 
 }

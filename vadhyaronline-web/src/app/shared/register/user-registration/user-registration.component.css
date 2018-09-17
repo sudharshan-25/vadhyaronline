@@ -1,0 +1,10 @@
+#registerUser {
+  left: 25%;
+  top: 15%;
+  position: absolute;
+  width: 500px;
+}
+
+[nz-button] {
+  margin-left: 10px;
+}
