@@ -54,6 +54,10 @@ export class UserRegistrationComponent implements OnInit {
 
   registerUser() {
     this.isError = false;
+    for (const i  of Object.keys(this.registerForm.controls)) {
+      this.registerForm.controls[i].markAsDirty();
+      this.registerForm.controls[i].updateValueAndValidity();
+    }
     if (this.registerForm.valid) {
       const user = this.registerForm.getRawValue();
       user['userId'] = 0;
@@ -72,6 +76,7 @@ export class UserRegistrationComponent implements OnInit {
       Object.keys(this.registerForm.controls).forEach(key => {
         if (this.registerForm.controls[key].invalid) {
           this.registerForm.controls[key].markAsDirty();
+          this.registerForm.controls[key].markAsTouched();
         }
       });
     }

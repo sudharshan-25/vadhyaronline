@@ -42,7 +42,6 @@ INSERT INTO user_master (user_first_name, user_last_name, user_name, user_email,
   VALUES ('User', '', 'user', 'user@vadhyar.in', '123456789', 'password-123', 4);
 
 
-
 INSERT INTO event_status (event_status_id, event_status_name) VALUES (1, 'Draft');
 INSERT INTO event_status (event_status_id, event_status_name) VALUES (2, 'Requested');
 INSERT INTO event_status (event_status_id, event_status_name) VALUES (3, 'Accepted');

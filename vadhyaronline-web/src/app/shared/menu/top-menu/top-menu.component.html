@@ -1,10 +1,13 @@
-<ul nz-menu [nzMode]="'horizontal'"
-    style="line-height: 64px; float: right;"><!-- ><!--style="background-color: #85d894 !important;" -->
-  <li nz-menu-item routerLink="/">Vadhyar Online</li>
-  <li nz-menu-item></li>
-  <li nz-menu-item>
+<div nz-row>
+  <div nz-col [nzOffset]="4" [nzSpan]="4">
+    <h2 routerLink="/">Vadhyar Online</h2>
+  </div>
+  <div nz-col [nzOffset]="8" [nzSpan]="4" *ngIf="showLogout">
+    <h3> Hi {{userName}} !</h3>
+  </div>
+  <div nz-col [nzOffset]="" [nzSpan]="4" style="float: right">
     <button nz-button [nzType]="'primary'" class="logout-button" (click)="logout()" *ngIf="showLogout">
       <i class="anticon anticon-logout"></i>Logout
     </button>
-  </li>
-</ul>
+  </div>
+</div>

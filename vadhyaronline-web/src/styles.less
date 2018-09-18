@@ -1,0 +1,34 @@
+@import '~ng-zorro-antd/src/ng-zorro-antd.less';
+
+@primary-color: #298958;
+@side-menu-color: #85d894 !important;
+@top-menu-color: #85d870 !important;
+@layout-body-background: #FFFFFF;
+
+@menu-item-height: 40px;
+
+@layout-header-background: @top-menu-color;
+@layout-header-height: 50px;
+
+@layout-footer-background: @top-menu-color;
+@layout-footer-padding: 12px 25px;
+
+.ant-layout-sider {
+  background-color: @side-menu-color;
+  .ant-menu {
+    background-color: @side-menu-color;
+    .ant-menu-inline {
+      background-color: @side-menu-color;
+    }
+  }
+}
+
+.page-content {
+  min-height: 450px !important;
+  height: 600px !important;
+  overflow-y: auto;
+}
+
+.menu-available-layout {
+  margin-left: 200px !important;
+}

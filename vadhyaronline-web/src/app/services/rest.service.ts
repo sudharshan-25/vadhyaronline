@@ -1,7 +1,14 @@
 import {Inject, Injectable} from '@angular/core';
 import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs';
-import {ChoiceResponse, DefaultStringResponse, DropDownChoices, LoginResponse} from '../domain/domain';
+import {
+  ChoiceResponse,
+  DefaultStringResponse,
+  DropDownChoices,
+  EventCategory,
+  EventCategoryResponse,
+  LoginResponse
+} from '../domain/domain';
 
 @Injectable({
   providedIn: 'root'
@@ -25,6 +32,10 @@ export class RestService {
 
   public registerUser(userDetails: any): Observable<DefaultStringResponse> {
     return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/user/register`, userDetails, {});
+  }
+
+  public getAllEventCategories(): Observable<EventCategoryResponse> {
+    return this.httpClient.get<EventCategoryResponse>(`${this.apiURL}/eventCategory/all`);
   }
 
 }

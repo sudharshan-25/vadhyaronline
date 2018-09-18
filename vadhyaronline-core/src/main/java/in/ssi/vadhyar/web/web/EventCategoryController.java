@@ -6,7 +6,6 @@ import in.ssi.vadhyar.web.authentication.VOAuthenticated;
 import in.ssi.vadhyar.web.domain.EventCategory;
 import in.ssi.vadhyar.web.domain.VOResponse;
 import in.ssi.vadhyar.web.service.EventCategoryService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 @CrossOrigin(origins = "http://localhost:4200")

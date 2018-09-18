@@ -1,14 +1,14 @@
 <nz-layout>
-  <nz-header>
-    <app-top-menu></app-top-menu>
-  </nz-header>
-  <nz-layout style="height: 650px; overflow-y: auto;">
-    <nz-sider *ngIf="showMenu">
-      <app-menu></app-menu>
-    </nz-sider>
-    <nz-content>
+  <nz-sider *ngIf="showMenu" style="overflow: auto; height: 100vh; position: fixed; left: 0">
+    <app-menu></app-menu>
+  </nz-sider>
+  <nz-layout [ngClass]="showMenu? 'menu-available-layout' :''">
+    <nz-header>
+      <app-top-menu></app-top-menu>
+    </nz-header>
+    <nz-content style="margin:24px 16px 30px;overflow: initial">
       <router-outlet></router-outlet>
     </nz-content>
+    <nz-footer style="text-align: center;">Vadhyar Online ©2018</nz-footer>
   </nz-layout>
-  <nz-footer style="text-align: center;">Vadhyar Online ©2018</nz-footer>
 </nz-layout>

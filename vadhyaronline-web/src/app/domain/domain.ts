@@ -23,3 +23,15 @@ export interface DropDownChoices {
 export interface ChoiceResponse {
   data: DropDownChoices[];
 }
+
+export interface EventCategory {
+  eventCategoryId: number;
+  eventCategoryName: string;
+  approved: boolean;
+  requestedBy: string;
+  approvedBy: string;
+}
+
+export interface EventCategoryResponse {
+  data: EventCategory[];
+}

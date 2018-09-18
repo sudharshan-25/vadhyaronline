@@ -1,44 +1,46 @@
-<div id="loginSection">
-  <form nz-form [formGroup]="loginForm" (ngSubmit)="login()">
-    <nz-form-item>
-      <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="userName">User Name</nz-form-label>
-      <nz-form-control [nzSm]="16" [nzXs]="24">
-        <nz-input-group nzPrefixIcon="anticon anticon-user">
-          <input nz-input type="text" [formControl]="loginForm.controls['userName']"
-                 id="userName" placeholder="User Name">
-        </nz-input-group>
-        <nz-form-explain *ngIf="loginForm.controls['userName'].dirty &&
+<div class="page-content">
+  <div id="loginSection">
+    <form nz-form [formGroup]="loginForm" (ngSubmit)="login()">
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="userName">User Name</nz-form-label>
+        <nz-form-control [nzSm]="16" [nzXs]="24">
+          <nz-input-group nzPrefixIcon="anticon anticon-user">
+            <input nz-input type="text" [formControl]="loginForm.controls['userName']"
+                   id="userName" placeholder="User Name">
+          </nz-input-group>
+          <nz-form-explain *ngIf="loginForm.controls['userName'].dirty &&
                     loginForm.controls['userName'].hasError('required')"> User Name cannot be empty
-        </nz-form-explain>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="password">Password</nz-form-label>
-      <nz-form-control [nzSm]="16" [nzXs]="24">
-        <nz-input-group nzPrefixIcon="anticon anticon-eye">
-          <input nz-input type="password" [formControl]="loginForm.controls['password']"
-                 id="password" placeholder="Password">
-        </nz-input-group>
-        <nz-form-explain *ngIf="loginForm.controls['password'].dirty
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" nzRequired nzFor="password">Password</nz-form-label>
+        <nz-form-control [nzSm]="16" [nzXs]="24">
+          <nz-input-group nzPrefixIcon="anticon anticon-eye">
+            <input nz-input type="password" [formControl]="loginForm.controls['password']"
+                   id="password" placeholder="Password">
+          </nz-input-group>
+          <nz-form-explain *ngIf="loginForm.controls['password'].dirty
                     && loginForm.controls['password'].hasError('required')"> Password cannot be empty
-        </nz-form-explain>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control [nzOffset]="4">
-        <nz-alert [nzType]="'error'" *ngIf="isError" [nzMessage]="errorMessage"></nz-alert>
-      </nz-form-control>
-    </nz-form-item>
-    <nz-form-item>
-      <nz-form-control [nzOffset]="4">
-        <button type="submit" nz-button class="login-form-button" [nzType]="'primary'">
-          <i class="anticon anticon-login"></i>Log in
-        </button>
-        <button type="button" (click)="registerNow()" nz-button
-                class="register-form-button" [nzType]="'success'">
-          <i class="anticon anticon-user-add"></i>Register
-        </button>
-      </nz-form-control>
-    </nz-form-item>
-  </form>
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzOffset]="4">
+          <nz-alert [nzType]="'error'" *ngIf="isError" [nzMessage]="errorMessage"></nz-alert>
+        </nz-form-control>
+      </nz-form-item>
+      <nz-form-item>
+        <nz-form-control [nzOffset]="4">
+          <button type="submit" nz-button class="login-form-button" [nzType]="'primary'">
+            <i class="anticon anticon-login"></i>Log in
+          </button>
+          <button type="button" (click)="registerNow()" nz-button
+                  class="register-form-button" [nzType]="'success'">
+            <i class="anticon anticon-user-add"></i>Register
+          </button>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
+  </div>
 </div>

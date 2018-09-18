@@ -22,6 +22,9 @@ export class TopMenuComponent implements OnInit {
       }
     });
     this.showLogout = this.loginService.isUserLoggedIn();
+    if (this.loginService.isUserLoggedIn()) {
+      this.userName = this.loginService.getUser().userName;
+    }
   }
 
   ngOnInit() {
