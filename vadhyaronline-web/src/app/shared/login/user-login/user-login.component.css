@@ -1,10 +1,14 @@
 
 #loginSection {
   padding-top: 25px;
-  height: 350px;
+  height: 300px;
   width: 500px;
   left: 30%;
+  top: 25%;
   position: absolute;
+  border: forestgreen 1px ridge;
+  padding-right: 25px;
+  padding-top: 15px;
 }
 
 .login-form-forgot {

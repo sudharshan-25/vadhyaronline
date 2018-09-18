@@ -4,6 +4,7 @@ import {Router} from '@angular/router';
 import {RestService} from '../../../services/rest.service';
 import {HttpErrorResponse} from '@angular/common/http';
 import {matchOtherValidator} from '../../../validators/vadhyar.validations';
+import {NzNotificationService} from 'ng-zorro-antd';
 
 @Component({
   selector: 'app-user-registration',
@@ -19,7 +20,7 @@ export class UserRegistrationComponent implements OnInit {
   registerForm: FormGroup;
   userRoles: Array<any>;
 
-  constructor(fb: FormBuilder, private service: RestService, private router: Router) {
+  constructor(fb: FormBuilder, private service: RestService, private router: Router, private notification: NzNotificationService) {
     this.registerForm = fb.group({
       'firstName': new FormControl('', [Validators.required]),
       'lastName': new FormControl('', [Validators.required]),
@@ -47,8 +48,7 @@ export class UserRegistrationComponent implements OnInit {
         this.userRoles.push({id: role.key, value: role.value});
       });
     }, (error: HttpErrorResponse) => {
-      this.isError = true;
-      this.errorMessage = error.message;
+      this.notification.error('Error', error.message);
     });
   }
 
@@ -66,11 +66,11 @@ export class UserRegistrationComponent implements OnInit {
       }, (error: HttpErrorResponse) => {
         this.isError = true;
         this.errorMessage = error.error;
+        this.notification.error('Error', this.errorMessage);
       });
     } else {
       Object.keys(this.registerForm.controls).forEach(key => {
         if (this.registerForm.controls[key].invalid) {
-          this.registerForm.controls[key].markAsTouched();
           this.registerForm.controls[key].markAsDirty();
         }
       });

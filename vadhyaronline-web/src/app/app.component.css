@@ -1,17 +1,14 @@
 .ant-layout-header {
-  background-color: #258535 !important;
+  background-color: #f0f2f5 !important;
 }
 
-ul.ant-menu-horizontal {
-  background-color: #258535 !important;
+.ant-layout-footer {
+  /*background-color: #258535 !important;*/
 }
 
 .ant-layout-sider {
-  background-color: #ffffff !important;
-}
+  /*background-color: #85d894 !important;*/
+  background-color: #f0f2f5 !important;
 
-.ng-star-inserted {
-  color: #0a260f !important;
 }
-
 

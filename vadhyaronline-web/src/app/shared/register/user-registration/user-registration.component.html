@@ -61,7 +61,8 @@
     <nz-form-item>
       <nz-form-label [nzSm]="8" [nzXs]="24" [nzRequired]="true" nzFor="password">Password</nz-form-label>
       <nz-form-control [nzSm]="16" [nzXs]="24">
-        <input nz-input [formControl]="registerForm.controls['password']" id="password" placeholder="Password">
+        <input nz-input [formControl]="registerForm.controls['password']" id="password" type="password"
+               placeholder="Password">
         <nz-form-explain *ngIf="registerForm.controls['password'].dirty &&
                     registerForm.controls['password'].hasError('required')"> Password cannot be empty
         </nz-form-explain>
@@ -71,7 +72,7 @@
       <nz-form-label [nzSm]="8" [nzXs]="24" [nzRequired]="true" nzFor="passwordRepeat">Confirm Password</nz-form-label>
       <nz-form-control [nzSm]="16" [nzXs]="24">
         <input nz-input [formControl]="registerForm.controls['passwordRepeat']" id="passwordRepeat"
-               placeholder="Confirm Password">
+              type="password" placeholder="Confirm Password">
         <nz-form-explain *ngIf="registerForm.controls['passwordRepeat'].dirty &&
                     registerForm.controls['passwordRepeat'].hasError('doesNotMatch')"> Password do not match
         </nz-form-explain>
