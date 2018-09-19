@@ -4,10 +4,10 @@ import {Observable} from 'rxjs';
 import {
   ChoiceResponse,
   DefaultStringResponse,
-  DropDownChoices,
-  EventCategory,
   EventCategoryResponse,
-  LoginResponse
+  EventTypeResponse,
+  GothramResponse,
+  LoginResponse, SoothramResponse
 } from '../domain/domain';
 
 @Injectable({
@@ -37,5 +37,18 @@ export class RestService {
   public getAllEventCategories(): Observable<EventCategoryResponse> {
     return this.httpClient.get<EventCategoryResponse>(`${this.apiURL}/eventCategory/all`);
   }
+
+  public getAllEventTypes(): Observable<EventTypeResponse> {
+    return this.httpClient.get<EventTypeResponse>(`${this.apiURL}/eventType/all`);
+  }
+
+  public getAllGothrams(): Observable<GothramResponse> {
+    return this.httpClient.get<GothramResponse>(`${this.apiURL}/gothram/all`);
+  }
+
+  public getAllSoothrams(): Observable<SoothramResponse> {
+    return this.httpClient.get<SoothramResponse>(`${this.apiURL}/soothram/all`);
+  }
+
 
 }

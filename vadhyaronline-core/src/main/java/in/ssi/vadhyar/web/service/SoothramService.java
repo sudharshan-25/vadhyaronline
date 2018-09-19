@@ -2,6 +2,7 @@ package in.ssi.vadhyar.web.service;
 
 import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.domain.Soothram;
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import in.ssi.vadhyar.web.entity.SoothramEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.SoothramJdbcRepository;
@@ -57,7 +58,7 @@ public class SoothramService {
             throw new VadhyarOnlineException("Soothram Name already exists...");
         SoothramEntity soothramEntity = new SoothramEntity();
         soothramEntity.setApproved(Boolean.FALSE);
-        soothramEntity.setRequestedBy(loginUserContext.getCurrentUser().getUserId());
+        soothramEntity.setRequestedBy(SimpleUserEntity.of(loginUserContext.getCurrentUser().getUserId()));
         soothramEntity.setRequestedOn(Timestamp.from(Instant.now()));
         soothramEntity.setSoothramName(soothram.getSoothramName());
         soothramJpaRepository.save(soothramEntity);
@@ -74,7 +75,7 @@ public class SoothramService {
     }
 
     public void deleteSoothram(Integer soothramId) {
-        if(soothramJdbcRepository.canDelete(soothramId)){
+        if (soothramJdbcRepository.canDelete(soothramId)) {
             soothramJpaRepository.deleteById(soothramId);
             return;
         }

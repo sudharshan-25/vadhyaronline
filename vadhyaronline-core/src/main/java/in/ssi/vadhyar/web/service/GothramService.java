@@ -3,6 +3,7 @@ package in.ssi.vadhyar.web.service;
 import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.domain.Gothram;
 import in.ssi.vadhyar.web.entity.GothramEntity;
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.GothramJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.GothramJpaRepository;
@@ -59,7 +60,7 @@ public class GothramService {
         gothramEntity.setGothramName(gothram.getGothramName());
         gothramEntity.setApproved(Boolean.FALSE);
         gothramEntity.setRequestedOn(Timestamp.from(Instant.now()));
-        gothramEntity.setRequestedBy(loginUserContext.getCurrentUser().getUserId());
+        gothramEntity.setRequestedBy(SimpleUserEntity.of(loginUserContext.getCurrentUser().getUserId()));
         gothramJpaRepository.save(gothramEntity);
     }
 

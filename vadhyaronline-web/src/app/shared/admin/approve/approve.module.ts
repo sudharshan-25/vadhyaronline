@@ -6,6 +6,7 @@ import {EventTypeComponent} from './event-type/event-type.component';
 import {GothramComponent} from './gothram/gothram.component';
 import {SoothramComponent} from './soothram/soothram.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {ApproveDisplayPipe} from '../../../pipes/approve-display.pipe';
 
 const APPROVE_MASTER_ROUTES: Routes = [
   {path: '', redirectTo: 'event-category', pathMatch: 'full'},

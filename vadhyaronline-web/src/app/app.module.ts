@@ -12,10 +12,11 @@ import {TokenHttpInterceptorService} from './services/token-http-interceptor.ser
 import {HomeRedirectComponent} from './shared/menu/home-redirect/home-redirect.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {en_US, NgZorroAntdModule, NZ_I18N} from 'ng-zorro-antd';
+import { ApproveDisplayPipe } from './pipes/approve-display.pipe';
 
 @NgModule({
   declarations: [
-    AppComponent, MenuComponent, TopMenuComponent, HomeRedirectComponent
+    AppComponent, MenuComponent, TopMenuComponent, HomeRedirectComponent, ApproveDisplayPipe
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, HttpClientModule,

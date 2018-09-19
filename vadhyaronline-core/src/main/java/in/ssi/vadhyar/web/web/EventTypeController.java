@@ -8,8 +8,6 @@ import in.ssi.vadhyar.web.domain.VOResponse;
 import in.ssi.vadhyar.web.service.EventTypeService;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.List;
-
 @CrossOrigin(origins = "http://localhost:4200")
 @RestController
 @RequestMapping("eventType")
@@ -23,20 +21,26 @@ public class EventTypeController {
     }
 
     @GetMapping("/")
-    public List<EventType> getEventTypes() {
-        return eventTypeService.getAllApproved();
+    public VOResponse getEventTypes() {
+        VOResponse response = new VOResponse();
+        response.setData(eventTypeService.getAllApproved());
+        return response;
     }
 
     @GetMapping("/all")
     @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
-    public List<EventType> getApprovedEventTypes() {
-        return eventTypeService.getAllEventTypes();
+    public VOResponse getApprovedEventTypes() {
+        VOResponse response = new VOResponse();
+        response.setData(eventTypeService.getAllEventTypes());
+        return response;
     }
 
     @GetMapping("/unapproved")
     @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
-    public List<EventType> getUnApprovedEventTypes() {
-        return eventTypeService.getAllUnApproved();
+    public VOResponse getUnApprovedEventTypes() {
+        VOResponse response = new VOResponse();
+        response.setData(eventTypeService.getAllUnApproved());
+        return response;
     }
 
     @GetMapping("/requested")

@@ -21,13 +21,13 @@ INSERT INTO veda_master (veda_id, veda_name ) VALUES (2, 'Yajur Veda');
 INSERT INTO veda_master (veda_id, veda_name ) VALUES (3, 'Sama Veda');
 INSERT INTO veda_master (veda_id, veda_name ) VALUES (4, 'Atharvana Veda');
 
-INSERT INTO soothram_master (soothram_name, approved) VALUES ('Thrahyayana Soothram', 1);
-INSERT INTO soothram_master (soothram_name, approved) VALUES ('Bhodhayana Soothram', 1);
-INSERT INTO soothram_master (soothram_name, approved) VALUES ('Apasthamba Soothram', 1);
+INSERT INTO soothram_master (soothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Thrahyayana Soothram', 1, 1 ,2);
+INSERT INTO soothram_master (soothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Bhodhayana Soothram', 1, 1 ,2);
+INSERT INTO soothram_master (soothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Apasthamba Soothram', 1, 1 ,2);
 
-INSERT INTO gothram_master (gothram_name, approved) VALUES ('Bharadwaja Gothram', 1);
-INSERT INTO gothram_master (gothram_name, approved) VALUES ('Athreya Gothram', 1);
-INSERT INTO gothram_master (gothram_name, approved) VALUES ('Vathula- Gothram', 1);
+INSERT INTO gothram_master (gothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Bharadwaja Gothram', 1, 1, 2);
+INSERT INTO gothram_master (gothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Athreya Gothram', 1, 1, 2);
+INSERT INTO gothram_master (gothram_name, approved, APPROVED_BY, REQUESTED_BY) VALUES ('Vathula- Gothram', 0, 1, 2);
 
 INSERT INTO status_master (status_master_id, status_master_name) VALUES (1, 'Active');
 INSERT INTO status_master (status_master_id, status_master_name) VALUES (2, 'Inactive');

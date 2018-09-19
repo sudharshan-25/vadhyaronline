@@ -35,3 +35,42 @@ export interface EventCategory {
 export interface EventCategoryResponse {
   data: EventCategory[];
 }
+
+export interface EventType {
+  eventTypeId: number;
+  eventTypeName: string;
+  eventTypeDesc: string;
+  eventCategoryId: number;
+  eventCategoryName: string;
+  approved: boolean;
+  requestedBy: string;
+  approvedBy: string;
+}
+
+export interface EventTypeResponse {
+  data: EventType[];
+}
+
+export interface Gothram {
+  gothramId: number;
+  gothramName: string;
+  approved: boolean;
+  requestedBy: string;
+  approvedBy: string;
+}
+
+export interface GothramResponse {
+  data: Gothram[];
+}
+
+export interface Soothram {
+  soothramId: number;
+  soothramName: string;
+  approved: boolean;
+  requestedBy: string;
+  approvedBy: string;
+}
+
+export interface SoothramResponse {
+  data: Soothram[];
+}

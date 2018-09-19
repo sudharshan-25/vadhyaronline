@@ -24,7 +24,7 @@ export class EventCategoryComponent implements OnInit {
       this.data = value.data;
     }, (error: HttpErrorResponse) => {
       this.notification.error('Error Loading', error.error);
-      this.loading = true;
+      this.loading = false;
     });
   }
 

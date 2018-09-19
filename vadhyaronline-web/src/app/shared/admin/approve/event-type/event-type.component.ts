@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {RestService} from '../../../../services/rest.service';
+import {NzNotificationService} from 'ng-zorro-antd';
+import {EventType} from '../../../../domain/domain';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-event-type',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EventTypeComponent implements OnInit {
 
-  constructor() { }
+  data: Array<EventType> = [];
+  loading: boolean;
+
+  constructor(private restService: RestService, private notification: NzNotificationService) {
+  }
+
+  public loadEventTypes(): void {
+    this.restService.getAllEventTypes().subscribe(value => {
+      this.loading = false;
+      this.data = value.data;
+    }, (error: HttpErrorResponse) => {
+      this.notification.error('Error Loading', error.error);
+      this.loading = false;
+    });
+  }
 
   ngOnInit() {
+    this.loadEventTypes();
   }
 
 }

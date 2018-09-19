@@ -9,7 +9,7 @@ import java.util.List;
 @Repository
 public interface EventCategoryJpaRepository extends JpaRepository<EventCategoryEntity, Integer> {
 
-    List<EventCategoryEntity> findByApproved(Boolean approved);
+    List<EventCategoryEntity> findAllByApproved(Boolean approved);
 
     List<EventCategoryEntity> findAllByRequestedBy(int requestedBy);
 

@@ -3,11 +3,10 @@ package in.ssi.vadhyar.web.entity;
 import in.ssi.vadhyar.web.domain.EventType;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
 
 @Entity
 @Table(name = "event_type")
-public class EventTypeEntity {
+public class EventTypeEntity extends AbstractApprovalEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -23,21 +22,6 @@ public class EventTypeEntity {
     @ManyToOne
     @JoinColumn(name = "event_category_id")
     EventCategoryEntity eventCategory;
-
-    @Column(name = "approved")
-    private boolean approved;
-
-    @Column(name = "requested_by")
-    private Integer requestedBy;
-
-    @Column(name = "requested_on")
-    private Timestamp requestedOn;
-
-    @Column(name = "approved_by")
-    private Integer approvedBy;
-
-    @Column(name = "approved_on")
-    private Timestamp approvedOn;
 
     public int getEventTypeId() {
         return eventTypeId;
@@ -71,54 +55,13 @@ public class EventTypeEntity {
         this.eventCategory = eventCategory;
     }
 
-
-    public boolean isApproved() {
-        return approved;
-    }
-
-    public void setApproved(boolean approved) {
-        this.approved = approved;
-    }
-
-    public Integer getRequestedBy() {
-        return requestedBy;
-    }
-
-    public void setRequestedBy(Integer requestedBy) {
-        this.requestedBy = requestedBy;
-    }
-
-    public Timestamp getRequestedOn() {
-        return requestedOn;
-    }
-
-    public void setRequestedOn(Timestamp requestedOn) {
-        this.requestedOn = requestedOn;
-    }
-
-    public Integer getApprovedBy() {
-        return approvedBy;
-    }
-
-    public void setApprovedBy(Integer approvedBy) {
-        this.approvedBy = approvedBy;
-    }
-
-    public Timestamp getApprovedOn() {
-        return approvedOn;
-    }
-
-    public void setApprovedOn(Timestamp approvedOn) {
-        this.approvedOn = approvedOn;
-    }
-
     public EventType toDomain() {
         EventType eventType = new EventType();
         eventType.setEventTypeId(this.eventTypeId);
         eventType.setEventTypeName(this.eventTypeName);
-        eventType.setApproved(this.approved);
-        eventType.setApprovedBy("" + this.approvedBy);
-        eventType.setRequestedBy("" + this.requestedBy);
+        eventType.setApproved(isApproved());
+        eventType.setApprovedBy(getApprovedBy() != null ? getApprovedBy().getUserName() : "");
+        eventType.setRequestedBy(getRequestedBy() != null ? getRequestedBy().getUserName() : "");
         eventType.setEventTypeName(this.eventTypeName);
         eventType.setEventCategoryId(this.eventCategory.getEventCategoryId());
         eventType.setEventCategoryName(this.eventCategory.getEventCategoryName());

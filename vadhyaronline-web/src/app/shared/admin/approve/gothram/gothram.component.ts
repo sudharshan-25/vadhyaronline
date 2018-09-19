@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EventType, Gothram} from '../../../../domain/domain';
+import {RestService} from '../../../../services/rest.service';
+import {NzNotificationService} from 'ng-zorro-antd';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-gothram',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GothramComponent implements OnInit {
 
-  constructor() { }
+  data: Array<Gothram> = [];
+  loading: boolean;
+
+  constructor(private restService: RestService, private notification: NzNotificationService) {
+  }
+
+  public loadAllGothrams() {
+    this.restService.getAllGothrams().subscribe(value => {
+      this.loading = false;
+      this.data = value.data;
+    }, (error: HttpErrorResponse) => {
+      this.notification.error('Error Loading', error.error);
+      this.loading = false;
+    });
+  }
 
   ngOnInit() {
+    this.loadAllGothrams();
   }
 
 }

@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
+import {EventType, Soothram} from '../../../../domain/domain';
+import {RestService} from '../../../../services/rest.service';
+import {NzNotificationService} from 'ng-zorro-antd';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-soothram',
@@ -7,9 +11,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SoothramComponent implements OnInit {
 
-  constructor() { }
+  data: Array<Soothram> = [];
+  loading: boolean;
+
+  constructor(private restService: RestService, private notification: NzNotificationService) {
+  }
+
+  public loadAllSoothrams() {
+    this.restService.getAllSoothrams().subscribe(value => {
+      this.loading = false;
+      this.data = value.data;
+    }, (error: HttpErrorResponse) => {
+      this.notification.error('Error Loading', error.error);
+      this.loading = false;
+    });
+  }
 
   ngOnInit() {
+    this.loadAllSoothrams();
   }
 
 }

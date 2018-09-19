@@ -3,6 +3,7 @@ package in.ssi.vadhyar.web.service;
 import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.domain.EventCategory;
 import in.ssi.vadhyar.web.entity.EventCategoryEntity;
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.EventCategoryJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.EventCategoryJpaRepository;
@@ -35,7 +36,7 @@ public class EventCategoryService {
     }
 
     public List<EventCategory> getApprovedEventCategories(boolean approvedStatus) {
-        return eventCategoryJpaRepository.findByApproved(approvedStatus).stream()
+        return eventCategoryJpaRepository.findAllByApproved(approvedStatus).stream()
                 .map(EventCategoryEntity::toDomain).collect(Collectors.toList());
     }
 
@@ -54,7 +55,7 @@ public class EventCategoryService {
         EventCategoryEntity categoryEntity = new EventCategoryEntity();
         categoryEntity.setEventCategoryName(eventCategory.getEventCategoryName());
         categoryEntity.setRequestedOn(Timestamp.from(Instant.now()));
-        categoryEntity.setRequestedBy(loginContext.getCurrentUser().getUserId());
+        categoryEntity.setRequestedBy(SimpleUserEntity.of(loginContext.getCurrentUser().getUserId()));
         eventCategoryJpaRepository.save(categoryEntity);
     }
 

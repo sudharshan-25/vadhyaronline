@@ -1,9 +1,12 @@
 <div class="page-content">
+
+  <h3>Event Category</h3>
+
   <nz-table #eventCategory [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
             [nzLoading]="loading">
     <thead>
     <tr>
-      <th>Id</th>
+      <th nzShowSort nzSortKey="eventCategoryId">Category Id</th>
       <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Name</th>
       <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
       <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
@@ -14,7 +17,7 @@
     <tr *ngFor="let category of eventCategory.data">
       <td>{{category.eventCategoryId}}</td>
       <td>{{category.eventCategoryName}}</td>
-      <td>{{category.approved}}</td>
+      <td>{{category.approved }}</td>
       <td>{{category.requestedBy}}</td>
       <td>{{category.approvedBy}}</td>
     </tr>

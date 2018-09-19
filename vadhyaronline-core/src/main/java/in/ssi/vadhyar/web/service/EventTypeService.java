@@ -4,6 +4,7 @@ import in.ssi.vadhyar.web.authentication.LoginUserContext;
 import in.ssi.vadhyar.web.domain.EventType;
 import in.ssi.vadhyar.web.entity.EventCategoryEntity;
 import in.ssi.vadhyar.web.entity.EventTypeEntity;
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import in.ssi.vadhyar.web.exception.VadhyarOnlineException;
 import in.ssi.vadhyar.web.repository.jdbc.EventTypeJdbcRepository;
 import in.ssi.vadhyar.web.repository.jpa.EventTypeJpaRepository;
@@ -64,7 +65,7 @@ public class EventTypeService {
         eventTypeEntity.setEventCategory(categoryEntity);
         eventTypeEntity.setEventTypeDescription(eventType.getEventTypeDescription());
         eventTypeEntity.setEventTypeName(eventType.getEventTypeName());
-        eventTypeEntity.setRequestedBy(loginContext.getCurrentUser().getUserId());
+        eventTypeEntity.setRequestedBy(SimpleUserEntity.of(loginContext.getCurrentUser().getUserId()));
         eventTypeEntity.setRequestedOn(Timestamp.from(Instant.now()));
         eventTypeJpaRepository.save(eventTypeEntity);
     }
@@ -81,7 +82,7 @@ public class EventTypeService {
     }
 
     public void deleteEventType(int eventTypeId) {
-        if (eventTypeJdbcRepository.canDelete(eventTypeId)){
+        if (eventTypeJdbcRepository.canDelete(eventTypeId)) {
             eventTypeJpaRepository.deleteById(eventTypeId);
             return;
         }
