@@ -3,23 +3,23 @@
   <h3>Event Category</h3>
 
   <nz-table #eventCategory [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
-            [nzLoading]="loading">
-    <thead>
+            [nzLoading]="loading" nzTitle="Unapproved Event Category">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventCategoryId">Category Id</th>
       <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Name</th>
-      <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
       <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
-      <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let category of eventCategory.data">
-      <td>{{category.eventCategoryId}}</td>
       <td>{{category.eventCategoryName}}</td>
-      <td>{{category.approved }}</td>
       <td>{{category.requestedBy}}</td>
-      <td>{{category.approvedBy}}</td>
+      <td>
+        <button nz-button [nzType]="'primary'">Approve</button>
+        <button nz-button [nzType]="'default'">Update</button>
+        <button nz-button [nzType]="'danger'">Delete</button>
+      </td>
     </tr>
     </tbody>
   </nz-table>

@@ -2,23 +2,23 @@
   <h3>Soothram</h3>
 
   <nz-table #soothrams [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
-            [nzLoading]="loading">
-    <thead>
+            [nzLoading]="loading" nzTitle="Unapproved Soothrams">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventCategoryId">soothram Id</th>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>soothram Name</th>
-      <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
+      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Soothram Name</th>
       <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
-      <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let soothram of soothrams.data">
-      <td>{{soothram.soothramId}}</td>
       <td>{{soothram.soothramName}}</td>
-      <td>{{soothram.approved}}</td>
       <td>{{soothram.requestedBy}}</td>
-      <td>{{soothram.approvedBy}}</td>
+      <td>
+        <button nz-button [nzType]="'primary'">Approve</button>
+        <button nz-button [nzType]="'default'">Update</button>
+        <button nz-button [nzType]="'danger'">Delete</button>
+      </td>
     </tr>
     </tbody>
   </nz-table>

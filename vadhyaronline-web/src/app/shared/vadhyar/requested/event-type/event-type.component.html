@@ -2,24 +2,20 @@
   <h3>Event Type</h3>
 
   <nz-table #eventType [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
-            [nzLoading]="loading">
-    <thead>
+            [nzLoading]="loading" nzTitle="Requested Event Type">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventTypeId" nzShowFilter>Event Type Id</th>
       <th nzShowSort nzSortKey="eventTypeName" nzShowFilter>Event Type</th>
       <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Category Name</th>
       <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
-      <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
       <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let category of eventType.data">
-      <td>{{category.eventTypeId}}</td>
       <td>{{category.eventTypeName}}</td>
       <td>{{category.eventCategoryName}}</td>
       <td>{{category.approved }}</td>
-      <td>{{category.requestedBy}}</td>
       <td>{{category.approvedBy}}</td>
     </tr>
     </tbody>

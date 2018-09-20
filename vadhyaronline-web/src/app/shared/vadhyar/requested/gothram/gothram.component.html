@@ -2,22 +2,18 @@
   <h3>Gothram</h3>
 
   <nz-table #gothrams [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
-            [nzLoading]="loading">
-    <thead>
+            [nzLoading]="loading" nzTitle="Requested Gothrams">
+    <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventCategoryId">Gothram Id</th>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Gothram Name</th>
+      <th nzShowSort nzSortKey="gothramName" nzShowFilter>Gothram Name</th>
       <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
-      <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
       <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let gothram of gothrams.data">
-      <td>{{gothram.gothramId}}</td>
       <td>{{gothram.gothramName}}</td>
       <td>{{gothram.approved}}</td>
-      <td>{{gothram.requestedBy}}</td>
       <td>{{gothram.approvedBy}}</td>
     </tr>
     </tbody>

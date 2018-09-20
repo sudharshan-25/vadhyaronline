@@ -2,41 +2,25 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a44938-7c9a-4c59-a34a-38d913c07677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/pipes/common-pipe/common-pipe.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/requested.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/vadhyar.routes.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventCategoryJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventCategoryJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventTypeJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/EventTypeJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/GothramJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/GothramJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/SoothramJpaRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/SoothramJpaRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventCategoryService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventCategoryService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventTypeService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/EventTypeService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/GothramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/GothramService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/SoothramService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/service/SoothramService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/pipes/approve-display.pipe.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/pipes/common-pipe/approve-display.pipe.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/services/rest.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/services/rest.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/approve.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/approve.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-type/event-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-type/event-type.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-type/event-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-type/event-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/gothram/gothram.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/gothram/gothram.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/gothram/gothram.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/gothram/gothram.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/soothram/soothram.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/soothram/soothram.component.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/soothram/soothram.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/soothram/soothram.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/vadhyar.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/vadhyar.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-type/event-type.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/gothram/gothram.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/soothram/soothram.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/styles.less" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/styles.less" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -79,7 +63,7 @@
     <session id="-337981254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="22" />
+          <entry key="project.closed" value="23" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.110" value="1" />
           <entry key="project.open.time.120" value="1" />
@@ -90,7 +74,7 @@
           <entry key="project.open.time.62" value="1" />
           <entry key="project.open.time.64" value="1" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.open.time.68" value="1" />
+          <entry key="project.open.time.68" value="2" />
           <entry key="project.open.time.72" value="1" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.75" value="1" />
@@ -101,11 +85,12 @@
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="23" />
+          <entry key="project.opened" value="24" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
+          <entry key="EVENT_CATEGORY" value="1" />
           <entry key="ISEQ$$_91959" value="1" />
           <entry key="ROLE_MASTER" value="1" />
           <entry key="SOOTHRAM_MASTER" value="1" />
@@ -118,13 +103,13 @@
           <entry key="sql" value="23" />
           <entry key="ts" value="1" />
           <entry key="xml" value="4" />
-          <entry key="yml" value="11" />
+          <entry key="yml" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="5" />
+          <entry key="Database Element" value="6" />
           <entry key="HTML" value="2" />
           <entry key="JAVA" value="248" />
           <entry key="Less" value="1" />
@@ -132,16 +117,16 @@
           <entry key="Scratch" value="3" />
           <entry key="TypeScript" value="1" />
           <entry key="XML" value="4" />
-          <entry key="YAML" value="11" />
+          <entry key="YAML" value="12" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="5" />
+          <entry key="cell" value="6" />
           <entry key="java" value="10692" />
           <entry key="sql" value="184" />
           <entry key="ts" value="2" />
-          <entry key="txt" value="71" />
+          <entry key="txt" value="124" />
           <entry key="xml" value="31" />
           <entry key="yml" value="73" />
         </counts>
@@ -149,9 +134,9 @@
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="10691" />
-          <entry key="PLAIN_TEXT" value="71" />
+          <entry key="PLAIN_TEXT" value="124" />
           <entry key="SQL" value="112" />
-          <entry key="Scratch" value="78" />
+          <entry key="Scratch" value="79" />
           <entry key="TypeScript" value="2" />
           <entry key="XML" value="31" />
           <entry key="YAML" value="73" />
@@ -164,7 +149,7 @@
       </usages-collector>
       <usages-collector id="statistics.js.language.service.starts">
         <counts>
-          <entry key="TypeScriptServerServiceImpl" value="4" />
+          <entry key="TypeScriptServerServiceImpl" value="5" />
         </counts>
       </usages-collector>
     </session>
@@ -293,7 +278,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -301,53 +286,11 @@
               <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
               <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,7 +374,8 @@
       <workItem from="1537328472610" duration="402000" />
       <workItem from="1537373869093" duration="76000" />
       <workItem from="1537374136949" duration="7197000" />
-      <workItem from="1537415583133" duration="2429000" />
+      <workItem from="1537415583133" duration="2557000" />
+      <workItem from="1537461904094" duration="1865000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC and JPA changes">
       <created>1535947654310</created>
@@ -489,11 +433,18 @@
       <option name="project" value="LOCAL" />
       <updated>1537381688668</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Base table for requested and unapproved">
+      <created>1537418154236</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1537418154236</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81237000" />
+    <option name="totallyTimeSpent" value="83230000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -504,7 +455,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" weight="0.32980332" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.33963692" />
+      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.34493193" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Bean Validation" order="8" weight="0.32980332" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3289689" />
@@ -605,7 +556,8 @@
     <MESSAGE value="JDBC and JPA changes" />
     <MESSAGE value="Base Page for approve pages" />
     <MESSAGE value="Base Page for Table structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base Page for Table structure" />
+    <MESSAGE value="Base table for requested and unapproved" />
+    <option name="LAST_COMMIT_MESSAGE" value="Base table for requested and unapproved" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -649,20 +601,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/AuthorizationAOP.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="29" column="4" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/ChoicesController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="69">
-          <caret line="22" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/authentication/AuthenticationAOP.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -999,6 +937,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="503">
           <caret line="48" column="24" lean-forward="true" selection-start-line="48" selection-start-column="24" selection-end-line="48" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="das://5030ab90-5473-48c2-9676-fe0de19f0d58/schema/DEVUSER/table/EVENT_CATEGORY">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
