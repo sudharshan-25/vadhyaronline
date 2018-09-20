@@ -1,13 +1,13 @@
 import {NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
+import {NgZorroAntdModule} from 'ng-zorro-antd';
 import {EventCategoryComponent} from './event-category/event-category.component';
-import {RouterModule, Routes} from '@angular/router';
 import {EventTypeComponent} from './event-type/event-type.component';
 import {GothramComponent} from './gothram/gothram.component';
 import {SoothramComponent} from './soothram/soothram.component';
-import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {RouterModule, Routes} from '@angular/router';
 
-const APPROVE_MASTER_ROUTES: Routes = [
+const REQUESTED_MASTER_ROUTES: Routes = [
   {path: '', redirectTo: 'event-category', pathMatch: 'full'},
   {path: 'event-category', component: EventCategoryComponent},
   {path: 'event-type', component: EventTypeComponent},
@@ -15,11 +15,12 @@ const APPROVE_MASTER_ROUTES: Routes = [
   {path: 'soothram', component: SoothramComponent}
 ];
 
+
 @NgModule({
   imports: [
-    CommonModule, RouterModule.forChild(APPROVE_MASTER_ROUTES), NgZorroAntdModule
+    CommonModule, NgZorroAntdModule, RouterModule.forChild(REQUESTED_MASTER_ROUTES)
   ],
   declarations: [EventCategoryComponent, EventTypeComponent, GothramComponent, SoothramComponent]
 })
-export class ApproveModule {
+export class RequestedModule {
 }

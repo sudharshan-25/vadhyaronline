@@ -45,7 +45,8 @@ public class GothramService {
     }
 
     public List<Gothram> findAllRequested() {
-        return gothramJpaRepository.findAllByRequestedBy(loginUserContext.getCurrentUser().getUserId())
+        return gothramJpaRepository
+                .findAllByRequestedBy(SimpleUserEntity.of(loginUserContext.getCurrentUser().getUserId()))
                 .stream().map(GothramEntity::toDomain).collect(Collectors.toList());
     }
 

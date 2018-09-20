@@ -1,5 +1,6 @@
 package in.ssi.vadhyar.web.repository.jpa;
 
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import in.ssi.vadhyar.web.entity.SoothramEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
@@ -11,6 +12,6 @@ public interface SoothramJpaRepository extends JpaRepository<SoothramEntity, Int
 
     List<SoothramEntity> findAllByApproved(boolean approved);
 
-    List<SoothramEntity> findAllByRequestedBy(int requestedBy);
+    List<SoothramEntity> findAllByRequestedBy(SimpleUserEntity requestedBy);
 
 }

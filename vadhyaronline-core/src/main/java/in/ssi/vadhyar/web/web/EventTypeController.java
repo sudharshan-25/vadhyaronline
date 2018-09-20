@@ -44,7 +44,7 @@ public class EventTypeController {
     }
 
     @GetMapping("/requested")
-    @VOAccessRoles(accessRoles = VOAccessRole.ADMIN)
+    @VOAccessRoles(accessRoles = {VOAccessRole.VADHYAR, VOAccessRole.USER})
     public VOResponse getRequested() {
         VOResponse response = new VOResponse();
         response.setData(eventTypeService.getAllRequested());

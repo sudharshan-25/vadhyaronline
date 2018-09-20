@@ -1,24 +1,24 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Gothram} from '../../../../domain/domain';
 import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
-import {EventType} from '../../../../domain/domain';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
-  selector: 'app-event-type',
-  templateUrl: './event-type.component.html',
-  styleUrls: ['./event-type.component.css']
+  selector: 'app-gothram',
+  templateUrl: './gothram.component.html',
+  styleUrls: ['./gothram.component.css']
 })
-export class EventTypeComponent implements OnInit {
+export class GothramComponent implements OnInit {
 
-  data: Array<EventType> = [];
+  data: Array<Gothram> = [];
   loading: boolean;
 
   constructor(private restService: RestService, private notification: NzNotificationService) {
   }
 
-  public loadEventTypes(): void {
-    this.restService.getUnapprovedEventTypes().subscribe(value => {
+  public loadRequestedGothrams() {
+    this.restService.getRequestedGothrams().subscribe(value => {
       this.loading = false;
       this.data = value.data;
     }, (error: HttpErrorResponse) => {
@@ -28,7 +28,7 @@ export class EventTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadEventTypes();
+    this.loadRequestedGothrams();
   }
 
 }

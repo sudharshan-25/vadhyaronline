@@ -1,6 +1,7 @@
 package in.ssi.vadhyar.web.repository.jpa;
 
 import in.ssi.vadhyar.web.entity.EventCategoryEntity;
+import in.ssi.vadhyar.web.entity.SimpleUserEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -11,6 +12,6 @@ public interface EventCategoryJpaRepository extends JpaRepository<EventCategoryE
 
     List<EventCategoryEntity> findAllByApproved(Boolean approved);
 
-    List<EventCategoryEntity> findAllByRequestedBy(int requestedBy);
+    List<EventCategoryEntity> findAllByRequestedBy(SimpleUserEntity requestedBy);
 
 }

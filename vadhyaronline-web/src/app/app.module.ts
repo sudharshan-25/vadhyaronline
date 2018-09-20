@@ -12,11 +12,12 @@ import {TokenHttpInterceptorService} from './services/token-http-interceptor.ser
 import {HomeRedirectComponent} from './shared/menu/home-redirect/home-redirect.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {en_US, NgZorroAntdModule, NZ_I18N} from 'ng-zorro-antd';
-import { ApproveDisplayPipe } from './pipes/approve-display.pipe';
+import {CommonPipeModule} from './pipes/common-pipe/common-pipe.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent, MenuComponent, TopMenuComponent, HomeRedirectComponent, ApproveDisplayPipe
+    AppComponent, MenuComponent, TopMenuComponent, HomeRedirectComponent
   ],
   imports: [
     BrowserModule, FormsModule, ReactiveFormsModule, BrowserAnimationsModule, HttpClientModule,
@@ -26,7 +27,7 @@ import { ApproveDisplayPipe } from './pipes/approve-display.pipe';
         onSameUrlNavigation: 'reload',
         scrollPositionRestoration: 'enabled'
       }),
-    NgZorroAntdModule
+    NgZorroAntdModule, CommonPipeModule
   ],
   providers: [
     {provide: 'API_URL', useValue: 'http://localhost:8080/vadhyar'},

@@ -45,7 +45,8 @@ public class SoothramService {
     }
 
     public List<Soothram> findAllRequested() {
-        return soothramJpaRepository.findAllByRequestedBy(loginUserContext.getCurrentUser().getUserId())
+        return soothramJpaRepository
+                .findAllByRequestedBy(SimpleUserEntity.of(loginUserContext.getCurrentUser().getUserId()))
                 .stream().map(SoothramEntity::toDomain).collect(Collectors.toList());
     }
 

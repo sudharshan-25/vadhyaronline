@@ -18,7 +18,7 @@ export class SoothramComponent implements OnInit {
   }
 
   public loadAllSoothrams() {
-    this.restService.getAllSoothrams().subscribe(value => {
+    this.restService.getUnapprovedSoothrams().subscribe(value => {
       this.loading = false;
       this.data = value.data;
     }, (error: HttpErrorResponse) => {

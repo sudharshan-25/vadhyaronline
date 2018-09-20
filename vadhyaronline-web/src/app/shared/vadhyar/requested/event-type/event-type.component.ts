@@ -1,7 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {EventCategory, EventType} from '../../../../domain/domain';
 import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
-import {EventType} from '../../../../domain/domain';
 import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
@@ -17,8 +17,9 @@ export class EventTypeComponent implements OnInit {
   constructor(private restService: RestService, private notification: NzNotificationService) {
   }
 
-  public loadEventTypes(): void {
-    this.restService.getUnapprovedEventTypes().subscribe(value => {
+  loadRequestedEventTypes() {
+    this.loading = true;
+    this.restService.getRequestedEventTypes().subscribe(value => {
       this.loading = false;
       this.data = value.data;
     }, (error: HttpErrorResponse) => {
@@ -28,7 +29,6 @@ export class EventTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadEventTypes();
+    this.loadRequestedEventTypes();
   }
-
 }

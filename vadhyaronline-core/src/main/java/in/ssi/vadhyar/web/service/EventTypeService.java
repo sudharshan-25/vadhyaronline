@@ -46,8 +46,8 @@ public class EventTypeService {
     }
 
     public List<EventType> getAllRequested() {
-        return eventTypeJpaRepository.findByRequestedBy(loginContext.getCurrentUser().getUserId()).stream()
-                .map(EventTypeEntity::toDomain).collect(Collectors.toList());
+        return eventTypeJpaRepository.findByRequestedBy(SimpleUserEntity.of(loginContext.getCurrentUser().getUserId()))
+                .stream().map(EventTypeEntity::toDomain).collect(Collectors.toList());
     }
 
     public EventType getEventType(Integer eventTypeId) {

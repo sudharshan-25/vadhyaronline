@@ -34,21 +34,36 @@ export class RestService {
     return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/user/register`, userDetails, {});
   }
 
-  public getAllEventCategories(): Observable<EventCategoryResponse> {
-    return this.httpClient.get<EventCategoryResponse>(`${this.apiURL}/eventCategory/all`);
+  public getUnapprovedEventCategories(): Observable<EventCategoryResponse> {
+    return this.httpClient.get<EventCategoryResponse>(`${this.apiURL}/eventCategory/unapproved`);
   }
 
-  public getAllEventTypes(): Observable<EventTypeResponse> {
-    return this.httpClient.get<EventTypeResponse>(`${this.apiURL}/eventType/all`);
+  public getUnapprovedEventTypes(): Observable<EventTypeResponse> {
+    return this.httpClient.get<EventTypeResponse>(`${this.apiURL}/eventType/unapproved`);
   }
 
-  public getAllGothrams(): Observable<GothramResponse> {
-    return this.httpClient.get<GothramResponse>(`${this.apiURL}/gothram/all`);
+  public getUnapprovedGothrams(): Observable<GothramResponse> {
+    return this.httpClient.get<GothramResponse>(`${this.apiURL}/gothram/unapproved`);
   }
 
-  public getAllSoothrams(): Observable<SoothramResponse> {
-    return this.httpClient.get<SoothramResponse>(`${this.apiURL}/soothram/all`);
+  public getUnapprovedSoothrams(): Observable<SoothramResponse> {
+    return this.httpClient.get<SoothramResponse>(`${this.apiURL}/soothram/unapproved`);
   }
 
+  public getRequestedEventCategories(): Observable<EventCategoryResponse> {
+    return this.httpClient.get<EventCategoryResponse>(`${this.apiURL}/eventCategory/requested`);
+  }
+
+  public getRequestedEventTypes(): Observable<EventTypeResponse> {
+    return this.httpClient.get<EventTypeResponse>(`${this.apiURL}/eventType/requested`);
+  }
+
+  public getRequestedGothrams(): Observable<GothramResponse> {
+    return this.httpClient.get<GothramResponse>(`${this.apiURL}/gothram/requested`);
+  }
+
+  public getRequestedSoothrams(): Observable<SoothramResponse> {
+    return this.httpClient.get<SoothramResponse>(`${this.apiURL}/soothram/requested`);
+  }
 
 }

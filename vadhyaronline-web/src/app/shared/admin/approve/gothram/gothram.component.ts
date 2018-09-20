@@ -18,7 +18,7 @@ export class GothramComponent implements OnInit {
   }
 
   public loadAllGothrams() {
-    this.restService.getAllGothrams().subscribe(value => {
+    this.restService.getUnapprovedGothrams().subscribe(value => {
       this.loading = false;
       this.data = value.data;
     }, (error: HttpErrorResponse) => {

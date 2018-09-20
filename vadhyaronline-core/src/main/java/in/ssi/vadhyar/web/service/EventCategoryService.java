@@ -41,7 +41,8 @@ public class EventCategoryService {
     }
 
     public List<EventCategory> getMyRequestedEventCategories() {
-        return eventCategoryJpaRepository.findAllByRequestedBy(loginContext.getCurrentUser().getUserId())
+        return eventCategoryJpaRepository
+                .findAllByRequestedBy(SimpleUserEntity.of(loginContext.getCurrentUser().getUserId()))
                 .stream().map(EventCategoryEntity::toDomain).collect(Collectors.toList());
     }
 

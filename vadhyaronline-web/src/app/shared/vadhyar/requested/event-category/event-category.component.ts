@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
-import {RestService} from '../../../../services/rest.service';
 import {EventCategory} from '../../../../domain/domain';
-import {HttpErrorResponse} from '@angular/common/http';
+import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
+import {HttpErrorResponse} from '@angular/common/http';
 
 @Component({
   selector: 'app-event-category',
@@ -17,9 +17,9 @@ export class EventCategoryComponent implements OnInit {
   constructor(private restService: RestService, private notification: NzNotificationService) {
   }
 
-  loadAllEventCategories() {
+  loadRequestedEventCategories() {
     this.loading = true;
-    this.restService.getUnapprovedEventCategories().subscribe(value => {
+    this.restService.getRequestedEventCategories().subscribe(value => {
       this.loading = false;
       this.data = value.data;
     }, (error: HttpErrorResponse) => {
@@ -29,7 +29,7 @@ export class EventCategoryComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.loadAllEventCategories();
+    this.loadRequestedEventCategories();
   }
 
 }
