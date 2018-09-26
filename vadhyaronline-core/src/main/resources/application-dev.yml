@@ -5,14 +5,18 @@ server:
 
 spring:
   datasource:
-    url: jdbc:oracle:thin:@localhost:1521/vadhyardev
-    driverClassName: oracle.jdbc.driver.OracleDriver
-    username: devuser
-    password: DevUser123
+    url: jdbc:postgresql://vadhyar.c2ekvuk7fhvc.ap-south-1.rds.amazonaws.com:5432/vadhyar
+    driverClassName: org.postgresql.Driver
+    username: root
+    password: Sudhu1992
+    hikari:
+      maximum-pool-size: 4
   jpa:
     show-sql: true
     hibernate.ddl-auto: validate
-    database-platform: org.hibernate.dialect.Oracle12cDialect
+    database-platform: org.hibernate.dialect.PostgreSQL91Dialect
+    properties:
+      hibernate.jdbc.lob.non_contextual_creation: true
   jackson:
     default-property-inclusion: non_null
   cache:

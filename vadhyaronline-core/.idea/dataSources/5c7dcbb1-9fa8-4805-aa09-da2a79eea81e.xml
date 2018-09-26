@@ -1,0 +1,1128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="vadhyar@vadhyar.c2ekvuk7fhvc.ap-south-1.rds.amazonaws.com">
+  <database-model serializer="dbm" rdbms="POSTGRES" format-version="4.11">
+    <root id="1">
+      <ServerVersion>10.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="postgres">
+      <ObjectId>13934</ObjectId>
+      <Comment>default administrative connection database</Comment>
+      <Owner>root</Owner>
+    </database>
+    <database id="3" parent="1" name="rdsadmin">
+      <ObjectId>16384</ObjectId>
+      <Owner>rdsadmin</Owner>
+    </database>
+    <database id="4" parent="1" name="vadhyar">
+      <ObjectId>16396</ObjectId>
+      <Owner>root</Owner>
+      <IntrospectionStateNumber>116</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <role id="5" parent="1" name="pg_monitor">
+      <ObjectId>3373</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="6" parent="1" name="pg_read_all_settings">
+      <ObjectId>3374</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="7" parent="1" name="pg_read_all_stats">
+      <ObjectId>3375</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="8" parent="1" name="pg_signal_backend">
+      <ObjectId>4200</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="9" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="10" parent="1" name="rds_iam">
+      <ObjectId>16388</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="11" parent="1" name="rds_replication">
+      <ObjectId>16387</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="12" parent="1" name="rds_superuser">
+      <ObjectId>16386</ObjectId>
+      <Inherit>1</Inherit>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="13" parent="1" name="rdsadmin">
+      <ObjectId>10</ObjectId>
+      <SuperRole>1</SuperRole>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>infinity</ValidUntil>
+      <BypassRls>1</BypassRls>
+      <Config>TimeZone=utc
+log_statement=all
+log_min_error_statement=debug5
+log_min_messages=panic
+exit_on_error=0
+statement_timeout=0
+role=rdsadmin
+auto_explain.log_min_duration=-1
+temp_file_limit=-1
+pg_hint_plan.enable_hint=off
+default_transaction_read_only=off
+search_path=pg_catalog, public</Config>
+    </role>
+    <role id="14" parent="1" name="rdsrepladmin">
+      <ObjectId>16395</ObjectId>
+      <Replication>1</Replication>
+      <ConnectionLimit>-1</ConnectionLimit>
+    </role>
+    <role id="15" parent="1" name="root">
+      <ObjectId>16394</ObjectId>
+      <Inherit>1</Inherit>
+      <CreateRole>1</CreateRole>
+      <CreateDb>1</CreateDb>
+      <CanLogin>1</CanLogin>
+      <ConnectionLimit>-1</ConnectionLimit>
+      <ValidUntil>infinity</ValidUntil>
+    </role>
+    <schema id="16" parent="4" name="information_schema">
+      <ObjectId>13643</ObjectId>
+      <Owner>rdsadmin</Owner>
+    </schema>
+    <schema id="17" parent="4" name="pg_catalog">
+      <ObjectId>11</ObjectId>
+      <Comment>system catalog schema</Comment>
+      <Owner>rdsadmin</Owner>
+    </schema>
+    <schema id="18" parent="4" name="pg_temp_1">
+      <ObjectId>11736</ObjectId>
+      <Owner>rdsadmin</Owner>
+    </schema>
+    <schema id="19" parent="4" name="pg_toast">
+      <ObjectId>99</ObjectId>
+      <Comment>reserved schema for TOAST tables</Comment>
+      <Owner>rdsadmin</Owner>
+    </schema>
+    <schema id="20" parent="4" name="pg_toast_temp_1">
+      <ObjectId>11737</ObjectId>
+      <Owner>rdsadmin</Owner>
+    </schema>
+    <schema id="21" parent="4" name="public">
+      <ObjectId>2200</ObjectId>
+      <Comment>standard public schema</Comment>
+      <Owner>root</Owner>
+      <IntrospectionTimestamp>2018-09-26.23:47:26.279</IntrospectionTimestamp>
+      <IntrospectionStateNumber>728</IntrospectionStateNumber>
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <access-method id="22" parent="4" name="btree">
+      <ObjectId>403</ObjectId>
+      <Comment>b-tree index access method</Comment>
+      <Handler>pg_catalog.bthandler</Handler>
+      <HandlerId>330</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="23" parent="4" name="hash">
+      <ObjectId>405</ObjectId>
+      <Comment>hash index access method</Comment>
+      <Handler>pg_catalog.hashhandler</Handler>
+      <HandlerId>331</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="24" parent="4" name="gist">
+      <ObjectId>783</ObjectId>
+      <Comment>GiST index access method</Comment>
+      <Handler>pg_catalog.gisthandler</Handler>
+      <HandlerId>332</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="25" parent="4" name="gin">
+      <ObjectId>2742</ObjectId>
+      <Comment>GIN index access method</Comment>
+      <Handler>pg_catalog.ginhandler</Handler>
+      <HandlerId>333</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="26" parent="4" name="spgist">
+      <ObjectId>4000</ObjectId>
+      <Comment>SP-GiST index access method</Comment>
+      <Handler>pg_catalog.spghandler</Handler>
+      <HandlerId>334</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <access-method id="27" parent="4" name="brin">
+      <ObjectId>3580</ObjectId>
+      <Comment>block range index (BRIN) access method</Comment>
+      <Handler>pg_catalog.brinhandler</Handler>
+      <HandlerId>335</HandlerId>
+      <Type>index</Type>
+    </access-method>
+    <sequence id="28" parent="21" name="event_category_event_category_id_seq">
+      <ObjectId>16539</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>671</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="29" parent="21" name="event_master_event_id_seq">
+      <ObjectId>16686</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>682</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="30" parent="21" name="event_type_event_type_id_seq">
+      <ObjectId>16549</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>672</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="31" parent="21" name="gothram_master_gothram_id_seq">
+      <ObjectId>16581</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>675</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="32" parent="21" name="soothram_master_soothram_id_seq">
+      <ObjectId>16571</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>674</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="33" parent="21" name="user_master_user_id_seq">
+      <ObjectId>16598</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>677</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <sequence id="34" parent="21" name="vadhyar_event_preferences_preference_id_seq">
+      <ObjectId>16660</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>680</StateNumber>
+      <SequenceIdentity>1..2147483647</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+      <CacheSize>1</CacheSize>
+      <DataType>integer</DataType>
+    </sequence>
+    <table id="35" parent="21" name="event_category">
+      <ObjectId>16541</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>672</StateNumber>
+    </table>
+    <table id="36" parent="21" name="event_master">
+      <ObjectId>16688</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>682</StateNumber>
+    </table>
+    <table id="37" parent="21" name="event_status">
+      <ObjectId>16679</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>682</StateNumber>
+    </table>
+    <table id="38" parent="21" name="event_type">
+      <ObjectId>16551</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>682</StateNumber>
+    </table>
+    <table id="39" parent="21" name="gothram_master">
+      <ObjectId>16583</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>678</StateNumber>
+    </table>
+    <table id="40" parent="21" name="role_master">
+      <ObjectId>16532</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>677</StateNumber>
+    </table>
+    <table id="41" parent="21" name="soothram_master">
+      <ObjectId>16573</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>678</StateNumber>
+    </table>
+    <table id="42" parent="21" name="status_master">
+      <ObjectId>16591</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>677</StateNumber>
+    </table>
+    <table id="43" parent="21" name="user_address">
+      <ObjectId>16647</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>679</StateNumber>
+    </table>
+    <table id="44" parent="21" name="user_details">
+      <ObjectId>16622</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>678</StateNumber>
+    </table>
+    <table id="45" parent="21" name="user_master">
+      <ObjectId>16600</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>728</StateNumber>
+    </table>
+    <table id="46" parent="21" name="vadhyar_event_preferences">
+      <ObjectId>16662</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>680</StateNumber>
+    </table>
+    <table id="47" parent="21" name="veda_master">
+      <ObjectId>16564</ObjectId>
+      <Owner>root</Owner>
+      <StateNumber>678</StateNumber>
+    </table>
+    <column id="48" parent="35" name="event_category_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>671</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>event_category_event_category_id_seq</SequenceName>
+    </column>
+    <column id="49" parent="35" name="event_category_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="50" parent="35" name="approved">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="51" parent="35" name="requested_by">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="52" parent="35" name="requested_on">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="53" parent="35" name="approved_by">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="54" parent="35" name="approved_on">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>671</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="55" parent="35" name="pk_event_category">
+      <ObjectId>16545</ObjectId>
+      <ColNames>event_category_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="56" parent="35" name="uk_event_category_name">
+      <ObjectId>16547</ObjectId>
+      <ColNames>event_category_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="57" parent="35" name="pk_event_category">
+      <ObjectId>16546</ObjectId>
+      <ColNames>event_category_id</ColNames>
+      <UnderlyingIndexName>pk_event_category</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="58" parent="35" name="uk_event_category_name">
+      <ObjectId>16548</ObjectId>
+      <ColNames>event_category_name</ColNames>
+      <UnderlyingIndexName>uk_event_category_name</UnderlyingIndexName>
+    </key>
+    <column id="59" parent="36" name="event_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>682</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>event_master_event_id_seq</SequenceName>
+    </column>
+    <column id="60" parent="36" name="event_type">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="61" parent="36" name="requested_by">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="62" parent="36" name="requested_on">
+      <Position>4</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="63" parent="36" name="event_date_time">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="64" parent="36" name="event_status_id">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="65" parent="36" name="vadhyar_by">
+      <Position>7</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>682</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="66" parent="36" name="pk_event_master_id">
+      <ObjectId>16691</ObjectId>
+      <ColNames>event_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="36" name="pk_event_master_id">
+      <ObjectId>16692</ObjectId>
+      <ColNames>event_id</ColNames>
+      <UnderlyingIndexName>pk_event_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <foreign-key id="68" parent="36" name="fk_event_master_type">
+      <ObjectId>16693</ObjectId>
+      <ColNames>event_type</ColNames>
+      <RefTableId>16551</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>event_type</RefTableName>
+      <RefKeyName>pk_event_type_id</RefKeyName>
+      <RefColNames>event_type_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="69" parent="36" name="fk_event_master_request">
+      <ObjectId>16698</ObjectId>
+      <ColNames>requested_by</ColNames>
+      <RefTableId>16600</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_master</RefTableName>
+      <RefKeyName>pk_user_master_id</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="70" parent="36" name="fk_event_master_status">
+      <ObjectId>16703</ObjectId>
+      <ColNames>event_status_id</ColNames>
+      <RefTableId>16679</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>event_status</RefTableName>
+      <RefKeyName>pk_event_status</RefKeyName>
+      <RefColNames>event_status_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="71" parent="36" name="fk_event_master_vadhyar">
+      <ObjectId>16708</ObjectId>
+      <ColNames>vadhyar_by</ColNames>
+      <RefTableId>16600</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_master</RefTableName>
+      <RefKeyName>pk_user_master_id</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="72" parent="37" name="event_status_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>681</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="73" parent="37" name="event_status_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>681</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="74" parent="37" name="pk_event_status">
+      <ObjectId>16682</ObjectId>
+      <ColNames>event_status_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="75" parent="37" name="uk_event_status">
+      <ObjectId>16684</ObjectId>
+      <ColNames>event_status_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="76" parent="37" name="pk_event_status">
+      <ObjectId>16683</ObjectId>
+      <ColNames>event_status_id</ColNames>
+      <UnderlyingIndexName>pk_event_status</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="77" parent="37" name="uk_event_status">
+      <ObjectId>16685</ObjectId>
+      <ColNames>event_status_name</ColNames>
+      <UnderlyingIndexName>uk_event_status</UnderlyingIndexName>
+    </key>
+    <column id="78" parent="38" name="event_type_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>672</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>event_type_event_type_id_seq</SequenceName>
+    </column>
+    <column id="79" parent="38" name="event_category_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="80" parent="38" name="event_type_name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="81" parent="38" name="event_type_desc">
+      <Position>4</Position>
+      <DataType>varchar(150)|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="82" parent="38" name="approved">
+      <Position>5</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="83" parent="38" name="requested_by">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="84" parent="38" name="requested_on">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="85" parent="38" name="approved_by">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="86" parent="38" name="approved_on">
+      <Position>9</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>672</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="87" parent="38" name="pk_event_type_id">
+      <ObjectId>16555</ObjectId>
+      <ColNames>event_type_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="88" parent="38" name="uk_event_type_name">
+      <ObjectId>16557</ObjectId>
+      <ColNames>event_type_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="89" parent="38" name="pk_event_type_id">
+      <ObjectId>16556</ObjectId>
+      <ColNames>event_type_id</ColNames>
+      <UnderlyingIndexName>pk_event_type_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="90" parent="38" name="uk_event_type_name">
+      <ObjectId>16558</ObjectId>
+      <ColNames>event_type_name</ColNames>
+      <UnderlyingIndexName>uk_event_type_name</UnderlyingIndexName>
+    </key>
+    <foreign-key id="91" parent="38" name="fk_event_type_category">
+      <ObjectId>16559</ObjectId>
+      <ColNames>event_category_id</ColNames>
+      <RefTableId>16541</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>event_category</RefTableName>
+      <RefKeyName>pk_event_category</RefKeyName>
+      <RefColNames>event_category_id</RefColNames>
+    </foreign-key>
+    <column id="92" parent="39" name="gothram_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>675</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>gothram_master_gothram_id_seq</SequenceName>
+    </column>
+    <column id="93" parent="39" name="gothram_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="94" parent="39" name="approved">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="95" parent="39" name="requested_by">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="96" parent="39" name="requested_on">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="97" parent="39" name="approved_by">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="98" parent="39" name="approved_on">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>675</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="99" parent="39" name="pk_gothram_master_id">
+      <ObjectId>16587</ObjectId>
+      <ColNames>gothram_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="100" parent="39" name="uk_gothram_master_name">
+      <ObjectId>16589</ObjectId>
+      <ColNames>gothram_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="101" parent="39" name="pk_gothram_master_id">
+      <ObjectId>16588</ObjectId>
+      <ColNames>gothram_id</ColNames>
+      <UnderlyingIndexName>pk_gothram_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="102" parent="39" name="uk_gothram_master_name">
+      <ObjectId>16590</ObjectId>
+      <ColNames>gothram_name</ColNames>
+      <UnderlyingIndexName>uk_gothram_master_name</UnderlyingIndexName>
+    </key>
+    <column id="103" parent="40" name="role_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>670</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="104" parent="40" name="role_name">
+      <Position>2</Position>
+      <DataType>varchar(25)|0s</DataType>
+      <StateNumber>670</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="105" parent="40" name="pk_user_role">
+      <ObjectId>16535</ObjectId>
+      <ColNames>role_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="106" parent="40" name="uk_user_role_name">
+      <ObjectId>16537</ObjectId>
+      <ColNames>role_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="107" parent="40" name="pk_user_role">
+      <ObjectId>16536</ObjectId>
+      <ColNames>role_id</ColNames>
+      <UnderlyingIndexName>pk_user_role</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="108" parent="40" name="uk_user_role_name">
+      <ObjectId>16538</ObjectId>
+      <ColNames>role_name</ColNames>
+      <UnderlyingIndexName>uk_user_role_name</UnderlyingIndexName>
+    </key>
+    <column id="109" parent="41" name="soothram_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>674</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>soothram_master_soothram_id_seq</SequenceName>
+    </column>
+    <column id="110" parent="41" name="soothram_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="111" parent="41" name="approved">
+      <Position>3</Position>
+      <DataType>boolean|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <DefaultExpression>false</DefaultExpression>
+      <TypeId>16</TypeId>
+    </column>
+    <column id="112" parent="41" name="requested_by">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="113" parent="41" name="requested_on">
+      <Position>5</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="114" parent="41" name="approved_by">
+      <Position>6</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="115" parent="41" name="approved_on">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>674</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <index id="116" parent="41" name="pk_soothram_master_id">
+      <ObjectId>16577</ObjectId>
+      <ColNames>soothram_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="117" parent="41" name="uk_soothram_master_name">
+      <ObjectId>16579</ObjectId>
+      <ColNames>soothram_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="118" parent="41" name="pk_soothram_master_id">
+      <ObjectId>16578</ObjectId>
+      <ColNames>soothram_id</ColNames>
+      <UnderlyingIndexName>pk_soothram_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="119" parent="41" name="uk_soothram_master_name">
+      <ObjectId>16580</ObjectId>
+      <ColNames>soothram_name</ColNames>
+      <UnderlyingIndexName>uk_soothram_master_name</UnderlyingIndexName>
+    </key>
+    <column id="120" parent="42" name="status_master_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>676</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="121" parent="42" name="status_master_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>676</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="122" parent="42" name="pk_status_master_id">
+      <ObjectId>16594</ObjectId>
+      <ColNames>status_master_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="123" parent="42" name="uk_status_master_name">
+      <ObjectId>16596</ObjectId>
+      <ColNames>status_master_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="124" parent="42" name="pk_status_master_id">
+      <ObjectId>16595</ObjectId>
+      <ColNames>status_master_id</ColNames>
+      <UnderlyingIndexName>pk_status_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="125" parent="42" name="uk_status_master_name">
+      <ObjectId>16597</ObjectId>
+      <ColNames>status_master_name</ColNames>
+      <UnderlyingIndexName>uk_status_master_name</UnderlyingIndexName>
+    </key>
+    <column id="126" parent="43" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="127" parent="43" name="address_flat_number">
+      <Position>2</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="128" parent="43" name="address_street_name">
+      <Position>3</Position>
+      <DataType>varchar(500)|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="129" parent="43" name="address_city">
+      <Position>4</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="130" parent="43" name="address_state">
+      <Position>5</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="131" parent="43" name="address_zipcode">
+      <Position>6</Position>
+      <DataType>varchar(10)|0s</DataType>
+      <StateNumber>679</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="132" parent="43" name="uk_user_address_id">
+      <ObjectId>16653</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="133" parent="43" name="uk_user_address_id">
+      <ObjectId>16654</ObjectId>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>uk_user_address_id</UnderlyingIndexName>
+    </key>
+    <foreign-key id="134" parent="43" name="fk_user_address_id">
+      <ObjectId>16655</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16600</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_master</RefTableName>
+      <RefKeyName>pk_user_master_id</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <column id="135" parent="44" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>678</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="136" parent="44" name="user_veda_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>678</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="137" parent="44" name="user_soothram_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>678</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="138" parent="44" name="user_gothram_id">
+      <Position>4</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>678</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="139" parent="44" name="uk_user_details_id">
+      <ObjectId>16625</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="140" parent="44" name="uk_user_details_id">
+      <ObjectId>16626</ObjectId>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>uk_user_details_id</UnderlyingIndexName>
+    </key>
+    <foreign-key id="141" parent="44" name="fk_user_details_id">
+      <ObjectId>16627</ObjectId>
+      <ColNames>user_id</ColNames>
+      <RefTableId>16600</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_master</RefTableName>
+      <RefKeyName>pk_user_master_id</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="142" parent="44" name="fk_user_veda_id">
+      <ObjectId>16632</ObjectId>
+      <ColNames>user_veda_id</ColNames>
+      <RefTableId>16564</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>veda_master</RefTableName>
+      <RefKeyName>pk_veda_master_id</RefKeyName>
+      <RefColNames>veda_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="143" parent="44" name="fk_user_soothram_id">
+      <ObjectId>16637</ObjectId>
+      <ColNames>user_soothram_id</ColNames>
+      <RefTableId>16573</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>soothram_master</RefTableName>
+      <RefKeyName>pk_soothram_master_id</RefKeyName>
+      <RefColNames>soothram_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="144" parent="44" name="fk_user_gothram_id">
+      <ObjectId>16642</ObjectId>
+      <ColNames>user_gothram_id</ColNames>
+      <RefTableId>16583</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>gothram_master</RefTableName>
+      <RefKeyName>pk_gothram_master_id</RefKeyName>
+      <RefColNames>gothram_id</RefColNames>
+    </foreign-key>
+    <column id="145" parent="45" name="user_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>user_master_user_id_seq</SequenceName>
+    </column>
+    <column id="146" parent="45" name="user_first_name">
+      <Position>2</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="147" parent="45" name="user_last_name">
+      <Position>3</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="148" parent="45" name="user_name">
+      <Position>4</Position>
+      <DataType>varchar(15)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="149" parent="45" name="user_email">
+      <Position>5</Position>
+      <DataType>varchar(75)|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="150" parent="45" name="user_mobile">
+      <Position>6</Position>
+      <DataType>varchar(13)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="151" parent="45" name="user_password">
+      <Position>7</Position>
+      <DataType>varchar(50)|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="152" parent="45" name="user_role_id">
+      <Position>8</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>677</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="153" parent="45" name="login_status_id">
+      <Position>9</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="154" parent="45" name="latest_login_token">
+      <Position>10</Position>
+      <DataType>varchar(300)|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="155" parent="45" name="last_successful_login">
+      <Position>11</Position>
+      <DataType>timestamp|0s</DataType>
+      <StateNumber>677</StateNumber>
+      <TypeId>1114</TypeId>
+    </column>
+    <column id="156" parent="45" name="login_failed_attempt">
+      <Position>12</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>728</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="157" parent="45" name="pk_user_master_id">
+      <ObjectId>16606</ObjectId>
+      <ColNames>user_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="158" parent="45" name="uk_user_master_name">
+      <ObjectId>16608</ObjectId>
+      <ColNames>user_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="159" parent="45" name="uk_user_mobile">
+      <ObjectId>16610</ObjectId>
+      <ColNames>user_mobile</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="160" parent="45" name="pk_user_master_id">
+      <ObjectId>16607</ObjectId>
+      <ColNames>user_id</ColNames>
+      <UnderlyingIndexName>pk_user_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="161" parent="45" name="uk_user_master_name">
+      <ObjectId>16609</ObjectId>
+      <ColNames>user_name</ColNames>
+      <UnderlyingIndexName>uk_user_master_name</UnderlyingIndexName>
+    </key>
+    <key id="162" parent="45" name="uk_user_mobile">
+      <ObjectId>16611</ObjectId>
+      <ColNames>user_mobile</ColNames>
+      <UnderlyingIndexName>uk_user_mobile</UnderlyingIndexName>
+    </key>
+    <foreign-key id="163" parent="45" name="fk_user_role_id">
+      <ObjectId>16612</ObjectId>
+      <ColNames>user_role_id</ColNames>
+      <RefTableId>16532</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>role_master</RefTableName>
+      <RefKeyName>pk_user_role</RefKeyName>
+      <RefColNames>role_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="164" parent="45" name="fk_user_login_status_id">
+      <ObjectId>16617</ObjectId>
+      <ColNames>login_status_id</ColNames>
+      <RefTableId>16591</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>status_master</RefTableName>
+      <RefKeyName>pk_status_master_id</RefKeyName>
+      <RefColNames>status_master_id</RefColNames>
+    </foreign-key>
+    <column id="165" parent="46" name="preference_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>680</StateNumber>
+      <TypeId>23</TypeId>
+      <SequenceName>vadhyar_event_preferences_preference_id_seq</SequenceName>
+    </column>
+    <column id="166" parent="46" name="vadhyar_id">
+      <Position>2</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>680</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="167" parent="46" name="event_type_id">
+      <Position>3</Position>
+      <DataType>integer|0s</DataType>
+      <StateNumber>680</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <index id="168" parent="46" name="pk_vadhyar_event_preferences">
+      <ObjectId>16665</ObjectId>
+      <ColNames>preference_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="169" parent="46" name="uk_vadhyar_event_preferences">
+      <ObjectId>16667</ObjectId>
+      <ColNames>vadhyar_id
+event_type_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="170" parent="46" name="pk_vadhyar_event_preferences">
+      <ObjectId>16666</ObjectId>
+      <ColNames>preference_id</ColNames>
+      <UnderlyingIndexName>pk_vadhyar_event_preferences</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="171" parent="46" name="uk_vadhyar_event_preferences">
+      <ObjectId>16668</ObjectId>
+      <ColNames>vadhyar_id
+event_type_id</ColNames>
+      <UnderlyingIndexName>uk_vadhyar_event_preferences</UnderlyingIndexName>
+    </key>
+    <foreign-key id="172" parent="46" name="fk_vadhyar_event_preferences_user">
+      <ObjectId>16669</ObjectId>
+      <ColNames>vadhyar_id</ColNames>
+      <RefTableId>16600</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>user_master</RefTableName>
+      <RefKeyName>pk_user_master_id</RefKeyName>
+      <RefColNames>user_id</RefColNames>
+    </foreign-key>
+    <foreign-key id="173" parent="46" name="fk_vadhyar_event_preferences_type">
+      <ObjectId>16674</ObjectId>
+      <ColNames>event_type_id</ColNames>
+      <RefTableId>16551</RefTableId>
+      <RefColPositions>1</RefColPositions>
+      <RefTableName>event_type</RefTableName>
+      <RefKeyName>pk_event_type_id</RefKeyName>
+      <RefColNames>event_type_id</RefColNames>
+    </foreign-key>
+    <column id="174" parent="47" name="veda_id">
+      <Position>1</Position>
+      <DataType>integer|0s</DataType>
+      <NotNull>1</NotNull>
+      <StateNumber>673</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="175" parent="47" name="veda_name">
+      <Position>2</Position>
+      <DataType>varchar(20)|0s</DataType>
+      <StateNumber>673</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <index id="176" parent="47" name="pk_veda_master_id">
+      <ObjectId>16567</ObjectId>
+      <ColNames>veda_id</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <index id="177" parent="47" name="uk_veda_master_name">
+      <ObjectId>16569</ObjectId>
+      <ColNames>veda_name</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="178" parent="47" name="pk_veda_master_id">
+      <ObjectId>16568</ObjectId>
+      <ColNames>veda_id</ColNames>
+      <UnderlyingIndexName>pk_veda_master_id</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <key id="179" parent="47" name="uk_veda_master_name">
+      <ObjectId>16570</ObjectId>
+      <ColNames>veda_name</ColNames>
+      <UnderlyingIndexName>uk_veda_master_name</UnderlyingIndexName>
+    </key>
+  </database-model>
+</dataSource>

@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="local-dev" uuid="5030ab90-5473-48c2-9676-fe0de19f0d58">
-      <driver-ref>oracle</driver-ref>
+    <data-source source="LOCAL" name="vadhyar@vadhyar.c2ekvuk7fhvc.ap-south-1.rds.amazonaws.com" uuid="5c7dcbb1-9fa8-4805-aa09-da2a79eea81e">
+      <driver-ref>postgresql</driver-ref>
       <synchronize>true</synchronize>
-      <auto-commit>false</auto-commit>
-      <jdbc-driver>oracle.jdbc.OracleDriver</jdbc-driver>
-      <jdbc-url>jdbc:oracle:thin:@localhost:1521:vadhyardev</jdbc-url>
-      <driver-properties>
-        <property name="v$session.program" value="DataGrip" />
-      </driver-properties>
+      <jdbc-driver>org.postgresql.Driver</jdbc-driver>
+      <jdbc-url>jdbc:postgresql://vadhyar.c2ekvuk7fhvc.ap-south-1.rds.amazonaws.com:5432/vadhyar</jdbc-url>
     </data-source>
   </component>
 </project>
