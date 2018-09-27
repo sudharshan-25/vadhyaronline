@@ -1,7 +1,7 @@
 <div class="page-content">
   <h3>Event Type</h3>
 
-  <nz-table #eventType [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
+  <nz-table #eventType [nzData]="displayData" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
             [nzLoading]="loading" nzTitle="Unapproved Event Type">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>

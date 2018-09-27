@@ -1,7 +1,7 @@
 <div class="page-content">
   <h3>Gothram</h3>
 
-  <nz-table #gothrams [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
+  <nz-table #gothrams [nzData]="displayData" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
             [nzLoading]="loading" nzTitle="Requested Gothrams">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>

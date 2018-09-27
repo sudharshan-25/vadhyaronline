@@ -2,7 +2,7 @@
 
   <h3>Event Category</h3>
 
-  <nz-table #eventCategory [nzData]="data" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
+  <nz-table #eventCategory [nzData]="displayData" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
             [nzLoading]="loading" nzTitle="Requested Event Category">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>

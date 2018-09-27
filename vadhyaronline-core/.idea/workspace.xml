@@ -2,17 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="32a44938-7c9a-4c59-a34a-38d913c07677" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5c7dcbb1-9fa8-4805-aa09-da2a79eea81e.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/storage_v2/_src_/database/vadhyar.m6tXDQ.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources/5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/storage_v2/_src_/database/vadhyar.m6tXDQ/schema/public.abK9xQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/5030ab90-5473-48c2-9676-fe0de19f0d58.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application-dev.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application-dev.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/schema.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/admin/approve/event-category/event-category.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../vadhyaronline-web/src/app/shared/vadhyar/requested/event-category/event-category.component.ts" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -72,16 +66,6 @@
         <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="vadhyar@vadhyar.c2ekvuk7fhvc.ap-south-1.rds.amazonaws.com" type="feb32156:DbDataSourceImpl" />
-        <item name="databases" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="vadhyar: database" type="6d9b600a:PostgresImplModel$Database" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="public: schema" type="a16502c0:PostgresImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="user_master: table" type="a93d6ac6:PostgresImplModel$LocalTable" />
-      </path>
     </expand>
     <select />
   </component>
@@ -89,7 +73,7 @@
     <session id="-337981254">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="26" />
+          <entry key="project.closed" value="27" />
           <entry key="project.open.time.105" value="1" />
           <entry key="project.open.time.107" value="1" />
           <entry key="project.open.time.110" value="1" />
@@ -103,7 +87,7 @@
           <entry key="project.open.time.67" value="1" />
           <entry key="project.open.time.68" value="2" />
           <entry key="project.open.time.72" value="1" />
-          <entry key="project.open.time.73" value="1" />
+          <entry key="project.open.time.73" value="2" />
           <entry key="project.open.time.74" value="1" />
           <entry key="project.open.time.75" value="1" />
           <entry key="project.open.time.77" value="2" />
@@ -113,7 +97,7 @@
           <entry key="project.open.time.84" value="1" />
           <entry key="project.open.time.86" value="1" />
           <entry key="project.open.time.98" value="1" />
-          <entry key="project.opened" value="27" />
+          <entry key="project.opened" value="28" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -125,11 +109,14 @@
           <entry key="STATUS_MASTER" value="2" />
           <entry key="USER_DETAILS" value="1" />
           <entry key="class" value="3" />
+          <entry key="event_category" value="1" />
+          <entry key="event_type" value="1" />
           <entry key="html" value="2" />
-          <entry key="java" value="293" />
+          <entry key="java" value="295" />
           <entry key="less" value="1" />
-          <entry key="sql" value="33" />
+          <entry key="sql" value="34" />
           <entry key="ts" value="1" />
+          <entry key="user_master" value="1" />
           <entry key="xml" value="6" />
           <entry key="yml" value="17" />
         </counts>
@@ -137,11 +124,11 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CLASS" value="3" />
-          <entry key="Database Element" value="6" />
+          <entry key="Database Element" value="9" />
           <entry key="HTML" value="2" />
-          <entry key="JAVA" value="293" />
+          <entry key="JAVA" value="295" />
           <entry key="Less" value="1" />
-          <entry key="SQL" value="29" />
+          <entry key="SQL" value="30" />
           <entry key="Scratch" value="5" />
           <entry key="TypeScript" value="1" />
           <entry key="XML" value="6" />
@@ -150,21 +137,21 @@
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="cell" value="6" />
-          <entry key="java" value="10886" />
+          <entry key="cell" value="26" />
+          <entry key="java" value="10925" />
           <entry key="sql" value="290" />
           <entry key="ts" value="2" />
-          <entry key="txt" value="143" />
+          <entry key="txt" value="160" />
           <entry key="xml" value="40" />
           <entry key="yml" value="194" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10885" />
-          <entry key="PLAIN_TEXT" value="143" />
+          <entry key="JAVA" value="10924" />
+          <entry key="PLAIN_TEXT" value="160" />
           <entry key="SQL" value="207" />
-          <entry key="Scratch" value="90" />
+          <entry key="Scratch" value="110" />
           <entry key="TypeScript" value="2" />
           <entry key="XML" value="40" />
           <entry key="YAML" value="194" />
@@ -183,7 +170,26 @@
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf>
+      <file pinned="false" current-in-tab="false">
+        <entry file="das://5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/database/vadhyar/schema/public/table/event_category">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="das://5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/database/vadhyar/schema/public/table/event_type">
+          <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+            <state>
+              <filtering enabled="true" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -257,7 +263,6 @@
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/web/EventTypeController.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/SimpleUserEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/LoginUserEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventCategoryEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventTypeEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/GothramEntity.java" />
         <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/SoothramEntity.java" />
@@ -267,6 +272,7 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/console.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/schema.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/application-dev.yml" />
+        <option value="$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventCategoryEntity.java" />
       </list>
     </option>
   </component>
@@ -299,7 +305,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="10" />
     <option name="y" value="20" />
     <option name="width" value="1346" />
@@ -313,7 +319,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -353,15 +358,6 @@
               <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="vadhyar-core" type="b2602c69:ProjectViewProjectNode" />
-              <item name="vadhyaronline-core" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -383,6 +379,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -392,10 +389,10 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="PostgreSQL91Dialect&#9;PSI&#9;JAVA://org.hibernate.dialect.PostgreSQL91Dialect&#10;PostgreSQLDialect&#9;PSI&#9;JAVA://org.hibernate.dialect.PostgreSQL9Dialect&#10;Oracle1&#9;PSI&#9;JAVA://org.hibernate.dialect.Oracle10gDialect" />
+    <property name="SearchEverywhereHistoryKey" value="UUIDGenerator&#9;PSI&#9;JAVA://org.hibernate.id.UUIDGenerator&#10;PostgreSQL91Dialect&#9;PSI&#9;JAVA://org.hibernate.dialect.PostgreSQL91Dialect&#10;PostgreSQLDialect&#9;PSI&#9;JAVA://org.hibernate.dialect.PostgreSQL9Dialect&#10;Oracle1&#9;PSI&#9;JAVA://org.hibernate.dialect.Oracle10gDialect" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537986564733" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1537986616083" />
     <property name="database.console.LAST_STATE" value="false" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -471,7 +468,8 @@
       <workItem from="1537461904094" duration="1977000" />
       <workItem from="1537895547751" duration="692000" />
       <workItem from="1537901854182" duration="2799000" />
-      <workItem from="1537984007991" duration="2411000" />
+      <workItem from="1537984007991" duration="2463000" />
+      <workItem from="1538017938841" duration="2112000" />
     </task>
     <task id="LOCAL-00001" summary="JDBC and JPA changes">
       <created>1535947654310</created>
@@ -543,14 +541,22 @@
       <option name="project" value="LOCAL" />
       <updated>1537465471851</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Moved to POSTGRES">
+      <created>1537986590083</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1537986590083</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="89244000" />
+    <option name="totallyTimeSpent" value="91408000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Image Layers" order="0" />
       <window_info id="UI Designer" order="1" />
@@ -558,7 +564,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" weight="0.32980332" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.36081696" />
+      <window_info content_ui="combo" id="Project" order="6" weight="0.36611196" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info id="Bean Validation" order="8" weight="0.32980332" />
       <window_info anchor="bottom" id="Spring" order="0" weight="0.3289689" />
@@ -585,7 +591,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="6" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="7" show_stripe_button="false" weight="0.24962178" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="8" weight="0.25" />
-      <window_info active="true" anchor="right" id="Version Control" order="9" visible="true" weight="0.3290469" />
+      <window_info anchor="right" id="Version Control" order="9" weight="0.3290469" />
     </layout>
     <layout-to-restore>
       <window_info id="Image Layers" order="0" />
@@ -661,7 +667,8 @@
     <MESSAGE value="Base Page for Table structure" />
     <MESSAGE value="Base table for requested and unapproved" />
     <MESSAGE value="Base table for requested and unapproved + sort by feature" />
-    <option name="LAST_COMMIT_MESSAGE" value="Base table for requested and unapproved + sort by feature" />
+    <MESSAGE value="Moved to POSTGRES" />
+    <option name="LAST_COMMIT_MESSAGE" value="Moved to POSTGRES" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -705,34 +712,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/Inheritance.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="47" column="18" selection-start-line="47" selection-start-column="18" selection-end-line="47" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/Entity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="32" column="18" selection-start-line="32" selection-start-column="18" selection-end-line="32" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/InheritanceType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="28" column="4" selection-start-line="28" selection-start-column="4" selection-end-line="28" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/javax/persistence/javax.persistence-api/2.2/javax.persistence-api-2.2-sources.jar!/javax/persistence/NamedQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="56" column="18" selection-start-line="56" selection-start-column="18" selection-end-line="56" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/repository/jpa/LoginUserJpaRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -941,13 +920,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventCategoryEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventTypeEntity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1007,13 +979,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="64" column="2" lean-forward="true" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application-dev.yml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="299">
@@ -1039,6 +1004,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="11" column="13" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-core/5.3.5.Final/hibernate-core-5.3.5.Final-sources.jar!/org/hibernate/id/UUIDGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="503">
+          <caret line="103" lean-forward="true" selection-start-line="103" selection-end-line="103" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/in/ssi/vadhyar/web/entity/EventCategoryEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="11" column="55" selection-start-line="11" selection-start-column="55" selection-end-line="11" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/schema.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="64" column="2" selection-start-line="64" selection-start-column="2" selection-end-line="64" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/database/vadhyar/schema/public/table/user_master">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/database/vadhyar/schema/public/table/event_category">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://5c7dcbb1-9fa8-4805-aa09-da2a79eea81e/database/vadhyar/schema/public/table/event_type">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
