@@ -16,6 +16,10 @@ export class EventCategoryComponent extends AbstractTableView<EventCategory> imp
     super();
   }
 
+  setFilterColumns() {
+    this.filteringValues = {eventCategoryName: [{}], approved: [{}], requestedBy: [{}], approvedBy: [{}]};
+  }
+
   loadAllEventCategories() {
     this.loading = true;
     this.restService.getUnapprovedEventCategories().subscribe(value => {
@@ -28,6 +32,7 @@ export class EventCategoryComponent extends AbstractTableView<EventCategory> imp
   }
 
   ngOnInit() {
+    this.setFilterColumns();
     this.loadAllEventCategories();
   }
 

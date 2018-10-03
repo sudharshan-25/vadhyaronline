@@ -39,7 +39,7 @@ export interface EventCategoryResponse {
 export interface EventType {
   eventTypeId: number;
   eventTypeName: string;
-  eventTypeDesc: string;
+  eventTypeDescription: string;
   eventCategoryId: number;
   eventCategoryName: string;
   approved: boolean;

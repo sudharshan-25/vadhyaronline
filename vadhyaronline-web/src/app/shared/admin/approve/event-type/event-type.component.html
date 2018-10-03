@@ -5,15 +5,23 @@
             [nzLoading]="loading" nzTitle="Unapproved Event Type">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventTypeName" nzShowFilter>Event Type</th>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Category Name</th>
-      <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
+      <th nzShowSort nzSortKey="eventTypeName" nzShowFilter [nzFilters]="filteringValues['eventTypeName']"
+          (nzFilterChange)="filterData('eventTypeName', $event)">Event Type
+      </th>
+      <th>Event Description</th>
+      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter [nzFilters]="filteringValues['eventCategoryName']"
+          (nzFilterChange)="filterData('eventCategoryName', $event)">Category Name
+      </th>
+      <th nzShowSort nzSortKey="requestedBy" nzShowFilter [nzFilters]="filteringValues['requestedBy']"
+          (nzFilterChange)="filterData('requestedBy', $event)">Requested By
+      </th>
       <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let category of eventType.data">
       <td>{{category.eventTypeName}}</td>
+      <td>{{category.eventTypeDescription}}</td>
       <td>{{category.eventCategoryName}}</td>
       <td>{{category.requestedBy}}</td>
       <td>

@@ -59,6 +59,7 @@ public class EventTypeEntity extends AbstractApprovalEntity {
         EventType eventType = new EventType();
         eventType.setEventTypeId(this.eventTypeId);
         eventType.setEventTypeName(this.eventTypeName);
+        eventType.setEventTypeDescription(this.eventTypeDescription);
         eventType.setApproved(isApproved());
         eventType.setApprovedBy(getApprovedBy() != null ? getApprovedBy().getUserName() : "");
         eventType.setRequestedBy(getRequestedBy() != null ? getRequestedBy().getUserName() : "");

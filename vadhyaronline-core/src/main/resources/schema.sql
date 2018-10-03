@@ -73,7 +73,7 @@ CREATE TABLE user_master (
   user_password VARCHAR(50) not null,
   user_role_id int not null,
   login_status_id INT,
-  latest_login_token varchar(300),
+  latest_login_token varchar(500),
   last_successful_login TIMESTAMP,
   login_failed_attempt INT,
   CONSTRAINT pk_user_master_id PRIMARY KEY (user_id),

@@ -5,8 +5,10 @@
             [nzLoading]="loading" nzTitle="Unapproved Soothrams">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Soothram Name</th>
-      <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
+      <th nzShowSort nzSortKey="soothramName" nzShowFilter [nzFilters]="filteringValues['soothramName']"
+          (nzFilterChange)="filterData('soothramName', $event)">Soothram Name</th>
+      <th nzShowSort nzSortKey="requestedBy" nzShowFilter [nzFilters]="filteringValues['requestedBy']"
+          (nzFilterChange)="filterData('requestedBy', $event)">Requested By</th>
       <th>Action</th>
     </tr>
     </thead>

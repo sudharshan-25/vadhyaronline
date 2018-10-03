@@ -6,8 +6,10 @@
             [nzLoading]="loading" nzTitle="Unapproved Event Category">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Name</th>
-      <th nzShowSort nzSortKey="requestedBy" nzShowFilter>Requested By</th>
+      <th nzShowSort nzSortKey="eventCategoryName" [nzFilters]="filteringValues['eventCategoryName']"
+          (nzFilterChange)="filterData('eventCategoryName', $event)"nzShowFilter>Name</th>
+      <th nzShowSort nzSortKey="requestedBy" nzShowFilter [nzFilters]="filteringValues['requestedBy']"
+          (nzFilterChange)="filterData('requestedBy', $event)">Requested By</th>
       <th>Action</th>
     </tr>
     </thead>

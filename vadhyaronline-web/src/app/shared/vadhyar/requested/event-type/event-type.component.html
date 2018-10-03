@@ -5,20 +5,40 @@
             [nzLoading]="loading" nzTitle="Requested Event Type">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="eventTypeName" nzShowFilter>Event Type</th>
-      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter>Category Name</th>
-      <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
-      <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
+      <th nzShowSort nzSortKey="eventTypeName" nzShowFilter [nzFilters]="filteringValues['eventTypeName']"
+          (nzFilterChange)="filterData('eventTypeName', $event)">Event Type
+      </th>
+      <th>Event Type Description</th>
+      <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter [nzFilters]="filteringValues['eventCategoryName']"
+          (nzFilterChange)="filterData('eventCategoryName', $event)">Category Name
+      </th>
+      <th nzShowSort nzSortKey="approved" nzShowFilter [nzFilters]="filteringValues['approved']"
+          (nzFilterChange)="filterData('approved', $event)">Approved
+      </th>
+      <th nzShowSort nzSortKey="approvedBy" nzShowFilter [nzFilters]="filteringValues['approvedBy']"
+          (nzFilterChange)="filterData('approvedBy', $event)">Approved By
+      </th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
     <tr *ngFor="let category of eventType.data">
       <td>{{category.eventTypeName}}</td>
+      <td>{{category.eventTypeDescription}}</td>
       <td>{{category.eventCategoryName}}</td>
       <td>{{category.approved }}</td>
       <td>{{category.approvedBy}}</td>
+      <td>
+        <button nz-button (click)="editEventType(category)">Edit <i class="anticon anticon-edit"></i></button>
+        <button *ngIf="!category.approved" nz-button (click)="deleteEntity(category)">Delete<i
+          class="anticon anticon-delete"></i></button>
+      </td>
     </tr>
     </tbody>
   </nz-table>
 
+  <nz-modal [(nzVisible)]="editAllowed" nzTitle="Create [Edit] Event Type"
+            (nzOnCancel)="cancelChanges()" (nzOnOk)="updateEntity()" nzOkText="Update">
+
+  </nz-modal>
 </div>

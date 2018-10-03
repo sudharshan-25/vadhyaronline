@@ -17,6 +17,10 @@ export class GothramComponent extends AbstractTableView<Gothram> implements OnIn
     ();
   }
 
+  setFilterColumns() {
+    this.filteringValues = {gothramName: [{}], approved: [{}], requestedBy: [{}], approvedBy: [{}]};
+  }
+
   public loadAllGothrams() {
     this.restService.getUnapprovedGothrams().subscribe(value => {
       this.loading = false;
@@ -28,6 +32,7 @@ export class GothramComponent extends AbstractTableView<Gothram> implements OnIn
   }
 
   ngOnInit() {
+    this.setFilterColumns();
     this.loadAllGothrams();
   }
 

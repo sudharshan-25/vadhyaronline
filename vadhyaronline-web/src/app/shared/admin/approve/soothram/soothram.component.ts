@@ -16,6 +16,12 @@ export class SoothramComponent extends AbstractTableView<Soothram> implements On
     super();
   }
 
+  setFilterColumns() {
+    this.filteringValues = {
+      soothramName: [{}], approved: [{}], requestedBy: [{}], approvedBy: [{}]
+    };
+  }
+
   public loadAllSoothrams() {
     this.restService.getUnapprovedSoothrams().subscribe(value => {
       this.loading = false;
@@ -27,6 +33,7 @@ export class SoothramComponent extends AbstractTableView<Soothram> implements On
   }
 
   ngOnInit() {
+    this.setFilterColumns();
     this.loadAllSoothrams();
   }
 

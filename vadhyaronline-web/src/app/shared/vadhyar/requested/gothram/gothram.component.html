@@ -5,9 +5,13 @@
             [nzLoading]="loading" nzTitle="Requested Gothrams">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="gothramName" nzShowFilter>Gothram Name</th>
-      <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
-      <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
+      <th nzShowSort nzSortKey="gothramName" nzShowFilter [nzFilters]="filteringValues['gothramName']"
+          (nzFilterChange)="filterData('gothramName', $event)">Gothram Name</th>
+      <th nzShowSort nzSortKey="approved" nzShowFilter [nzFilters]="filteringValues['approved']"
+          (nzFilterChange)="filterData('approved', $event)">Approved</th>
+      <th nzShowSort nzSortKey="approvedBy" nzShowFilter [nzFilters]="filteringValues['approvedBy']"
+          (nzFilterChange)="filterData('approvedBy', $event)">Approved By</th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -15,7 +19,15 @@
       <td>{{gothram.gothramName}}</td>
       <td>{{gothram.approved}}</td>
       <td>{{gothram.approvedBy}}</td>
+      <td>
+        <button nz-button (click)="editGothram(gothram)">Edit <i class="anticon anticon-edit"></i></button>
+        <button *ngIf="!gothram.approved" nz-button (click)="deleteEntity(gothram)">Delete<i class="anticon anticon-delete"></i></button>
+      </td>
     </tr>
     </tbody>
   </nz-table>
+  <nz-modal [(nzVisible)]="editAllowed" nzTitle="Create [Edit] Gothram"
+            (nzOnCancel)="cancelChanges()" (nzOnOk)="updateEntity()" nzOkText="Update">
+
+  </nz-modal>
 </div>

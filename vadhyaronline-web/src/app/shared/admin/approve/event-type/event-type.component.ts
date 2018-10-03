@@ -16,6 +16,10 @@ export class EventTypeComponent extends AbstractTableView<EventType> implements 
     super();
   }
 
+  setFilterColumns() {
+    this.filteringValues = {'eventTypeName' : [{}], eventCategoryName: [{}], approved: [{}], requestedBy : [{}],  approvedBy: [{}]};
+  }
+
   public loadEventTypes(): void {
     this.restService.getUnapprovedEventTypes().subscribe(value => {
       this.loading = false;
@@ -27,6 +31,7 @@ export class EventTypeComponent extends AbstractTableView<EventType> implements 
   }
 
   ngOnInit() {
+    this.setFilterColumns();
     this.loadEventTypes();
   }
 

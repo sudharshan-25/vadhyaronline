@@ -4,16 +4,24 @@ import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
 import {HttpErrorResponse} from '@angular/common/http';
 import {AbstractTableView} from '../../../../domain/abstract-table-view';
+import {EditEntity} from '../../../../domain/edit-entity';
 
 @Component({
   selector: 'app-gothram',
   templateUrl: './gothram.component.html',
   styleUrls: ['./gothram.component.css']
 })
-export class GothramComponent extends AbstractTableView<Gothram> implements OnInit {
+export class GothramComponent extends AbstractTableView<Gothram> implements OnInit, EditEntity<Gothram> {
+
+  protected selectedEntity: Gothram;
+  protected editAllowed: boolean;
 
   constructor(private restService: RestService, private notification: NzNotificationService) {
     super();
+  }
+
+  setFilterColumns() {
+    this.filteringValues = {gothramName: [{}], approved: [{}], requestedBy: [{}], approvedBy: [{}]};
   }
 
   public loadRequestedGothrams() {
@@ -27,7 +35,30 @@ export class GothramComponent extends AbstractTableView<Gothram> implements OnIn
   }
 
   ngOnInit() {
+    this.setFilterColumns();
     this.loadRequestedGothrams();
   }
 
+  editGothram(gothram: Gothram) {
+    this.selectedEntity = gothram;
+    this.editAllowed = true;
+  }
+
+  updateEntity(updatedGothram: Gothram) {
+    this.loadRequestedGothrams();
+  }
+
+  cancelChanges() {
+    this.selectedEntity = null;
+    this.editAllowed = false;
+    this.loadRequestedGothrams();
+  }
+
+  createEntity() {
+    this.selectedEntity = {gothramId: 0, gothramName: '', approvedBy: '', requestedBy: '', approved: false};
+    this.editAllowed = true;
+  }
+
+  deleteEntity(gothram: Gothram) {
+  }
 }

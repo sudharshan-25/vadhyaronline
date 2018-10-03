@@ -5,9 +5,16 @@
             [nzLoading]="loading" nzTitle="Requested Soothrams">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
-      <th nzShowSort nzSortKey="soothramName" nzShowFilter>Soothram Name</th>
-      <th nzShowSort nzSortKey="approved" nzShowFilter>Approved</th>
-      <th nzShowSort nzSortKey="approvedBy" nzShowFilter>Approved By</th>
+      <th nzShowSort nzSortKey="soothramName" nzShowFilter [nzFilters]="filteringValues['soothramName']"
+          (nzFilterChange)="filterData('soothramName', $event)">Soothram Name
+      </th>
+      <th nzShowSort nzSortKey="approved" nzShowFilter [nzFilters]="filteringValues['approved']"
+          (nzFilterChange)="filterData('approved', $event)">Approved
+      </th>
+      <th nzShowSort nzSortKey="approvedBy" nzShowFilter [nzFilters]="filteringValues['approvedBy']"
+          (nzFilterChange)="filterData('approvedBy', $event)">Approved By
+      </th>
+      <th>Action</th>
     </tr>
     </thead>
     <tbody>
@@ -15,7 +22,16 @@
       <td>{{soothram.soothramName}}</td>
       <td>{{soothram.approved}}</td>
       <td>{{soothram.approvedBy}}</td>
+      <td>
+        <button nz-button (click)="editGothram(soothram)">Edit <i class="anticon anticon-edit"></i></button>
+        <button *ngIf="!soothram.approved" nz-button (click)="deleteEntity(soothram)">Delete<i
+          class="anticon anticon-delete"></i></button>
+      </td>
     </tr>
     </tbody>
   </nz-table>
+  <nz-modal [(nzVisible)]="editAllowed" nzTitle="Create [Edit] Soothram"
+            (nzOnCancel)="cancelChanges()" (nzOnOk)="updateEntity()" nzOkText="Update">
+
+  </nz-modal>
 </div>
