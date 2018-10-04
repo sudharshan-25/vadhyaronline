@@ -6,6 +6,7 @@ import {EventTypeComponent} from './event-type/event-type.component';
 import {GothramComponent} from './gothram/gothram.component';
 import {SoothramComponent} from './soothram/soothram.component';
 import {NgZorroAntdModule} from 'ng-zorro-antd';
+import {ReactiveFormsModule} from '@angular/forms';
 
 const APPROVE_MASTER_ROUTES: Routes = [
   {path: '', redirectTo: 'event-category', pathMatch: 'full'},
@@ -17,7 +18,7 @@ const APPROVE_MASTER_ROUTES: Routes = [
 
 @NgModule({
   imports: [
-    CommonModule, RouterModule.forChild(APPROVE_MASTER_ROUTES), NgZorroAntdModule
+    CommonModule, RouterModule.forChild(APPROVE_MASTER_ROUTES), NgZorroAntdModule, ReactiveFormsModule
   ],
   declarations: [EventCategoryComponent, EventTypeComponent, GothramComponent, SoothramComponent]
 })

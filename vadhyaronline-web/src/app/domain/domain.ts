@@ -27,9 +27,9 @@ export interface ChoiceResponse {
 export interface EventCategory {
   eventCategoryId: number;
   eventCategoryName: string;
-  approved: boolean;
-  requestedBy: string;
-  approvedBy: string;
+  approved?: boolean;
+  requestedBy?: string;
+  approvedBy?: string;
 }
 
 export interface EventCategoryResponse {

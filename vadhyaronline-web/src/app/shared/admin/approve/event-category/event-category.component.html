@@ -35,7 +35,20 @@
 
   <nz-modal [(nzVisible)]="editAllowed" nzTitle="Edit Event Category"
             (nzOnCancel)="cancelChanges()" (nzOnOk)="updateEntity()" nzOkText="Update">
-
+    <form nz-form name="eventCategoryForm" [formGroup]="eventCategoryForm"
+          (submit)="updateEntity(eventCategoryForm.value)">
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" [nzRequired]="true" nzFor="eventCategoryName">Event Category Name
+        </nz-form-label>
+        <nz-form-control [nzSm]="16" [nzXs]="24">
+          <input nz-input [formControl]="eventCategoryForm.controls['eventCategoryName']" id="eventCategoryName"
+                 placeholder="Category Name">
+          <nz-form-explain *ngIf="eventCategoryForm.controls['eventCategoryName'].dirty &&
+                    eventCategoryForm.controls['eventCategoryName'].hasError('required')"> Category Name cannot be empty
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
   </nz-modal>
 
 </div>

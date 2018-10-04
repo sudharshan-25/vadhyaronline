@@ -7,11 +7,14 @@
     <thead (nzSortChange)="sort($event)" nzSingleSort>
     <tr>
       <th nzShowSort nzSortKey="eventCategoryName" nzShowFilter [nzFilters]="filteringValues['eventCategoryName']"
-          (nzFilterChange)="filterData('eventCategoryName', $event)">Name</th>
+          (nzFilterChange)="filterData('eventCategoryName', $event)">Name
+      </th>
       <th nzShowSort nzSortKey="approved" nzShowFilter [nzFilters]="filteringValues['approved']"
-          (nzFilterChange)="filterData('approved', $event)">Approved</th>
+          (nzFilterChange)="filterData('approved', $event)">Approved
+      </th>
       <th nzShowSort nzSortKey="approvedBy" nzShowFilter [nzFilters]="filteringValues['approvedBy']"
-          (nzFilterChange)="filterData('approvedBy', $event)">Approved By</th>
+          (nzFilterChange)="filterData('approvedBy', $event)">Approved By
+      </th>
       <th>Action</th>
     </tr>
     </thead>
@@ -22,13 +25,27 @@
       <td>{{category.approvedBy}}</td>
       <td>
         <button nz-button (click)="editEventCategory(category)">Edit <i class="anticon anticon-edit"></i></button>
-        <button *ngIf="!category.approved" nz-button (click)="deleteEntity(category)">Delete<i class="anticon anticon-delete"></i></button>
+        <button *ngIf="!category.approved" nz-button (click)="deleteEntity(category)">Delete<i
+          class="anticon anticon-delete"></i></button>
       </td>
     </tr>
     </tbody>
   </nz-table>
   <nz-modal [(nzVisible)]="editAllowed" nzTitle="Create [Edit] Event Category"
             (nzOnCancel)="cancelChanges()" (nzOnOk)="updateEntity()" nzOkText="Update">
-
+    <form nz-form name="eventCategoryForm" [formGroup]="eventCategoryForm"
+          (submit)="updateEntity(eventCategoryForm.value)">
+      <nz-form-item>
+        <nz-form-label [nzSm]="8" [nzXs]="24" [nzRequired]="true" nzFor="eventCategoryName">Event Category Name
+        </nz-form-label>
+        <nz-form-control [nzSm]="16" [nzXs]="24">
+          <input nz-input [formControl]="eventCategoryForm.controls['eventCategoryName']" id="eventCategoryName"
+                 placeholder="Category Name">
+          <nz-form-explain *ngIf="eventCategoryForm.controls['eventCategoryName'].dirty &&
+                    eventCategoryForm.controls['eventCategoryName'].hasError('required')"> Category Name cannot be empty
+          </nz-form-explain>
+        </nz-form-control>
+      </nz-form-item>
+    </form>
   </nz-modal>
 </div>

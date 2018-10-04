@@ -1,6 +1,6 @@
 export interface EditEntity<T> {
 
-  updateEntity(updatedEntity: T);
+  updateEntity(updatedEntity?: T);
 
   cancelChanges();
 
