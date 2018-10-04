@@ -8,3 +8,9 @@ export interface EditEntity<T> {
 
   createEntity();
 }
+
+export interface ApproveEntity<T> {
+
+  approveEntity(entity: T);
+
+}
