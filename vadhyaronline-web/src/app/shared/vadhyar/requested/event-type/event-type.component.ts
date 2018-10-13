@@ -1,10 +1,11 @@
 import {Component, OnInit} from '@angular/core';
-import {EventCategory, EventType} from '../../../../domain/domain';
+import {EventType} from '../../../../domain/domain';
 import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
 import {HttpErrorResponse} from '@angular/common/http';
 import {AbstractTableView} from '../../../../domain/abstract-table-view';
 import {EditEntity} from '../../../../domain/edit-entity';
+import {FormBuilder, FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
   selector: 'app-event-type',
@@ -13,11 +14,18 @@ import {EditEntity} from '../../../../domain/edit-entity';
 })
 export class EventTypeComponent extends AbstractTableView<EventType> implements OnInit, EditEntity<EventType> {
 
-  protected selectedEntity: EventCategory;
+  protected selectedEntity: EventType;
   protected editAllowed: boolean;
+  protected eventTypeForm: FormGroup;
 
-  constructor(private restService: RestService, private notification: NzNotificationService) {
+  constructor(fb: FormBuilder, private restService: RestService, private notification: NzNotificationService) {
     super();
+    this.eventTypeForm = fb.group({
+      eventTypeId: new FormControl('', [Validators.required]),
+      eventTypeName: new FormControl('', [Validators.required]),
+      eventTypeDescription: new FormControl(''),
+      eventCategoryId: new FormControl('', [Validators.required])
+    });
   }
 
   setFilterColumns() {
@@ -43,6 +51,7 @@ export class EventTypeComponent extends AbstractTableView<EventType> implements 
   editEventType(eventType: EventType) {
     this.selectedEntity = eventType;
     this.editAllowed = true;
+    this.eventTypeForm.setValue(this.selectedEntity);
   }
 
   cancelChanges() {
@@ -52,13 +61,46 @@ export class EventTypeComponent extends AbstractTableView<EventType> implements 
   }
 
   createEntity() {
+    this.selectedEntity = {eventTypeId: 0, eventTypeName: '', eventTypeDescription: '', eventCategoryId: 0};
+    this.eventTypeForm.setValue(this.selectedEntity);
+    this.editAllowed = true;
   }
 
   deleteEntity(entity: EventType) {
+    this.restService.deleteEventType(entity).subscribe(value => {
+      this.notification.success('Deleted', value.data);
+    }, (error: HttpErrorResponse) => {
+      this.notification.error('Error', error.error);
+    }, () => {
+      this.loadRequestedEventTypes();
+    });
   }
 
   updateEntity(updatedEntity: EventType) {
-    this.loadRequestedEventTypes();
+    if (this.eventTypeForm.valid) {
+      const updatedET: EventType = this.eventTypeForm.value;
+      if (updatedET.eventTypeId === 0) {
+        this.restService.createEventType(updatedET).subscribe(value => {
+          this.notification.success('Success', value.data);
+        }, (error: HttpErrorResponse) => {
+          this.notification.error('Error', error.error);
+        }, () => {
+          this.selectedEntity = null;
+          this.editAllowed = false;
+          this.loadRequestedEventTypes();
+        });
+      } else {
+        this.restService.updateEventType(updatedET).subscribe(value => {
+          this.notification.success('Success', value.data);
+        }, (error: HttpErrorResponse) => {
+          this.notification.error('Error', error.error);
+        }, () => {
+          this.selectedEntity = null;
+          this.editAllowed = false;
+          this.loadRequestedEventTypes();
+        });
+      }
+    }
   }
 
 }

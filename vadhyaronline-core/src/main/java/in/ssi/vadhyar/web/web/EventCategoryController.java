@@ -52,6 +52,7 @@ public class EventCategoryController {
     }
 
     @PostMapping("/")
+    @VOAccessRoles(accessRoles = {VOAccessRole.VADHYAR})
     public VOResponse createEventCategory(@RequestBody EventCategory eventCategory) {
         VOResponse response = new VOResponse();
         eventCategoryService.createEventCategory(eventCategory);
@@ -67,6 +68,7 @@ public class EventCategoryController {
     }
 
     @PutMapping("/{eventCategoryId}")
+    @VOAccessRoles(accessRoles = {VOAccessRole.VADHYAR, VOAccessRole.ADMIN})
     public VOResponse updateEventCategory(@PathVariable Integer eventCategoryId, @RequestBody EventCategory eventCategory) {
         VOResponse response = new VOResponse();
         eventCategory.setEventCategoryId(eventCategoryId);
@@ -76,6 +78,7 @@ public class EventCategoryController {
     }
 
     @PutMapping("/{eventCategoryId}/approve")
+    @VOAccessRoles(accessRoles = {VOAccessRole.ADMIN})
     public VOResponse approveEventCategory(@PathVariable Integer eventCategoryId) {
         VOResponse response = new VOResponse();
         eventCategoryService.approveEventCategory(eventCategoryId);

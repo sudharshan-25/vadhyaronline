@@ -1,7 +1,11 @@
 <div class="page-content">
 
   <h3>Event Category</h3>
-
+  <div nz-row>
+    <div nz-col [nzOffset]="5">
+      <button nz-button nzType="primary" (click)="createEntity()">Create</button>
+    </div>
+  </div>
   <nz-table #eventCategory [nzData]="displayData" nzBordered [nzPageSize]="10" [nzSize]="'middle'"
             [nzLoading]="loading" nzTitle="Requested Event Category">
     <thead (nzSortChange)="sort($event)" nzSingleSort>
@@ -25,7 +29,7 @@
       <td>{{category.approvedBy}}</td>
       <td>
         <button nz-button (click)="editEventCategory(category)">Edit <i class="anticon anticon-edit"></i></button>
-        <button *ngIf="!category.approved" nz-button (click)="deleteEntity(category)">Delete<i
+        <button *ngIf="!category.approved" nz-button nzType="danger" (click)="deleteEntity(category)">Delete<i
           class="anticon anticon-delete"></i></button>
       </td>
     </tr>

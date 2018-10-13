@@ -6,6 +6,7 @@ import {
   DefaultStringResponse,
   EventCategory,
   EventCategoryResponse,
+  EventType,
   EventTypeResponse,
   GothramResponse,
   LoginResponse,
@@ -55,7 +56,7 @@ export class RestService {
   }
 
   public createEventCategory(eventCategory: EventCategory): Observable<DefaultStringResponse> {
-    return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/eventCategory`, eventCategory);
+    return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/eventCategory/`, eventCategory);
   }
 
   public deleteEventCategory(eventCategory: EventCategory): Observable<DefaultStringResponse> {
@@ -63,7 +64,7 @@ export class RestService {
   }
 
   public approveEventCategory(eventCategory: EventCategory): Observable<DefaultStringResponse> {
-    return this.httpClient.put<DefaultStringResponse>(`${this.apiURL}/eventCategory/${eventCategory.eventCategoryId}/approve`);
+    return this.httpClient.put<DefaultStringResponse>(`${this.apiURL}/eventCategory/${eventCategory.eventCategoryId}/approve`, null);
   }
 
   /**
@@ -75,6 +76,22 @@ export class RestService {
 
   public getRequestedEventTypes(): Observable<EventTypeResponse> {
     return this.httpClient.get<EventTypeResponse>(`${this.apiURL}/eventType/requested`);
+  }
+
+  public updateEventType(eventType: EventType): Observable<DefaultStringResponse> {
+    return this.httpClient.put<DefaultStringResponse>(`${this.apiURL}/eventType/${eventType.eventTypeId}`, eventType);
+  }
+
+  public createEventType(eventType: EventType): Observable<DefaultStringResponse> {
+    return this.httpClient.post<DefaultStringResponse>(`${this.apiURL}/eventType/`, eventType);
+  }
+
+  public deleteEventType(eventType: EventType): Observable<DefaultStringResponse> {
+    return this.httpClient.delete<DefaultStringResponse>(`${this.apiURL}/eventType/${eventType.eventTypeId}`);
+  }
+
+  public approveEventType(eventType: EventType): Observable<DefaultStringResponse> {
+    return this.httpClient.put<DefaultStringResponse>(`${this.apiURL}/eventType/${eventType.eventTypeId}/approve`, null);
   }
 
   /**

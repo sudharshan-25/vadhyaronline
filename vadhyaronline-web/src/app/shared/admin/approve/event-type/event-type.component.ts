@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {RestService} from '../../../../services/rest.service';
 import {NzNotificationService} from 'ng-zorro-antd';
-import {EventCategory, EventType} from '../../../../domain/domain';
+import {EventType} from '../../../../domain/domain';
 import {HttpErrorResponse} from '@angular/common/http';
 import {AbstractTableView} from '../../../../domain/abstract-table-view';
 import {ApproveEntity, EditEntity} from '../../../../domain/edit-entity';
@@ -14,7 +14,7 @@ import {ApproveEntity, EditEntity} from '../../../../domain/edit-entity';
 export class EventTypeComponent extends AbstractTableView<EventType>
   implements OnInit, EditEntity<EventType>, ApproveEntity<EventType> {
 
-  protected selectedEntity: EventCategory;
+  protected selectedEntity: EventType;
   protected editAllowed: boolean;
 
   constructor(private restService: RestService, private notification: NzNotificationService) {

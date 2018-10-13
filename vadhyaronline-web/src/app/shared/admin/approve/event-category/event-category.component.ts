@@ -60,27 +60,29 @@ export class EventCategoryComponent extends AbstractTableView<EventCategory>
   }
 
   updateEntity() {
-    const updatedEC = this.eventCategoryForm.value;
-    if (updatedEC['eventCategoryId'] === 0) {
-      this.restService.createEventCategory(updatedEC).subscribe(value => {
-        this.notification.success('Success', value.data);
-      }, (error: HttpErrorResponse) => {
-        this.notification.error('Error', error.error);
-      }, () => {
-        this.selectedEntity = null;
-        this.editAllowed = false;
-        this.loadAllEventCategories();
-      });
-    } else {
-      this.restService.updateEventCategory(updatedEC).subscribe(value => {
-        this.notification.success('Success', value.data);
-      }, (error: HttpErrorResponse) => {
-        this.notification.error('Error', error.error);
-      }, () => {
-        this.selectedEntity = null;
-        this.editAllowed = false;
-        this.loadAllEventCategories();
-      });
+    if (this.eventCategoryForm.valid) {
+      const updatedEC = this.eventCategoryForm.value;
+      if (updatedEC['eventCategoryId'] === 0) {
+        this.restService.createEventCategory(updatedEC).subscribe(value => {
+          this.notification.success('Success', value.data);
+        }, (error: HttpErrorResponse) => {
+          this.notification.error('Error', error.error);
+        }, () => {
+          this.selectedEntity = null;
+          this.editAllowed = false;
+          this.loadAllEventCategories();
+        });
+      } else {
+        this.restService.updateEventCategory(updatedEC).subscribe(value => {
+          this.notification.success('Success', value.data);
+        }, (error: HttpErrorResponse) => {
+          this.notification.error('Error', error.error);
+        }, () => {
+          this.selectedEntity = null;
+          this.editAllowed = false;
+          this.loadAllEventCategories();
+        });
+      }
     }
   }
 

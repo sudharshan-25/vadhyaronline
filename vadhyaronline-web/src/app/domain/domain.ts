@@ -41,10 +41,10 @@ export interface EventType {
   eventTypeName: string;
   eventTypeDescription: string;
   eventCategoryId: number;
-  eventCategoryName: string;
-  approved: boolean;
-  requestedBy: string;
-  approvedBy: string;
+  eventCategoryName?: string;
+  approved?: boolean;
+  requestedBy?: string;
+  approvedBy?: string;
 }
 
 export interface EventTypeResponse {

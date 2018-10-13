@@ -30,7 +30,7 @@
       <td>{{category.approvedBy}}</td>
       <td>
         <button nz-button (click)="editEventType(category)">Edit <i class="anticon anticon-edit"></i></button>
-        <button *ngIf="!category.approved" nz-button (click)="deleteEntity(category)">Delete<i
+        <button *ngIf="!category.approved" nz-button nzType="danger" (click)="deleteEntity(category)">Delete<i
           class="anticon anticon-delete"></i></button>
       </td>
     </tr>
